@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly (security measu
 /**
  * Widget Name: Client Logos
  */
-class Restobar_Image_Carousel extends Widget_Base{
+class Xhub_Image_Carousel extends Widget_Base{
 
  	// The get_name() method is a simple one, you just need to return a widget name that will be used in the code.
 	public function get_name() {
@@ -14,7 +14,7 @@ class Restobar_Image_Carousel extends Widget_Base{
 
 	// The get_title() method, which again, is a very simple one, you need to return the widget title that will be displayed as the widget label.
 	public function get_title() {
-		return __( 'XP Client Logos', 'restobar' );
+		return __( 'XP Client Logos', 'xhub' );
 	}
 
 	// The get_icon() method, is an optional but recommended method, it lets you set the widget icon. you can use any of the eicon or font-awesome icons, simply return the class name as a string.
@@ -24,7 +24,7 @@ class Restobar_Image_Carousel extends Widget_Base{
 
 	// The get_categories method, lets you set the category of the widget, return the category name as a string.
 	public function get_categories() {
-		return [ 'category_restobar' ];
+		return [ 'category_xhub' ];
 	}
 
 	protected function register_controls() {
@@ -32,7 +32,7 @@ class Restobar_Image_Carousel extends Widget_Base{
 		$this->start_controls_section(
 			'content_section',
 			[
-				'label' => __( 'Logos', 'restobar' ),
+				'label' => __( 'Logos', 'xhub' ),
 			]
 		);
 
@@ -40,15 +40,15 @@ class Restobar_Image_Carousel extends Widget_Base{
 		$repeater->add_control(
 			'title',
 			[
-				'label' => __( 'Name', 'restobar' ),
+				'label' => __( 'Name', 'xhub' ),
 				'type' => Controls_Manager::TEXT,
-				'default' => __( '', 'restobar' ),
+				'default' => __( '', 'xhub' ),
 			]
 		);
 		$repeater->add_control(
 			'image_partner',
 			[
-				'label' => __( 'Image', 'restobar' ),
+				'label' => __( 'Image', 'xhub' ),
 				'type' => Controls_Manager::MEDIA,
 				'default' => [
 					'url' => Utils::get_placeholder_image_src(),
@@ -58,7 +58,7 @@ class Restobar_Image_Carousel extends Widget_Base{
 		$repeater->add_control(
 			'image_link',
 			[
-				'label' => __( 'Link', 'restobar' ),
+				'label' => __( 'Link', 'xhub' ),
 				'type' => Controls_Manager::URL,
 				'default' => [],
 			]
@@ -90,10 +90,10 @@ class Restobar_Image_Carousel extends Widget_Base{
 		$this->add_responsive_control(
 			'tshow',
 			[
-				'label' => __( 'Slides To Show', 'restobar' ),
+				'label' => __( 'Slides To Show', 'xhub' ),
 				'type' => Controls_Manager::SELECT,
 				'options' => [
-					'' => __( 'Default', 'restobar' ),
+					'' => __( 'Default', 'xhub' ),
 				] + $slides_show,
 				'default' => ''
 			]
@@ -102,31 +102,31 @@ class Restobar_Image_Carousel extends Widget_Base{
 		$this->add_control(
 			'loop',
 			[
-				'label' => __( 'Loop', 'restobar' ),
+				'label' => __( 'Loop', 'xhub' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'true',
 				'options' => [
-					'true' => __( 'Yes', 'restobar' ),
-					'false' => __( 'No', 'restobar' ),
+					'true' => __( 'Yes', 'xhub' ),
+					'false' => __( 'No', 'xhub' ),
 				]
 			]
 		);
 		$this->add_control(
 			'autoplay',
 			[
-				'label' => __( 'Autoplay', 'restobar' ),
+				'label' => __( 'Autoplay', 'xhub' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'true',
 				'options' => [
-					'true' => __( 'Yes', 'restobar' ),
-					'false' => __( 'No', 'restobar' ),
+					'true' => __( 'Yes', 'xhub' ),
+					'false' => __( 'No', 'xhub' ),
 				]
 			]
 		);
 		$this->add_control(
 			'timeout',
 			[
-				'label' => __( 'Autoplay Timeout', 'restobar' ),
+				'label' => __( 'Autoplay Timeout', 'xhub' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -146,24 +146,24 @@ class Restobar_Image_Carousel extends Widget_Base{
 		$this->add_control(
 			'arrows',
 			[
-				'label' => __( 'Arrows', 'restobar' ),
+				'label' => __( 'Arrows', 'xhub' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'false',
 				'options' => [
-					'true'   => __( 'Yes', 'restobar' ),
-					'false'  => __( 'No', 'restobar' ),
+					'true'   => __( 'Yes', 'xhub' ),
+					'false'  => __( 'No', 'xhub' ),
 				],
 			]
 		);
 		$this->add_control(
 			'dots',
 			[
-				'label' => __( 'Dots', 'restobar' ),
+				'label' => __( 'Dots', 'xhub' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'true',
 				'options' => [
-					'true'   => __( 'Yes', 'restobar' ),
-					'false'  => __( 'No', 'restobar' ),
+					'true'   => __( 'Yes', 'xhub' ),
+					'false'  => __( 'No', 'xhub' ),
 				],
 			]
 		);
@@ -175,26 +175,26 @@ class Restobar_Image_Carousel extends Widget_Base{
 		$this->start_controls_section(
 			'image_style_section',
 			[
-				'label' => __( 'Style Logos', 'restobar' ),
+				'label' => __( 'Style Logos', 'xhub' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 			]
 		);
 		$this->add_responsive_control(
 			'align',
 			[
-				'label' => __( 'Vertical Align', 'restobar' ),
+				'label' => __( 'Vertical Align', 'xhub' ),
 				'type' => Controls_Manager::CHOOSE,
 				'options' => [
 					'flex-start'    => [
-						'title' => __( 'Top', 'restobar' ),
+						'title' => __( 'Top', 'xhub' ),
 						'icon' => 'eicon-v-align-top',
 					],
 					'center' => [
-						'title' => __( 'Center', 'restobar' ),
+						'title' => __( 'Center', 'xhub' ),
 						'icon' => 'eicon-v-align-middle',
 					],
 					'flex-end' => [
-						'title' => __( 'Bottom', 'restobar' ),
+						'title' => __( 'Bottom', 'xhub' ),
 						'icon' => 'eicon-v-align-bottom',
 					],
 				],
@@ -207,7 +207,7 @@ class Restobar_Image_Carousel extends Widget_Base{
 		$this->add_responsive_control(
 			'img_height',
 			[
-				'label' => __( 'Height', 'restobar' ),
+				'label' => __( 'Height', 'xhub' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -228,7 +228,7 @@ class Restobar_Image_Carousel extends Widget_Base{
 		$this->add_responsive_control(
 			'img_spacing',
 			[
-				'label' => __( 'Spacing', 'restobar' ),
+				'label' => __( 'Spacing', 'xhub' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -247,14 +247,14 @@ class Restobar_Image_Carousel extends Widget_Base{
 
 		$this->start_controls_tab( 'normal',
 			[
-				'label' => __( 'Normal', 'restobar' ),
+				'label' => __( 'Normal', 'xhub' ),
 			]
 		);
 
 		$this->add_control(
 			'opacity',
 			[
-				'label' => __( 'Opacity', 'restobar' ),
+				'label' => __( 'Opacity', 'xhub' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -281,14 +281,14 @@ class Restobar_Image_Carousel extends Widget_Base{
 
 		$this->start_controls_tab( 'img_hover_effects',
 			[
-				'label' => __( 'Hover', 'restobar' ),
+				'label' => __( 'Hover', 'xhub' ),
 			]
 		);
 
 		$this->add_control(
 			'opacity_hover',
 			[
-				'label' => __( 'Opacity', 'restobar' ),
+				'label' => __( 'Opacity', 'xhub' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -321,7 +321,7 @@ class Restobar_Image_Carousel extends Widget_Base{
 		$this->start_controls_section(
 			'navigation_section',
 			[
-				'label' => __( 'Dots', 'restobar' ),
+				'label' => __( 'Dots', 'xhub' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 				'condition' => [
 					'dots' => 'true',
@@ -332,7 +332,7 @@ class Restobar_Image_Carousel extends Widget_Base{
 		$this->add_responsive_control(
 			'dots_spacing',
 			[
-				'label' => __( 'Spacing', 'restobar' ),
+				'label' => __( 'Spacing', 'xhub' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -349,7 +349,7 @@ class Restobar_Image_Carousel extends Widget_Base{
 		$this->add_control(
             'dots_bgcolor',
             [
-                'label' => __( 'Color', 'restobar' ),
+                'label' => __( 'Color', 'xhub' ),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
 					'{{WRAPPER}} .owl-dots button.owl-dot span' => 'background: {{VALUE}};',
@@ -360,7 +360,7 @@ class Restobar_Image_Carousel extends Widget_Base{
         $this->add_control(
             'dots_active_bgcolor',
             [
-                'label' => __( 'Color Active', 'restobar' ),
+                'label' => __( 'Color Active', 'xhub' ),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
 					'{{WRAPPER}} .owl-dots button.owl-dot.active span' => 'background: {{VALUE}};',
@@ -374,7 +374,7 @@ class Restobar_Image_Carousel extends Widget_Base{
 		$this->start_controls_section(
 			'style_nav',
 			[
-				'label' => __( 'Arrows', 'restobar' ),
+				'label' => __( 'Arrows', 'xhub' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 				'condition' => [
 					'arrows' => 'true',
@@ -384,7 +384,7 @@ class Restobar_Image_Carousel extends Widget_Base{
 		$this->add_control(
 			'arrow_color',
 			[
-				'label' => __( 'Color', 'restobar' ),
+				'label' => __( 'Color', 'xhub' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -395,7 +395,7 @@ class Restobar_Image_Carousel extends Widget_Base{
 		$this->add_control(
 			'arrow_hcolor',
 			[
-				'label' => __( 'Color Hover', 'restobar' ),
+				'label' => __( 'Color Hover', 'xhub' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -406,7 +406,7 @@ class Restobar_Image_Carousel extends Widget_Base{
 		$this->add_control(
 			'arrow_bg_color',
 			[
-				'label' => __( 'Background', 'restobar' ),
+				'label' => __( 'Background', 'xhub' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -417,7 +417,7 @@ class Restobar_Image_Carousel extends Widget_Base{
 		$this->add_control(
 			'arrow_bg_hcolor',
 			[
-				'label' => __( 'Background Hover', 'restobar' ),
+				'label' => __( 'Background Hover', 'xhub' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -428,7 +428,7 @@ class Restobar_Image_Carousel extends Widget_Base{
 		$this->add_control(
 			'radius_arrow',
 			[
-				'label' => __( 'Border Radius', 'restobar' ),
+				'label' => __( 'Border Radius', 'xhub' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -519,5 +519,5 @@ class Restobar_Image_Carousel extends Widget_Base{
 	}
 
 }
-// After the Restobar_Image_Carousel class is defined, I must register the new widget class with Elementor:
-Plugin::instance()->widgets_manager->register( new Restobar_Image_Carousel() );
+// After the Xhub_Image_Carousel class is defined, I must register the new widget class with Elementor:
+Plugin::instance()->widgets_manager->register( new Xhub_Image_Carousel() );

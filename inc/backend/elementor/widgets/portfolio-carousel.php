@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly (security measu
 /**
  * Widget Name: Projects Carousel
  */
-class Restobar_Portfolio_Slider extends Widget_Base{
+class Xhub_Portfolio_Slider extends Widget_Base{
 
  	// The get_name() method is a simple one, you just need to return a widget name that will be used in the code.
 	public function get_name() {
@@ -14,7 +14,7 @@ class Restobar_Portfolio_Slider extends Widget_Base{
 
 	// The get_title() method, which again, is a very simple one, you need to return the widget title that will be displayed as the widget label.
 	public function get_title() {
-		return __( 'XP Portfolio Carousel', 'restobar' );
+		return __( 'XP Portfolio Carousel', 'xhub' );
 	}
 
 	// The get_icon() method, is an optional but recommended method, it lets you set the widget icon. you can use any of the eicon or font-awesome icons, simply return the class name as a string.
@@ -24,7 +24,7 @@ class Restobar_Portfolio_Slider extends Widget_Base{
 
 	// The get_categories method, lets you set the category of the widget, return the category name as a string.
 	public function get_categories() {
-		return [ 'category_restobar' ];
+		return [ 'category_xhub' ];
 	}
 
 	protected function register_controls() {
@@ -33,24 +33,24 @@ class Restobar_Portfolio_Slider extends Widget_Base{
 		$this->start_controls_section(
 			'content_section',
 			[
-				'label' => __( 'Projects', 'restobar' ),
+				'label' => __( 'Projects', 'xhub' ),
 			]
 		);
 		$this->add_control(
 			'project_cat',
 			[
-				'label' => __( 'Select Categories', 'restobar' ),
+				'label' => __( 'Select Categories', 'xhub' ),
 				'type' => Controls_Manager::SELECT2,
 				'options' => $this->select_param_cate_project(),
 				'multiple' => true,
 				'label_block' => true,
-				'placeholder' => __( 'All Categories', 'restobar' ),
+				'placeholder' => __( 'All Categories', 'xhub' ),
 			]
 		);
 		$this->add_control(
 			'project_num',
 			[
-				'label' => __( 'Show Number Projects', 'restobar' ),
+				'label' => __( 'Show Number Projects', 'xhub' ),
 				'type' => Controls_Manager::NUMBER,
 				'default' => '5',
 			]
@@ -58,7 +58,7 @@ class Restobar_Portfolio_Slider extends Widget_Base{
 		$this->add_control(
 			'heading_slider',
 			[
-				'label' => __( 'Slider', 'restobar' ),
+				'label' => __( 'Slider', 'xhub' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -70,10 +70,10 @@ class Restobar_Portfolio_Slider extends Widget_Base{
 		$this->add_responsive_control(
 			'tshow',
 			[
-				'label' => __( 'Slides to Show', 'restobar' ),
+				'label' => __( 'Slides to Show', 'xhub' ),
 				'type' => Controls_Manager::SELECT,
 				'options' => [
-					'' => __( 'Default', 'restobar' ),
+					'' => __( 'Default', 'xhub' ),
 				] + $slides_show,
 				'default' => ''
 			]
@@ -81,43 +81,43 @@ class Restobar_Portfolio_Slider extends Widget_Base{
 		$this->add_control(
 			'center_mode',
 			[
-				'label' => __( 'Center Mode', 'restobar' ),
+				'label' => __( 'Center Mode', 'xhub' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'true',
 				'options' => [
-					'true' => __( 'Yes', 'restobar' ),
-					'false' => __( 'No', 'restobar' ),
+					'true' => __( 'Yes', 'xhub' ),
+					'false' => __( 'No', 'xhub' ),
 				]
 			]
 		);
 		$this->add_control(
 			'loop',
 			[
-				'label' => __( 'Loop', 'restobar' ),
+				'label' => __( 'Loop', 'xhub' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'true',
 				'options' => [
-					'true' => __( 'Yes', 'restobar' ),
-					'false' => __( 'No', 'restobar' ),
+					'true' => __( 'Yes', 'xhub' ),
+					'false' => __( 'No', 'xhub' ),
 				]
 			]
 		);
 		$this->add_control(
 			'autoplay',
 			[
-				'label' => __( 'Autoplay', 'restobar' ),
+				'label' => __( 'Autoplay', 'xhub' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'true',
 				'options' => [
-					'true' => __( 'Yes', 'restobar' ),
-					'false' => __( 'No', 'restobar' ),
+					'true' => __( 'Yes', 'xhub' ),
+					'false' => __( 'No', 'xhub' ),
 				]
 			]
 		);
 		$this->add_control(
 			'timeout',
 			[
-				'label' => __( 'Autoplay Timeout', 'restobar' ),
+				'label' => __( 'Autoplay Timeout', 'xhub' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -137,31 +137,31 @@ class Restobar_Portfolio_Slider extends Widget_Base{
 		$this->add_control(
 			'arrows',
 			[
-				'label' => __( 'Arrows', 'restobar' ),
+				'label' => __( 'Arrows', 'xhub' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'false',
 				'options' => [
-					'true'   => __( 'Yes', 'restobar' ),
-					'false'  => __( 'No', 'restobar' ),
+					'true'   => __( 'Yes', 'xhub' ),
+					'false'  => __( 'No', 'xhub' ),
 				],
 			]
 		);
 		$this->add_control(
 			'dots',
 			[
-				'label' => __( 'Dots', 'restobar' ),
+				'label' => __( 'Dots', 'xhub' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'true',
 				'options' => [
-					'true'   => __( 'Yes', 'restobar' ),
-					'false'  => __( 'No', 'restobar' ),
+					'true'   => __( 'Yes', 'xhub' ),
+					'false'  => __( 'No', 'xhub' ),
 				],
 			]
 		);
 		$this->add_responsive_control(
 			'w_gaps',
 			[
-				'label' => __( 'Gap Width', 'restobar' ),
+				'label' => __( 'Gap Width', 'xhub' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -176,14 +176,14 @@ class Restobar_Portfolio_Slider extends Widget_Base{
 		$this->start_controls_section(
 			'overlay_style_section',
 			[
-				'label' => __( 'Project Items', 'restobar' ),
+				'label' => __( 'Project Items', 'xhub' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
 		$this->add_control(
 			'heading_general',
 			[
-				'label' => __( 'General', 'restobar' ),
+				'label' => __( 'General', 'xhub' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -191,19 +191,19 @@ class Restobar_Portfolio_Slider extends Widget_Base{
 		$this->add_responsive_control(
 			'overlay_align',
 			[
-				'label' => __( 'Alignment Info', 'restobar' ),
+				'label' => __( 'Alignment Info', 'xhub' ),
 				'type' => Controls_Manager::CHOOSE,
 				'options' => [
 					'left'    => [
-						'title' => __( 'Left', 'restobar' ),
+						'title' => __( 'Left', 'xhub' ),
 						'icon' => 'eicon-text-align-left',
 					],
 					'center' => [
-						'title' => __( 'Center', 'restobar' ),
+						'title' => __( 'Center', 'xhub' ),
 						'icon' => 'eicon-text-align-center',
 					],
 					'right' => [
-						'title' => __( 'Right', 'restobar' ),
+						'title' => __( 'Right', 'xhub' ),
 						'icon' => 'eicon-text-align-right',
 					],
 				],				
@@ -226,7 +226,7 @@ class Restobar_Portfolio_Slider extends Widget_Base{
 		$this->add_control(
 			'radius_thumb',
 			[
-				'label' => __( 'Border Radius Image', 'restobar' ),
+				'label' => __( 'Border Radius Image', 'xhub' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
 				'selectors' => [
@@ -237,10 +237,10 @@ class Restobar_Portfolio_Slider extends Widget_Base{
 		$this->add_control(
 			'scale_thumb',
 			[
-				'label' => __( 'Animation Image Hover', 'restobar' ),
+				'label' => __( 'Animation Image Hover', 'xhub' ),
 				'type' => Controls_Manager::SWITCHER,
-				'label_on' => __( 'Yes', 'restobar' ),
-				'label_off' => __( 'No', 'restobar' ),
+				'label_on' => __( 'Yes', 'xhub' ),
+				'label_off' => __( 'No', 'xhub' ),
 				'return_value' => 'yes',
 				'default' => 'yes',
 			]
@@ -250,7 +250,7 @@ class Restobar_Portfolio_Slider extends Widget_Base{
 		$this->add_control(
 			'heading_title',
 			[
-				'label' => __( 'Title', 'restobar' ),
+				'label' => __( 'Title', 'xhub' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -258,7 +258,7 @@ class Restobar_Portfolio_Slider extends Widget_Base{
 		$this->add_responsive_control(
 			'title_spacing',
 			[
-				'label' => __( 'Spacing', 'restobar' ),
+				'label' => __( 'Spacing', 'xhub' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -274,7 +274,7 @@ class Restobar_Portfolio_Slider extends Widget_Base{
 		$this->add_control(
 			'title_color',
 			[
-				'label' => __( 'Color', 'restobar' ),
+				'label' => __( 'Color', 'xhub' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -285,7 +285,7 @@ class Restobar_Portfolio_Slider extends Widget_Base{
 		$this->add_control(
 			'title_hcolor',
 			[
-				'label' => __( 'Hover Color', 'restobar' ),
+				'label' => __( 'Hover Color', 'xhub' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -305,7 +305,7 @@ class Restobar_Portfolio_Slider extends Widget_Base{
 		$this->add_control(
 			'heading_overlay',
 			[
-				'label' => __( 'Category', 'restobar' ),
+				'label' => __( 'Category', 'xhub' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -313,10 +313,10 @@ class Restobar_Portfolio_Slider extends Widget_Base{
 		$this->add_control(
 			'show_cat',
 			[
-				'label' => __( 'Show Category', 'restobar' ),
+				'label' => __( 'Show Category', 'xhub' ),
 				'type' => Controls_Manager::SWITCHER,
-				'label_on' => __( 'Show', 'restobar' ),
-				'label_off' => __( 'Hide', 'restobar' ),
+				'label_on' => __( 'Show', 'xhub' ),
+				'label_off' => __( 'Hide', 'xhub' ),
 				'return_value' => 'yes',
 				'default' => 'yes',
 			]
@@ -324,7 +324,7 @@ class Restobar_Portfolio_Slider extends Widget_Base{
 		$this->add_control(
 			'cat_color',
 			[
-				'label' => __( 'Color', 'restobar' ),
+				'label' => __( 'Color', 'xhub' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -352,7 +352,7 @@ class Restobar_Portfolio_Slider extends Widget_Base{
 		$this->start_controls_section(
 			'navigation_section',
 			[
-				'label' => __( 'Dots', 'restobar' ),
+				'label' => __( 'Dots', 'xhub' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 				'condition' => [
 					'dots' => 'true',
@@ -363,7 +363,7 @@ class Restobar_Portfolio_Slider extends Widget_Base{
 		$this->add_responsive_control(
 			'dots_spacing',
 			[
-				'label' => __( 'Spacing', 'restobar' ),
+				'label' => __( 'Spacing', 'xhub' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -380,7 +380,7 @@ class Restobar_Portfolio_Slider extends Widget_Base{
 		$this->add_control(
             'dots_bgcolor',
             [
-                'label' => __( 'Color', 'restobar' ),
+                'label' => __( 'Color', 'xhub' ),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
 					'{{WRAPPER}} .owl-dots button.owl-dot span' => 'background: {{VALUE}};',
@@ -391,7 +391,7 @@ class Restobar_Portfolio_Slider extends Widget_Base{
         $this->add_control(
             'dots_active_bgcolor',
             [
-                'label' => __( 'Color Active', 'restobar' ),
+                'label' => __( 'Color Active', 'xhub' ),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
 					'{{WRAPPER}} .owl-dots button.owl-dot.active span' => 'background: {{VALUE}};',
@@ -405,7 +405,7 @@ class Restobar_Portfolio_Slider extends Widget_Base{
 		$this->start_controls_section(
 			'style_nav',
 			[
-				'label' => __( 'Arrows', 'restobar' ),
+				'label' => __( 'Arrows', 'xhub' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 				'condition' => [
 					'arrows' => 'true',
@@ -415,7 +415,7 @@ class Restobar_Portfolio_Slider extends Widget_Base{
 		$this->add_control(
 			'arrow_color',
 			[
-				'label' => __( 'Color', 'restobar' ),
+				'label' => __( 'Color', 'xhub' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -426,7 +426,7 @@ class Restobar_Portfolio_Slider extends Widget_Base{
 		$this->add_control(
 			'arrow_hcolor',
 			[
-				'label' => __( 'Color Hover', 'restobar' ),
+				'label' => __( 'Color Hover', 'xhub' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -437,7 +437,7 @@ class Restobar_Portfolio_Slider extends Widget_Base{
 		$this->add_control(
 			'arrow_bg_color',
 			[
-				'label' => __( 'Background', 'restobar' ),
+				'label' => __( 'Background', 'xhub' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -448,7 +448,7 @@ class Restobar_Portfolio_Slider extends Widget_Base{
 		$this->add_control(
 			'arrow_bg_hcolor',
 			[
-				'label' => __( 'Background Hover', 'restobar' ),
+				'label' => __( 'Background Hover', 'xhub' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -459,7 +459,7 @@ class Restobar_Portfolio_Slider extends Widget_Base{
 		$this->add_control(
 			'radius_arrow',
 			[
-				'label' => __( 'Border Radius', 'restobar' ),
+				'label' => __( 'Border Radius', 'xhub' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -549,5 +549,5 @@ data-mgaps="<?php echo esc_attr( $mgaps ); ?>">
 	  	return $cat;
 	}
 }
-// After the Restobar_Portfolio_Slider class is defined, I must register the new widget class with Elementor:
-Plugin::instance()->widgets_manager->register( new Restobar_Portfolio_Slider() );
+// After the Xhub_Portfolio_Slider class is defined, I must register the new widget class with Elementor:
+Plugin::instance()->widgets_manager->register( new Xhub_Portfolio_Slider() );

@@ -10,19 +10,19 @@
  *
  * @return array All registered meta boxes
  */
-function restobar_register_meta_boxes( $meta_boxes ) {
+function xhub_register_meta_boxes( $meta_boxes ) {
 	
 	// Post format's meta box
 	$meta_boxes[] = array(
 		'id'       => 'format_detail',
-		'title'    => esc_html__( 'Format Details', 'restobar' ),
+		'title'    => esc_html__( 'Format Details', 'xhub' ),
 		'pages'    => array( 'post' ),
 		'context'  => 'normal',
 		'priority' => 'high',
 		'autosave' => true,
 		'fields'   => array(
 			array(
-				'name'             => esc_html__( 'Image', 'restobar' ),
+				'name'             => esc_html__( 'Image', 'xhub' ),
 				'id'               => 'post_image',
 				'type'             => 'image_advanced',
 				'class'            => 'image',
@@ -31,7 +31,7 @@ function restobar_register_meta_boxes( $meta_boxes ) {
     			'image_size'       => 'thumbnail',
 			),
 			array(
-				'name'  => esc_html__( 'Gallery', 'restobar' ),
+				'name'  => esc_html__( 'Gallery', 'xhub' ),
 				'id'    => 'post_gallery',
 				'type'  => 'image_advanced',
 				'class' => 'gallery',
@@ -39,7 +39,7 @@ function restobar_register_meta_boxes( $meta_boxes ) {
     			'image_size'       => 'thumbnail',
 			),			
 			array(
-				'name'  => esc_html__( 'Audio', 'restobar' ),
+				'name'  => esc_html__( 'Audio', 'xhub' ),
 				'id'    => 'post_audio',
 				'type'  => 'textarea',
 				'cols'  => 20,
@@ -48,7 +48,7 @@ function restobar_register_meta_boxes( $meta_boxes ) {
 				'desc'  => 'Example: https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/139083759',
 			),
 			array(
-				'name'  => esc_html__( 'Video', 'restobar' ),
+				'name'  => esc_html__( 'Video', 'xhub' ),
 				'id'    => 'post_video',
 				'type'  => 'textarea',
 				'cols'  => 20,
@@ -57,14 +57,14 @@ function restobar_register_meta_boxes( $meta_boxes ) {
 				'desc'  => 'Example: https://vimeo.com/87959439',
 			),
 			array(
-				'name'  => esc_html__( 'Background Video', 'restobar' ),
+				'name'  => esc_html__( 'Background Video', 'xhub' ),
 				'id'    => 'bg_video',
 				'type'  => 'image_advanced',
 				'class' => 'video',
 				'max_file_uploads' => 1,
 			),
 			array(
-				'name'  => esc_html__( 'Link', 'restobar' ),
+				'name'  => esc_html__( 'Link', 'xhub' ),
 				'id'    => 'post_link',
 				'type'  => 'textarea',
 				'cols'  => 20,
@@ -72,7 +72,7 @@ function restobar_register_meta_boxes( $meta_boxes ) {
 				'class' => 'link',
 			),
 			array(
-				'name'  => esc_html__( 'Text Link', 'restobar' ),
+				'name'  => esc_html__( 'Text Link', 'xhub' ),
 				'id'    => 'text_link',
 				'type'  => 'textarea',
 				'cols'  => 20,
@@ -80,13 +80,13 @@ function restobar_register_meta_boxes( $meta_boxes ) {
 				'class' => 'link',
 			),
 			array(
-				'name'  => esc_html__( 'Quote', 'restobar' ),
+				'name'  => esc_html__( 'Quote', 'xhub' ),
 				'id'    => 'post_quote',
 				'type'  => 'textarea',
 				'class' => 'quote',
 			),
 			array(
-				'name'  => esc_html__( 'Quote Name', 'restobar' ),
+				'name'  => esc_html__( 'Quote Name', 'xhub' ),
 				'id'    => 'quote_name',
 				'type'  => 'text',
 				'class' => 'quote',
@@ -97,7 +97,7 @@ function restobar_register_meta_boxes( $meta_boxes ) {
 	// Page Settings
 	$meta_boxes[] = array(
 		'id'       => 'page-settings',
-		'title'    => esc_html__( 'Page Header Settings', 'restobar' ),
+		'title'    => esc_html__( 'Page Header Settings', 'xhub' ),
 		'pages'    => array( 'page' ),
 		'context'  => 'normal',
 		'priority' => 'high',
@@ -105,7 +105,7 @@ function restobar_register_meta_boxes( $meta_boxes ) {
 		'fields'   => array(
             array(
                 'id'        => 'page_layout',
-                'name'      => esc_html__( 'Page Layout', 'restobar' ),
+                'name'      => esc_html__( 'Page Layout', 'xhub' ),
                 'type'      => 'image_select',
                 'options'   => array(
                     'full-content'    => get_template_directory_uri() . '/inc/backend/images/full.png',
@@ -115,7 +115,7 @@ function restobar_register_meta_boxes( $meta_boxes ) {
                 'std'       => 'full-content'
             ),
             array(
-                'name'             => esc_html__( 'Page Header On/Off', 'restobar' ),
+                'name'             => esc_html__( 'Page Header On/Off', 'xhub' ),
                 'id'               => 'pheader_switch',
                 'type'             => 'switch',
                 'style'            => 'rounded',
@@ -124,7 +124,7 @@ function restobar_register_meta_boxes( $meta_boxes ) {
                 'std'              => 'on'
             ),
             array(
-                'name'             => esc_html__( 'Background Page Header', 'restobar' ),
+                'name'             => esc_html__( 'Background Page Header', 'xhub' ),
                 'id'               => 'pheader_bg_image',
                 'type'             => 'image_advanced',
                 'max_file_uploads' => 1,
@@ -155,7 +155,7 @@ function restobar_register_meta_boxes( $meta_boxes ) {
 		    	),
 			),
 			array(
-                'name'             => esc_html__( 'Header Transparent?', 'restobar' ),
+                'name'             => esc_html__( 'Header Transparent?', 'xhub' ),
                 'id'               => 'is_trans',
 				'type'             => 'select',
 				'options'   => array(
@@ -198,14 +198,14 @@ function restobar_register_meta_boxes( $meta_boxes ) {
 
 	$meta_boxes[] = array(
         'id'       => 'ppheader-settings',
-        'title'    => esc_html__( 'Page Header Settings', 'restobar' ),
+        'title'    => esc_html__( 'Page Header Settings', 'xhub' ),
         'pages'    => array( 'xp_portfolio' ),
         'context'  => 'normal',
         'priority' => 'high',
         'autosave' => true,
         'fields'   => array(
             array(
-                'name'             => esc_html__( 'Page Header On/Off', 'restobar' ),
+                'name'             => esc_html__( 'Page Header On/Off', 'xhub' ),
                 'id'               => 'pheader_switch',
                 'type'             => 'switch',
                 'style'            => 'rounded',
@@ -214,7 +214,7 @@ function restobar_register_meta_boxes( $meta_boxes ) {
                 'std'              => 'on'
             ),
             array(
-                'name'             => esc_html__( 'Background Page Header', 'restobar' ),
+                'name'             => esc_html__( 'Background Page Header', 'xhub' ),
                 'id'               => 'pheader_bg_image',
                 'type'             => 'image_advanced',
                 'max_file_uploads' => 1,
@@ -223,14 +223,14 @@ function restobar_register_meta_boxes( $meta_boxes ) {
 	);
 	$meta_boxes[] = array(
         'id'       => 'case-settings',
-        'title'    => esc_html__( 'Project Settings', 'restobar' ),
+        'title'    => esc_html__( 'Project Settings', 'xhub' ),
         'pages'    => array( 'xp_portfolio' ),
         'context'  => 'normal',
         'priority' => 'high',
         'autosave' => true,
         'fields'   => array(
             array(
-                'name'             => esc_html__( 'Carousel Image', 'restobar' ),
+                'name'             => esc_html__( 'Carousel Image', 'xhub' ),
                 'id'               => 'slide_img',
                 'type'             => 'image_advanced',
                 'max_file_uploads' => 1,
@@ -240,7 +240,7 @@ function restobar_register_meta_boxes( $meta_boxes ) {
 
     $meta_boxes[] = array(
         'id'       => 'pthumb-settings',
-        'title'    => esc_html__( 'Thumbnail Image Settings', 'restobar' ),
+        'title'    => esc_html__( 'Thumbnail Image Settings', 'xhub' ),
         'pages'    => array( 'xp_portfolio' ),
         'context'  => 'normal',
         'priority' => 'high',
@@ -248,7 +248,7 @@ function restobar_register_meta_boxes( $meta_boxes ) {
         'fields'   => array(
             array(
                 'id'        => 'thumb_size',
-                'name'      => esc_html__( 'Select Size', 'restobar' ),
+                'name'      => esc_html__( 'Select Size', 'xhub' ),
                 'type'      => 'select',
                 'options'   => array(
                     'normal' 	=> 'Normal Width',
@@ -263,4 +263,4 @@ function restobar_register_meta_boxes( $meta_boxes ) {
 	return $meta_boxes;
 }
 
-add_filter( 'rwmb_meta_boxes', 'restobar_register_meta_boxes' );
+add_filter( 'rwmb_meta_boxes', 'xhub_register_meta_boxes' );

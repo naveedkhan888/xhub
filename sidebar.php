@@ -4,10 +4,10 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package Restobar
+ * @package Xhub
  */
 
-if ( restobar_get_layout() === 'full-content' ) {
+if ( xhub_get_layout() === 'full-content' ) {
 	return;
 }
 

@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly (security measu
 /**
  * Widget Name: Menu_Mobile
  */
-class Restobar_Menu_Mobile extends Widget_Base{
+class Xhub_Menu_Mobile extends Widget_Base{
 
  	// The get_name() method is a simple one, you just need to return a widget name that will be used in the code.
 	public function get_name() {
@@ -14,7 +14,7 @@ class Restobar_Menu_Mobile extends Widget_Base{
 
 	// The get_title() method, which again, is a very simple one, you need to return the widget title that will be displayed as the widget label.
 	public function get_title() {
-		return __( 'XP Menu Mobile', 'restobar' );
+		return __( 'XP Menu Mobile', 'xhub' );
 	}
 
 	// The get_icon() method, is an optional but recommended method, it lets you set the widget icon. you can use any of the eicon or font-awesome icons, simply return the class name as a string.
@@ -24,7 +24,7 @@ class Restobar_Menu_Mobile extends Widget_Base{
 
 	// The get_categories method, lets you set the category of the widget, return the category name as a string.
 	public function get_categories() {
-		return [ 'category_restobar_header' ];
+		return [ 'category_xhub_header' ];
 	}
 
 	protected function register_controls() {
@@ -32,7 +32,7 @@ class Restobar_Menu_Mobile extends Widget_Base{
 		$this->start_controls_section(
 			'content_section',
 			[
-				'label' => __( 'Menu', 'restobar' ),
+				'label' => __( 'Menu', 'xhub' ),
 			]
 		);
 
@@ -40,7 +40,7 @@ class Restobar_Menu_Mobile extends Widget_Base{
 		$this->add_control(
 			'nav_menu',
 			[
-				'label' => esc_html__( 'Select Menu', 'restobar' ),
+				'label' => esc_html__( 'Select Menu', 'xhub' ),
 				'type' => Controls_Manager::SELECT,
 				'multiple' => false,
 				'options' => $menus,
@@ -53,12 +53,12 @@ class Restobar_Menu_Mobile extends Widget_Base{
 		$this->add_control(
 			'pos_menu',
 			[
-				'label' => __( 'Position', 'restobar' ),
+				'label' => __( 'Position', 'xhub' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'on-right',
 				'options' => [
-					'on-left' 	=> __( 'On Left', 'restobar' ),
-					'on-right'  => __( 'On Right', 'restobar' ),
+					'on-left' 	=> __( 'On Left', 'xhub' ),
+					'on-right'  => __( 'On Right', 'xhub' ),
 				]
 			]
 		);
@@ -69,14 +69,14 @@ class Restobar_Menu_Mobile extends Widget_Base{
 		$this->start_controls_section(
 			'style_icon_section',
 			[
-				'label' => __( 'Icon', 'restobar' ),
+				'label' => __( 'Icon', 'xhub' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
 		$this->add_control(
 			'icon_color',
 			[
-				'label' => __( 'Icon Color', 'restobar' ),
+				'label' => __( 'Icon Color', 'xhub' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -87,7 +87,7 @@ class Restobar_Menu_Mobile extends Widget_Base{
 		$this->add_control(
 			'icon_size',
 			[
-				'label' => __( 'Icon Size', 'restobar' ),
+				'label' => __( 'Icon Size', 'xhub' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -106,14 +106,14 @@ class Restobar_Menu_Mobile extends Widget_Base{
 		$this->start_controls_section(
 			'style_mmenu_section',
 			[
-				'label' => __( 'Menu', 'restobar' ),
+				'label' => __( 'Menu', 'xhub' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
 		$this->add_control(
 			'bg_mmenu',
 			[
-				'label' => __( 'Background', 'restobar' ),
+				'label' => __( 'Background', 'xhub' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -124,7 +124,7 @@ class Restobar_Menu_Mobile extends Widget_Base{
 		$this->add_control(
 			'color_mmenu',
 			[
-				'label' => __( 'Text Color', 'restobar' ),
+				'label' => __( 'Text Color', 'xhub' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -135,7 +135,7 @@ class Restobar_Menu_Mobile extends Widget_Base{
 		$this->add_control(
 			'bcolor_mmenu',
 			[
-				'label' => __( 'Border Color', 'restobar' ),
+				'label' => __( 'Border Color', 'xhub' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -153,7 +153,7 @@ class Restobar_Menu_Mobile extends Widget_Base{
 		$this->add_control(
 			'color_back',
 			[
-				'label' => __( 'Back Button Color', 'restobar' ),
+				'label' => __( 'Back Button Color', 'xhub' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -206,5 +206,5 @@ class Restobar_Menu_Mobile extends Widget_Base{
 	}
 
 }
-// After the Restobar_Menu_Mobile class is defined, I must register the new widget class with Elementor:
-Plugin::instance()->widgets_manager->register( new Restobar_Menu_Mobile() );
+// After the Xhub_Menu_Mobile class is defined, I must register the new widget class with Elementor:
+Plugin::instance()->widgets_manager->register( new Xhub_Menu_Mobile() );

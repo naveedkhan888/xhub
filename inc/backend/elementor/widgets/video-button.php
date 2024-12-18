@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly (security measu
 /**
  * Widget Name: Video Button
  */
-class Restobar_VideoPopup extends Widget_Base{
+class Xhub_VideoPopup extends Widget_Base{
 
  	// The get_name() method is a simple one, you just need to return a widget name that will be used in the code.
 	public function get_name() {
@@ -14,7 +14,7 @@ class Restobar_VideoPopup extends Widget_Base{
 
 	// The get_title() method, which again, is a very simple one, you need to return the widget title that will be displayed as the widget label.
 	public function get_title() {
-		return __( 'XP Video Button', 'restobar' );
+		return __( 'XP Video Button', 'xhub' );
 	}
 
 	// The get_icon() method, is an optional but recommended method, it lets you set the widget icon. you can use any of the eicon or font-awesome icons, simply return the class name as a string.
@@ -24,7 +24,7 @@ class Restobar_VideoPopup extends Widget_Base{
 
 	// The get_categories method, lets you set the category of the widget, return the category name as a string.
 	public function get_categories() {
-		return [ 'category_restobar' ];
+		return [ 'category_xhub' ];
 	}
 
 	protected function register_controls() {
@@ -33,26 +33,26 @@ class Restobar_VideoPopup extends Widget_Base{
 		$this->start_controls_section(
 			'content_section',
 			[
-				'label' => __( 'Button', 'restobar' ),
+				'label' => __( 'Button', 'xhub' ),
 			]
 		);
 
 		$this->add_responsive_control(
 			'align',
 			[
-				'label' => __( 'Alignment', 'restobar' ),
+				'label' => __( 'Alignment', 'xhub' ),
 				'type' => Controls_Manager::CHOOSE,
 				'options' => [
 					'flex-start'    => [
-						'title' => __( 'Left', 'restobar' ),
+						'title' => __( 'Left', 'xhub' ),
 						'icon' => 'eicon-text-align-left',
 					],
 					'center' => [
-						'title' => __( 'Center', 'restobar' ),
+						'title' => __( 'Center', 'xhub' ),
 						'icon' => 'eicon-text-align-center',
 					],
 					'flex-end' => [
-						'title' => __( 'Right', 'restobar' ),
+						'title' => __( 'Right', 'xhub' ),
 						'icon' => 'eicon-text-align-right',
 					]
 				],
@@ -66,16 +66,16 @@ class Restobar_VideoPopup extends Widget_Base{
 		$this->add_control(
 			'vlink',
 			[
-				'label' => __( 'Video Link', 'restobar' ),
+				'label' => __( 'Video Link', 'xhub' ),
 				'type' => Controls_Manager::TEXT,
-				'placeholder' => __( 'https://your-link.com', 'restobar' ),
+				'placeholder' => __( 'https://your-link.com', 'xhub' ),
 			]
 		);
 
 		$this->add_control(
 			'caption',
 			[
-				'label' => __( 'Caption', 'restobar' ),
+				'label' => __( 'Caption', 'xhub' ),
 				'type' => Controls_Manager::TEXT,
 			]
 		);
@@ -83,10 +83,10 @@ class Restobar_VideoPopup extends Widget_Base{
 		$this->add_control(
 			'animate',
 			[
-				'label' => __( 'Animation', 'restobar' ),
+				'label' => __( 'Animation', 'xhub' ),
 				'type' => Controls_Manager::SWITCHER,
-				'label_on' => __( 'Yes', 'restobar' ),
-				'label_off' => __( 'No', 'restobar' ),
+				'label_on' => __( 'Yes', 'xhub' ),
+				'label_off' => __( 'No', 'xhub' ),
 				'return_value' => 'yes',
 				'default' => 'yes',
 			]
@@ -98,7 +98,7 @@ class Restobar_VideoPopup extends Widget_Base{
 		$this->start_controls_section(
 			'style_section',
 			[
-				'label' => __( 'Button', 'restobar' ),
+				'label' => __( 'Button', 'xhub' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -107,7 +107,7 @@ class Restobar_VideoPopup extends Widget_Base{
 		$this->add_responsive_control(
 			'btn_width',
 			[
-				'label' => __( 'Size', 'restobar' ),
+				'label' => __( 'Size', 'xhub' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -123,7 +123,7 @@ class Restobar_VideoPopup extends Widget_Base{
 		$this->add_responsive_control(
 			'btn_size',
 			[
-				'label' => __( 'Icon Size', 'restobar' ),
+				'label' => __( 'Icon Size', 'xhub' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -142,14 +142,14 @@ class Restobar_VideoPopup extends Widget_Base{
 		$this->start_controls_tab(
 			'tab_button_normal',
 			[
-				'label' => __( 'Normal', 'restobar' ),
+				'label' => __( 'Normal', 'xhub' ),
 			]
 		);
 
 		$this->add_control(
 			'btn_color',
 			[
-				'label' => __( 'Color', 'restobar' ),
+				'label' => __( 'Color', 'xhub' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -160,7 +160,7 @@ class Restobar_VideoPopup extends Widget_Base{
 		$this->add_control(
 			'btn_border_color',
 			[
-				'label' => __( 'Border Color', 'restobar' ),
+				'label' => __( 'Border Color', 'xhub' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -172,7 +172,7 @@ class Restobar_VideoPopup extends Widget_Base{
 		$this->add_control(
 			'btn_bg',
 			[
-				'label' => __( 'Background Color', 'restobar' ),
+				'label' => __( 'Background Color', 'xhub' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -183,7 +183,7 @@ class Restobar_VideoPopup extends Widget_Base{
 		$this->add_control(
 			'btn_circle',
 			[
-				'label' => __( 'Animation Color', 'restobar' ),
+				'label' => __( 'Animation Color', 'xhub' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -200,14 +200,14 @@ class Restobar_VideoPopup extends Widget_Base{
 		$this->start_controls_tab(
 			'tab_button_hover',
 			[
-				'label' => __( 'Hover', 'restobar' ),
+				'label' => __( 'Hover', 'xhub' ),
 			]
 		);
 
 		$this->add_control(
 			'btn_hover_color',
 			[
-				'label' => __( 'Color', 'restobar' ),
+				'label' => __( 'Color', 'xhub' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -219,7 +219,7 @@ class Restobar_VideoPopup extends Widget_Base{
 		$this->add_control(
 			'btn__hover_border_color',
 			[
-				'label' => __( 'Border Color', 'restobar' ),
+				'label' => __( 'Border Color', 'xhub' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -230,7 +230,7 @@ class Restobar_VideoPopup extends Widget_Base{
 		$this->add_control(
 			'btn_hover_bg',
 			[
-				'label' => __( 'Background Color', 'restobar' ),
+				'label' => __( 'Background Color', 'xhub' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -241,7 +241,7 @@ class Restobar_VideoPopup extends Widget_Base{
 		$this->add_control(
 			'btn_hover_circle',
 			[
-				'label' => __( 'Animation Color', 'restobar' ),
+				'label' => __( 'Animation Color', 'xhub' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -262,7 +262,7 @@ class Restobar_VideoPopup extends Widget_Base{
 		$this->start_controls_section(
 			'caption_section',
 			[
-				'label' => __( 'Caption', 'restobar' ),
+				'label' => __( 'Caption', 'xhub' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 				'condition' => [
 					'caption!'  => ''
@@ -273,7 +273,7 @@ class Restobar_VideoPopup extends Widget_Base{
 		$this->add_control(
 			'caption_color',
 			[
-				'label' => __( 'Color', 'restobar' ),
+				'label' => __( 'Color', 'xhub' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -291,7 +291,7 @@ class Restobar_VideoPopup extends Widget_Base{
 		$this->add_responsive_control(
 			'caption_space',
 			[
-				'label' => __( 'Spacing', 'restobar' ),
+				'label' => __( 'Spacing', 'xhub' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -329,5 +329,5 @@ class Restobar_VideoPopup extends Widget_Base{
 	}
 
 }
-// After the Restobar_VideoPopup class is defined, I must register the new widget class with Elementor:
-Plugin::instance()->widgets_manager->register( new Restobar_VideoPopup() );
+// After the Xhub_VideoPopup class is defined, I must register the new widget class with Elementor:
+Plugin::instance()->widgets_manager->register( new Xhub_VideoPopup() );

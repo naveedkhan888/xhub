@@ -2,14 +2,14 @@
 namespace Elementor;
 if ( ! defined( 'ABSPATH' ) ) exit;
 
-class Restobar_Membership_Options extends Widget_Base {
+class Xhub_Membership_Options extends Widget_Base {
 
     public function get_name() {
         return 'membership-options';
     }
 
     public function get_title() {
-        return __( 'Membership Options', 'restobar' );
+        return __( 'Membership Options', 'xhub' );
     }
 
     public function get_icon() {
@@ -17,57 +17,57 @@ class Restobar_Membership_Options extends Widget_Base {
     }
 
     public function get_categories() {
-        return [ 'category_restobar' ];
+        return [ 'category_xhub' ];
     }
 
     protected function register_controls() {
         $this->start_controls_section(
             'section_content',
             [
-                'label' => __( 'Membership Options', 'restobar' ),
+                'label' => __( 'Membership Options', 'xhub' ),
             ]
         );
 
         $this->add_control(
             'membership_options',
             [
-                'label' => __( 'Membership Options', 'restobar' ),
+                'label' => __( 'Membership Options', 'xhub' ),
                 'type' => Controls_Manager::REPEATER,
                 'fields' => [
                     [
                         'name' => 'title',
-                        'label' => __( 'Title', 'restobar' ),
+                        'label' => __( 'Title', 'xhub' ),
                         'type' => Controls_Manager::TEXT,
-                        'default' => __( 'Outlying Worker', 'restobar' ),
+                        'default' => __( 'Outlying Worker', 'xhub' ),
                     ],
                     [
                         'name' => 'description',
-                        'label' => __( 'Description', 'restobar' ),
+                        'label' => __( 'Description', 'xhub' ),
                         'type' => Controls_Manager::TEXTAREA,
                         'default' => '10 Days/Month Hot Desk Membership | Full access to our hot desking lounge | 10 access day passes per calendar month',
                     ],
                     [
                         'name' => 'price',
-                        'label' => __( 'Price', 'restobar' ),
+                        'label' => __( 'Price', 'xhub' ),
                         'type' => Controls_Manager::TEXT,
                         'default' => '$149.99',
                     ],
                     [
                         'name' => 'period',
-                        'label' => __( 'Billing Period', 'restobar' ),
+                        'label' => __( 'Billing Period', 'xhub' ),
                         'type' => Controls_Manager::TEXT,
                         'default' => 'Monthly',
                     ],
                 ],
                 'default' => [
                     [
-                        'title' => __( 'Outlying Worker', 'restobar' ),
+                        'title' => __( 'Outlying Worker', 'xhub' ),
                         'description' => '10 Days/Month Hot Desk Membership | Full access to our hot desking lounge | 10 access day passes per calendar month',
                         'price' => '$149.99',
                         'period' => 'Monthly',
                     ],
                     [
-                        'title' => __( 'Resident', 'restobar' ),
+                        'title' => __( 'Resident', 'xhub' ),
                         'description' => 'Unlimited Hot Desk Membership | Full access to our hot desking lounge | Unlimited uncapped access',
                         'price' => '$349.99',
                         'period' => 'Monthly',
@@ -81,7 +81,7 @@ class Restobar_Membership_Options extends Widget_Base {
         $this->start_controls_section(
             'section_style',
             [
-                'label' => __( 'Style', 'restobar' ),
+                'label' => __( 'Style', 'xhub' ),
                 'tab' => Controls_Manager::TAB_STYLE,
             ]
         );
@@ -89,24 +89,24 @@ class Restobar_Membership_Options extends Widget_Base {
         $this->add_responsive_control(
             'alignment',
             [
-                'label' => __( 'Alignment', 'restobar' ),
+                'label' => __( 'Alignment', 'xhub' ),
                 'type' => Controls_Manager::CHOOSE,
                 'options' => [
                     'left' => [
-                        'title' => __( 'Left', 'restobar' ),
+                        'title' => __( 'Left', 'xhub' ),
                         'icon' => 'eicon-text-align-left',
                     ],
                     'center' => [
-                        'title' => __( 'Center', 'restobar' ),
+                        'title' => __( 'Center', 'xhub' ),
                         'icon' => 'eicon-text-align-center',
                     ],
                     'right' => [
-                        'title' => __( 'Right', 'restobar' ),
+                        'title' => __( 'Right', 'xhub' ),
                         'icon' => 'eicon-text-align-right',
                     ],
                 ],
                 'selectors' => [
-                    '{{WRAPPER}} .restobar-membership' => 'text-align: {{VALUE}};',
+                    '{{WRAPPER}} .xhub-membership' => 'text-align: {{VALUE}};',
                 ],
             ]
         );
@@ -114,10 +114,10 @@ class Restobar_Membership_Options extends Widget_Base {
         $this->add_control(
             'box_bg_color',
             [
-                'label' => __( 'Box Background Color', 'restobar' ),
+                'label' => __( 'Box Background Color', 'xhub' ),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
-                    '{{WRAPPER}} .restobar-membership' => 'background-color: {{VALUE}};',
+                    '{{WRAPPER}} .xhub-membership' => 'background-color: {{VALUE}};',
                 ],
             ]
         );
@@ -125,10 +125,10 @@ class Restobar_Membership_Options extends Widget_Base {
         $this->add_control(
             'text_color',
             [
-                'label' => __( 'Text Color', 'restobar' ),
+                'label' => __( 'Text Color', 'xhub' ),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
-                    '{{WRAPPER}} .restobar-membership' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .xhub-membership' => 'color: {{VALUE}};',
                 ],
             ]
         );
@@ -137,18 +137,18 @@ class Restobar_Membership_Options extends Widget_Base {
             Group_Control_Typography::get_type(),
             [
                 'name' => 'typography',
-                'selector' => '{{WRAPPER}} .restobar-membership',
+                'selector' => '{{WRAPPER}} .xhub-membership',
             ]
         );
 
         $this->add_responsive_control(
             'padding',
             [
-                'label' => __( 'Padding', 'restobar' ),
+                'label' => __( 'Padding', 'xhub' ),
                 'type' => Controls_Manager::DIMENSIONS,
                 'size_units' => [ 'px', '%', 'em' ],
                 'selectors' => [
-                    '{{WRAPPER}} .restobar-membership' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .xhub-membership' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );
@@ -156,11 +156,11 @@ class Restobar_Membership_Options extends Widget_Base {
         $this->add_responsive_control(
             'margin',
             [
-                'label' => __( 'Margin', 'restobar' ),
+                'label' => __( 'Margin', 'xhub' ),
                 'type' => Controls_Manager::DIMENSIONS,
                 'size_units' => [ 'px', '%', 'em' ],
                 'selectors' => [
-                    '{{WRAPPER}} .restobar-membership' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .xhub-membership' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );
@@ -172,13 +172,13 @@ class Restobar_Membership_Options extends Widget_Base {
         $settings = $this->get_settings_for_display();
 
         ?>
-        <div class="restobar-membership">
+        <div class="xhub-membership">
             <ul>
                 <?php foreach ( $settings['membership_options'] as $option ) : ?>
                     <li>
                         <h3><?php echo esc_html( $option['title'] ); ?></h3>
                         <p><?php echo esc_html( $option['description'] ); ?></p>
-                        <p class="restobar-membership-price"><?php echo esc_html( $option['price'] ); ?> / <?php echo esc_html( $option['period'] ); ?></p>
+                        <p class="xhub-membership-price"><?php echo esc_html( $option['price'] ); ?> / <?php echo esc_html( $option['period'] ); ?></p>
                     </li>
                 <?php endforeach; ?>
             </ul>
@@ -187,4 +187,4 @@ class Restobar_Membership_Options extends Widget_Base {
     }
 }
 
-Plugin::instance()->widgets_manager->register( new Restobar_Membership_Options() );
+Plugin::instance()->widgets_manager->register( new Xhub_Membership_Options() );

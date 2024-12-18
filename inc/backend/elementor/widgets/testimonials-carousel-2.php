@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly (security measu
 /**
  * Widget Name: Testimonial Carousel 2
  */
-class Restobar_Testimonials2 extends Widget_Base{
+class Xhub_Testimonials2 extends Widget_Base{
 
  	// The get_name() method is a simple one, you just need to return a widget name that will be used in the code.
 	public function get_name() {
@@ -14,7 +14,7 @@ class Restobar_Testimonials2 extends Widget_Base{
 
 	// The get_title() method, which again, is a very simple one, you need to return the widget title that will be displayed as the widget label.
 	public function get_title() {
-		return __( 'XP Testimonial Carousel 2', 'restobar' );
+		return __( 'XP Testimonial Carousel 2', 'xhub' );
 	}
 
 	// The get_icon() method, is an optional but recommended method, it lets you set the widget icon. you can use any of the eicon or font-awesome icons, simply return the class name as a string.
@@ -24,7 +24,7 @@ class Restobar_Testimonials2 extends Widget_Base{
 
 	// The get_categories method, lets you set the category of the widget, return the category name as a string.
 	public function get_categories() {
-		return [ 'category_restobar' ];
+		return [ 'category_xhub' ];
 	}
 
 	protected function register_controls() {
@@ -32,25 +32,25 @@ class Restobar_Testimonials2 extends Widget_Base{
 		$this->start_controls_section(
 			'section_testimonials',
 			[
-				'label' => __( 'Testimonials', 'restobar' ),
+				'label' => __( 'Testimonials', 'xhub' ),
 			]
 		);
 		$this->add_responsive_control(
 			'align',
 			[
-				'label' => __( 'Alignment', 'restobar' ),
+				'label' => __( 'Alignment', 'xhub' ),
 				'type' => Controls_Manager::CHOOSE,
 				'options' => [
 					'left'    => [
-						'title' => __( 'Left', 'restobar' ),
+						'title' => __( 'Left', 'xhub' ),
 						'icon' => 'eicon-text-align-left',
 					],
 					'center' => [
-						'title' => __( 'Center', 'restobar' ),
+						'title' => __( 'Center', 'xhub' ),
 						'icon' => 'eicon-text-align-center',
 					],
 					'right' => [
-						'title' => __( 'Right', 'restobar' ),
+						'title' => __( 'Right', 'xhub' ),
 						'icon' => 'eicon-text-align-right',
 					]
 				],
@@ -63,7 +63,7 @@ class Restobar_Testimonials2 extends Widget_Base{
 		$repeater->add_control(
 			'timage',
 			[
-				'label' => __( 'Avatar:', 'restobar' ),
+				'label' => __( 'Avatar:', 'xhub' ),
 				'type' => Controls_Manager::MEDIA,
 				'default' => [
 					'url' => get_template_directory_uri().'/images/avatar-1.png',
@@ -74,7 +74,7 @@ class Restobar_Testimonials2 extends Widget_Base{
 		$repeater->add_control(
 			'tname',
 			[
-				'label' => __( 'Name:', 'restobar' ),
+				'label' => __( 'Name:', 'xhub' ),
 				'type' => Controls_Manager::TEXT,
 				'default' => 'Emilia Clarke',
 			]
@@ -83,7 +83,7 @@ class Restobar_Testimonials2 extends Widget_Base{
 		$repeater->add_control(
 			'tjob',
 			[
-				'label' => __( 'Job:', 'restobar' ),
+				'label' => __( 'Job:', 'xhub' ),
 				'type' => Controls_Manager::TEXT,
 				'default' => 'Developer',
 			]
@@ -91,7 +91,7 @@ class Restobar_Testimonials2 extends Widget_Base{
 		$repeater->add_control(
 			'tcontent',
 			[
-				'label' => __( 'Content:', 'restobar' ),
+				'label' => __( 'Content:', 'xhub' ),
 				'type' => Controls_Manager::TEXTAREA,
 				'rows' => '10',
 				'default' => '"I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents. I should be incapable of drawing a single stroke at the present moment."',
@@ -106,7 +106,7 @@ class Restobar_Testimonials2 extends Widget_Base{
 		        'show_label'  => false,
 		        'default'     => [
 		            [
-		             	'tcontent' => __( '"I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents. I should be incapable of drawing a single stroke at the present moment."', 'restobar' ),
+		             	'tcontent' => __( '"I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents. I should be incapable of drawing a single stroke at the present moment."', 'xhub' ),
 		                'timage'  => [
 							'url' => get_template_directory_uri().'/images/avatar-1.png',
 						],
@@ -115,7 +115,7 @@ class Restobar_Testimonials2 extends Widget_Base{
 		 
 		            ],
 		            [
-		             	'tcontent' => __( '"I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents. I should be incapable of drawing a single stroke at the present moment."', 'restobar' ),
+		             	'tcontent' => __( '"I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents. I should be incapable of drawing a single stroke at the present moment."', 'xhub' ),
 		                'timage'  => [
 							'url' => get_template_directory_uri().'/images/avatar-1.png',
 						],
@@ -124,7 +124,7 @@ class Restobar_Testimonials2 extends Widget_Base{
 		 
 		            ],
 		            [
-		             	'tcontent' => __( '"I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents. I should be incapable of drawing a single stroke at the present moment."', 'restobar' ),
+		             	'tcontent' => __( '"I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents. I should be incapable of drawing a single stroke at the present moment."', 'xhub' ),
 		                'timage'  => [
 							'url' => get_template_directory_uri().'/images/avatar-1.png',
 						],
@@ -141,31 +141,31 @@ class Restobar_Testimonials2 extends Widget_Base{
 		$this->add_control(
 			'loop',
 			[
-				'label' => __( 'Loop', 'restobar' ),
+				'label' => __( 'Loop', 'xhub' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'yes',
 				'options' => [
-					'true' => __( 'Yes', 'restobar' ),
-					'false' => __( 'No', 'restobar' ),
+					'true' => __( 'Yes', 'xhub' ),
+					'false' => __( 'No', 'xhub' ),
 				]
 			]
 		);
 		$this->add_control(
 			'autoplay',
 			[
-				'label' => __( 'Autoplay', 'restobar' ),
+				'label' => __( 'Autoplay', 'xhub' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'true',
 				'options' => [
-					'true' => __( 'Yes', 'restobar' ),
-					'false' => __( 'No', 'restobar' ),
+					'true' => __( 'Yes', 'xhub' ),
+					'false' => __( 'No', 'xhub' ),
 				]
 			]
 		);
 		$this->add_control(
 			'timeout',
 			[
-				'label' => __( 'Autoplay Timeout', 'restobar' ),
+				'label' => __( 'Autoplay Timeout', 'xhub' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -185,23 +185,23 @@ class Restobar_Testimonials2 extends Widget_Base{
 		$this->add_control(
 			'arrows',
 			[
-				'label' => __( 'Arrows', 'restobar' ),
+				'label' => __( 'Arrows', 'xhub' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'false',
 				'options' => [
-					'true'   => __( 'Yes', 'restobar' ),
-					'false'  => __( 'No', 'restobar' ),
+					'true'   => __( 'Yes', 'xhub' ),
+					'false'  => __( 'No', 'xhub' ),
 				],
 			]
 		);
 		$this->add_control(
 			'arrow_align',
 			[
-				'label' => __( 'Arrows Align', 'restobar' ),
+				'label' => __( 'Arrows Align', 'xhub' ),
 				'type' => Controls_Manager::SELECT,
 				'options' => [
-					'middle'   => __( 'Middle', 'restobar' ),
-					'bottom'   => __( 'Bottom', 'restobar' ),
+					'middle'   => __( 'Middle', 'xhub' ),
+					'bottom'   => __( 'Bottom', 'xhub' ),
 				],
 				'default' => 'middle',
 				'prefix_class' => 'arrows-',
@@ -213,27 +213,27 @@ class Restobar_Testimonials2 extends Widget_Base{
 		$this->add_control(
 			'dots',
 			[
-				'label' => __( 'Dots', 'restobar' ),
+				'label' => __( 'Dots', 'xhub' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'true',
 				'options' => [
-					'true'   => __( 'Yes', 'restobar' ),
-					'false'  => __( 'No', 'restobar' ),
+					'true'   => __( 'Yes', 'xhub' ),
+					'false'  => __( 'No', 'xhub' ),
 				],
 			]
 		);
 		$this->add_control(
 			'dots_style',
 			[
-				'label' => __( 'Dots Style', 'restobar' ),
+				'label' => __( 'Dots Style', 'xhub' ),
 				'type' => Controls_Manager::CHOOSE,
 				'options' => [
 					'vertical'   => [
-						'title' => esc_html__( 'Vertical', 'restobar' ),
+						'title' => esc_html__( 'Vertical', 'xhub' ),
 						'icon'  => 'fa fa-ellipsis-v',
 					],
 					'horizontal' => [
-						'title' => esc_html__( 'Horizontal', 'restobar' ),
+						'title' => esc_html__( 'Horizontal', 'xhub' ),
 						'icon'  => 'fa fa-ellipsis-h',
 					],
 				],
@@ -251,7 +251,7 @@ class Restobar_Testimonials2 extends Widget_Base{
 		$this->start_controls_section(
 			'style_general',
 			[
-				'label' => __( 'General', 'restobar' ),
+				'label' => __( 'General', 'xhub' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -259,7 +259,7 @@ class Restobar_Testimonials2 extends Widget_Base{
 		$this->add_control(
 			'tcontent_color',
 			[
-				'label' => __( 'Text Color', 'restobar' ),
+				'label' => __( 'Text Color', 'xhub' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -281,7 +281,7 @@ class Restobar_Testimonials2 extends Widget_Base{
 		$this->start_controls_section(
 			'style_tinfo',
 			[
-				'label' => __( 'Information', 'restobar' ),
+				'label' => __( 'Information', 'xhub' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -290,7 +290,7 @@ class Restobar_Testimonials2 extends Widget_Base{
 		$this->add_control(
 			'style_timage',
 			[
-				'label' => __( 'Photo', 'restobar' ),
+				'label' => __( 'Photo', 'xhub' ),
 				'type' => Controls_Manager::HEADING,
 			]
 		);
@@ -298,7 +298,7 @@ class Restobar_Testimonials2 extends Widget_Base{
 		$this->add_responsive_control(
 			'spacing_img',
 			[
-				'label' => __( 'Spacing', 'restobar' ),
+				'label' => __( 'Spacing', 'xhub' ),
 				'type' => Controls_Manager::SLIDER,
 				'size_units' => [ 'px' ],
 				'range' => [
@@ -316,7 +316,7 @@ class Restobar_Testimonials2 extends Widget_Base{
 		$this->add_control(
 			'image_border_radius',
 			[
-				'label' => __( 'Border Radius', 'restobar' ),
+				'label' => __( 'Border Radius', 'xhub' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
 				'selectors' => [
@@ -328,7 +328,7 @@ class Restobar_Testimonials2 extends Widget_Base{
 		$this->add_control(
 			'quote_color',
 			[
-				'label' => __( 'Icon Color', 'restobar' ),
+				'label' => __( 'Icon Color', 'xhub' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -339,7 +339,7 @@ class Restobar_Testimonials2 extends Widget_Base{
 		$this->add_control(
 			'quote_bg',
 			[
-				'label' => __( 'Icon Background', 'restobar' ),
+				'label' => __( 'Icon Background', 'xhub' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -352,7 +352,7 @@ class Restobar_Testimonials2 extends Widget_Base{
 		$this->add_control(
 			'style_tname',
 			[
-				'label' => __( 'Name', 'restobar' ),
+				'label' => __( 'Name', 'xhub' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -360,7 +360,7 @@ class Restobar_Testimonials2 extends Widget_Base{
 		$this->add_responsive_control(
 			'spacing_name',
 			[
-				'label' => __( 'Spacing', 'restobar' ),
+				'label' => __( 'Spacing', 'xhub' ),
 				'type' => Controls_Manager::SLIDER,
 				'size_units' => [ 'px' ],
 				'range' => [
@@ -377,7 +377,7 @@ class Restobar_Testimonials2 extends Widget_Base{
 		$this->add_control(
 			'name_color',
 			[
-				'label' => __( 'Text Color', 'restobar' ),
+				'label' => __( 'Text Color', 'xhub' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -398,7 +398,7 @@ class Restobar_Testimonials2 extends Widget_Base{
 		$this->add_control(
 			'style_tjob',
 			[
-				'label' => __( 'Job', 'restobar' ),
+				'label' => __( 'Job', 'xhub' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -407,7 +407,7 @@ class Restobar_Testimonials2 extends Widget_Base{
 		$this->add_control(
 			'job_color',
 			[
-				'label' => __( 'Text Color', 'restobar' ),
+				'label' => __( 'Text Color', 'xhub' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -430,7 +430,7 @@ class Restobar_Testimonials2 extends Widget_Base{
 		$this->start_controls_section(
 			'navigation_section',
 			[
-				'label' => __( 'Dots', 'restobar' ),
+				'label' => __( 'Dots', 'xhub' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 				'condition' => [
 					'dots' => 'true',
@@ -441,7 +441,7 @@ class Restobar_Testimonials2 extends Widget_Base{
 		$this->add_responsive_control(
 			'dots_spacing',
 			[
-				'label' => __( 'Spacing', 'restobar' ),
+				'label' => __( 'Spacing', 'xhub' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -459,7 +459,7 @@ class Restobar_Testimonials2 extends Widget_Base{
 		$this->add_control(
             'dots_bgcolor',
             [
-                'label' => __( 'Color', 'restobar' ),
+                'label' => __( 'Color', 'xhub' ),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
 					'{{WRAPPER}} .owl-dots button.owl-dot span' => 'background: {{VALUE}};',
@@ -470,7 +470,7 @@ class Restobar_Testimonials2 extends Widget_Base{
         $this->add_control(
             'dots_active_bgcolor',
             [
-                'label' => __( 'Color Active', 'restobar' ),
+                'label' => __( 'Color Active', 'xhub' ),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
 					'{{WRAPPER}} .owl-dots button.owl-dot.active span' => 'background: {{VALUE}};',
@@ -484,7 +484,7 @@ class Restobar_Testimonials2 extends Widget_Base{
 		$this->start_controls_section(
 			'style_nav',
 			[
-				'label' => __( 'Arrows', 'restobar' ),
+				'label' => __( 'Arrows', 'xhub' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 				'condition' => [
 					'arrows' => 'true',
@@ -494,7 +494,7 @@ class Restobar_Testimonials2 extends Widget_Base{
 		$this->add_responsive_control(
 			'arrow_spacing',
 			[
-				'label' => __( 'Spacing', 'restobar' ),
+				'label' => __( 'Spacing', 'xhub' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -512,7 +512,7 @@ class Restobar_Testimonials2 extends Widget_Base{
 		$this->add_responsive_control(
 			'arrow_width',
 			[
-				'label' => __( 'Width', 'restobar' ),
+				'label' => __( 'Width', 'xhub' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -528,7 +528,7 @@ class Restobar_Testimonials2 extends Widget_Base{
 		$this->add_control(
 			'arrow_color',
 			[
-				'label' => __( 'Color', 'restobar' ),
+				'label' => __( 'Color', 'xhub' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -539,7 +539,7 @@ class Restobar_Testimonials2 extends Widget_Base{
 		$this->add_control(
 			'arrow_bg_color',
 			[
-				'label' => __( 'Background', 'restobar' ),
+				'label' => __( 'Background', 'xhub' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -550,7 +550,7 @@ class Restobar_Testimonials2 extends Widget_Base{
 		$this->add_control(
 			'arrow_hcolor',
 			[
-				'label' => __( 'Color Hover', 'restobar' ),
+				'label' => __( 'Color Hover', 'xhub' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -561,7 +561,7 @@ class Restobar_Testimonials2 extends Widget_Base{
 		$this->add_control(
 			'arrow_bg_hcolor',
 			[
-				'label' => __( 'Background Hover', 'restobar' ),
+				'label' => __( 'Background Hover', 'xhub' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -572,7 +572,7 @@ class Restobar_Testimonials2 extends Widget_Base{
 		$this->add_control(
 			'radius_arrow',
 			[
-				'label' => __( 'Border Radius', 'restobar' ),
+				'label' => __( 'Border Radius', 'xhub' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
 				'selectors' => [
@@ -620,4 +620,4 @@ class Restobar_Testimonials2 extends Widget_Base{
 	}
 }
 // After the Schedule class is defined, I must register the new widget class with Elementor:
-Plugin::instance()->widgets_manager->register( new Restobar_Testimonials2() );
+Plugin::instance()->widgets_manager->register( new Xhub_Testimonials2() );

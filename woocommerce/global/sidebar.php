@@ -19,7 +19,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }
 
-if ( restobar_get_shop_layout() === 'full-content' ) {
+if ( xhub_get_shop_layout() === 'full-content' ) {
 	return;
 }
 

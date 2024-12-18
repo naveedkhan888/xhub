@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly (security measu
 /**
  * Widget Name: Logo
  */
-class Restobar_Logo extends Widget_Base{
+class Xhub_Logo extends Widget_Base{
 
  	// The get_name() method is a simple one, you just need to return a widget name that will be used in the code.
 	public function get_name() {
@@ -14,7 +14,7 @@ class Restobar_Logo extends Widget_Base{
 
 	// The get_title() method, which again, is a very simple one, you need to return the widget title that will be displayed as the widget label.
 	public function get_title() {
-		return __( 'XP Logo', 'restobar' );
+		return __( 'XP Logo', 'xhub' );
 	}
 
 	// The get_icon() method, is an optional but recommended method, it lets you set the widget icon. you can use any of the eicon or font-awesome icons, simply return the class name as a string.
@@ -24,7 +24,7 @@ class Restobar_Logo extends Widget_Base{
 
 	// The get_categories method, lets you set the category of the widget, return the category name as a string.
 	public function get_categories() {
-		return [ 'category_restobar_header' ];
+		return [ 'category_xhub_header' ];
 	}
 
 	protected function register_controls() {
@@ -32,26 +32,26 @@ class Restobar_Logo extends Widget_Base{
 		$this->start_controls_section(
 			'content_section',
 			[
-				'label' => __( 'Logo', 'restobar' ),
+				'label' => __( 'Logo', 'xhub' ),
 			]
 		);
 
 		$this->add_responsive_control(
 			'align',
 			[
-				'label' => __( 'Alignment', 'restobar' ),
+				'label' => __( 'Alignment', 'xhub' ),
 				'type' => Controls_Manager::CHOOSE,
 				'options' => [
 					'left'    => [
-						'title' => __( 'Left', 'restobar' ),
+						'title' => __( 'Left', 'xhub' ),
 						'icon' => 'eicon-text-align-left',
 					],
 					'center' => [
-						'title' => __( 'Center', 'restobar' ),
+						'title' => __( 'Center', 'xhub' ),
 						'icon' => 'eicon-text-align-center',
 					],
 					'right' => [
-						'title' => __( 'Right', 'restobar' ),
+						'title' => __( 'Right', 'xhub' ),
 						'icon' => 'eicon-text-align-right',
 					],
 				],
@@ -64,7 +64,7 @@ class Restobar_Logo extends Widget_Base{
 		$this->add_control(
 			'logo_image',
 			 [
-				'label' => esc_html__( 'Image', 'restobar' ),
+				'label' => esc_html__( 'Image', 'xhub' ),
 				'type'  => Controls_Manager::MEDIA,
 				'default' => [
 					'url' => get_template_directory_uri().'/images/logo.svg',
@@ -75,7 +75,7 @@ class Restobar_Logo extends Widget_Base{
 		$this->add_responsive_control(
 			'logo_width',
 			[
-				'label' => __( 'Width', 'restobar' ),
+				'label' => __( 'Width', 'xhub' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -91,7 +91,7 @@ class Restobar_Logo extends Widget_Base{
 		$this->add_responsive_control(
 			'logo_height',
 			[
-				'label' => __( 'Height', 'restobar' ),
+				'label' => __( 'Height', 'xhub' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -123,5 +123,5 @@ class Restobar_Logo extends Widget_Base{
 	}
 
 }
-// After the Restobar_Logo class is defined, I must register the new widget class with Elementor:
-Plugin::instance()->widgets_manager->register( new Restobar_Logo() );
+// After the Xhub_Logo class is defined, I must register the new widget class with Elementor:
+Plugin::instance()->widgets_manager->register( new Xhub_Logo() );

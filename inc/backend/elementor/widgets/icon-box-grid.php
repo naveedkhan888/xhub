@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly (security measu
 /**
  * Widget Name: Icon Box Grid
  */
-class Restobar_IconBox_Grid extends Widget_Base{
+class Xhub_IconBox_Grid extends Widget_Base{
 
  	// The get_name() method is a simple one, you just need to return a widget name that will be used in the code.
 	public function get_name() {
@@ -14,7 +14,7 @@ class Restobar_IconBox_Grid extends Widget_Base{
 
 	// The get_title() method, which again, is a very simple one, you need to return the widget title that will be displayed as the widget label.
 	public function get_title() {
-		return __( 'XP Icon Box Grid', 'restobar' );
+		return __( 'XP Icon Box Grid', 'xhub' );
 	}
 
 	// The get_icon() method, is an optional but recommended method, it lets you set the widget icon. you can use any of the eicon or font-awesome icons, simply return the class name as a string.
@@ -24,7 +24,7 @@ class Restobar_IconBox_Grid extends Widget_Base{
 
 	// The get_categories method, lets you set the category of the widget, return the category name as a string.
 	public function get_categories() {
-		return [ 'category_restobar' ];
+		return [ 'category_xhub' ];
 	}
 
 	protected function register_controls() {
@@ -33,30 +33,30 @@ class Restobar_IconBox_Grid extends Widget_Base{
 		$this->start_controls_section(
 			'content_section',
 			[
-				'label' => __( 'Icon Boxes', 'restobar' ),
+				'label' => __( 'Icon Boxes', 'xhub' ),
 			]
 		);
 
 		$this->add_responsive_control(
 			'align',
 			[
-				'label' => __( 'Alignment', 'restobar' ),
+				'label' => __( 'Alignment', 'xhub' ),
 				'type' => Controls_Manager::CHOOSE,
 				'options' => [
 					'left'    => [
-						'title' => __( 'Left', 'restobar' ),
+						'title' => __( 'Left', 'xhub' ),
 						'icon' => 'eicon-text-align-left',
 					],
 					'center' => [
-						'title' => __( 'Center', 'restobar' ),
+						'title' => __( 'Center', 'xhub' ),
 						'icon' => 'eicon-text-align-center',
 					],
 					'right' => [
-						'title' => __( 'Right', 'restobar' ),
+						'title' => __( 'Right', 'xhub' ),
 						'icon' => 'eicon-text-align-right',
 					],
 				],
-				// 'prefix_class' => 'restobar%s-align-',
+				// 'prefix_class' => 'xhub%s-align-',
 				'selectors' => [
 					'{{WRAPPER}}' => 'text-align: {{VALUE}};',
 				],
@@ -65,14 +65,14 @@ class Restobar_IconBox_Grid extends Widget_Base{
 		$this->add_control(
 			'column_grid',
 			[
-				'label' => __( 'Columns', 'restobar' ),
+				'label' => __( 'Columns', 'xhub' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'col-md-4',
 				'options' => [
-					'col-md-12' => __( '1', 'restobar' ),
-					'col-md-6'  => __( '2', 'restobar' ),
-					'col-md-4'  => __( '3', 'restobar' ),
-					'col-md-3'  => __( '4', 'restobar' ),
+					'col-md-12' => __( '1', 'xhub' ),
+					'col-md-6'  => __( '2', 'xhub' ),
+					'col-md-4'  => __( '3', 'xhub' ),
+					'col-md-3'  => __( '4', 'xhub' ),
 				]
 			]
 		);
@@ -83,7 +83,7 @@ class Restobar_IconBox_Grid extends Widget_Base{
 		$repeater->add_control(
 			'icon_font',
 			[
-				'label' => __( 'Icon', 'restobar' ),
+				'label' => __( 'Icon', 'xhub' ),
 				'type' => Controls_Manager::ICONS,
 				'fa4compatibility' => 'icon',
 				'default' => [
@@ -96,10 +96,10 @@ class Restobar_IconBox_Grid extends Widget_Base{
 		$repeater->add_control(
 			'title',
 			[
-				'label' => __( 'Title', 'restobar' ),
+				'label' => __( 'Title', 'xhub' ),
 				'type' => Controls_Manager::TEXT,
 				'label_block' => true,
-				'default' => esc_html__( 'Content Marketing', 'restobar' ),
+				'default' => esc_html__( 'Content Marketing', 'xhub' ),
 			]
 		);
 
@@ -108,16 +108,16 @@ class Restobar_IconBox_Grid extends Widget_Base{
 			[
 				'label' => 'Description',
 				'type' => Controls_Manager::TEXTAREA,
-				'default' => esc_html__( 'You can provide the answers that your potential customers are trying to find, so you can become the industry.', 'restobar' ),
+				'default' => esc_html__( 'You can provide the answers that your potential customers are trying to find, so you can become the industry.', 'xhub' ),
 			]
 		);
 
 		$repeater->add_control(
 			'link',
 			[
-				'label' => __( 'Link', 'restobar' ),
+				'label' => __( 'Link', 'xhub' ),
 				'type' => Controls_Manager::URL,
-				'placeholder' => __( 'https://your-link.com', 'restobar' ),
+				'placeholder' => __( 'https://your-link.com', 'xhub' ),
 			]
 		);
 
@@ -129,21 +129,21 @@ class Restobar_IconBox_Grid extends Widget_Base{
 		        'show_label'  => false,
 		        'default'     => [
 		            [
-		            	'icon_font' => __( 'fas fa-star', 'restobar' ),
-		             	'title' => esc_html__( 'Content Marketing', 'restobar' ),
-		                'des'	=> esc_html__( 'You can provide the answers that your potential customers are trying to find, so you can become the industry.', 'restobar' ),
+		            	'icon_font' => __( 'fas fa-star', 'xhub' ),
+		             	'title' => esc_html__( 'Content Marketing', 'xhub' ),
+		                'des'	=> esc_html__( 'You can provide the answers that your potential customers are trying to find, so you can become the industry.', 'xhub' ),
 		             	'link' => '',
 		            ],
 		            [
-		            	'icon_font' => __( 'fas fa-star', 'restobar' ),
-		             	'title' => esc_html__( 'Content Marketing', 'restobar' ),
-		                'des'	=> esc_html__( 'You can provide the answers that your potential customers are trying to find, so you can become the industry.', 'restobar' ),
+		            	'icon_font' => __( 'fas fa-star', 'xhub' ),
+		             	'title' => esc_html__( 'Content Marketing', 'xhub' ),
+		                'des'	=> esc_html__( 'You can provide the answers that your potential customers are trying to find, so you can become the industry.', 'xhub' ),
 		             	'link' => '',
 		            ],
 		            [
-		            	'icon_font' => __( 'fas fa-star', 'restobar' ),
-		             	'title' => esc_html__( 'Content Marketing', 'restobar' ),
-		                'des'	=> esc_html__( 'You can provide the answers that your potential customers are trying to find, so you can become the industry.', 'restobar' ),
+		            	'icon_font' => __( 'fas fa-star', 'xhub' ),
+		             	'title' => esc_html__( 'Content Marketing', 'xhub' ),
+		                'des'	=> esc_html__( 'You can provide the answers that your potential customers are trying to find, so you can become the industry.', 'xhub' ),
 		             	'link' => '',
 		            ]
 		        ],
@@ -154,7 +154,7 @@ class Restobar_IconBox_Grid extends Widget_Base{
 		$this->add_control(
 			'header_size',
 			[
-				'label' => __( 'Title HTML Tag', 'restobar' ),
+				'label' => __( 'Title HTML Tag', 'xhub' ),
 				'type' => Controls_Manager::SELECT,
 				'options' => [
 					'h1' => 'H1',
@@ -177,14 +177,14 @@ class Restobar_IconBox_Grid extends Widget_Base{
 		$this->start_controls_section(
 			'style_box_section',
 			[
-				'label' => __( 'Boxes', 'restobar' ),
+				'label' => __( 'Boxes', 'xhub' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
 		$this->add_control(
 			'bg_box',
 			[
-				'label' => __( 'Background', 'restobar' ),
+				'label' => __( 'Background', 'xhub' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .icon-box' => 'background: {{VALUE}};',
@@ -194,7 +194,7 @@ class Restobar_IconBox_Grid extends Widget_Base{
 		$this->add_control(
 			'bg_hover_box',
 			[
-				'label' => __( 'Border Color', 'restobar' ),
+				'label' => __( 'Border Color', 'xhub' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .icon-box' => 'border-color: {{VALUE}};',
@@ -204,7 +204,7 @@ class Restobar_IconBox_Grid extends Widget_Base{
 		$this->add_responsive_control(
 			'box_radius',
 			[
-				'label' => __( 'Border Radius', 'restobar' ),
+				'label' => __( 'Border Radius', 'xhub' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', 'em', '%' ],
 				'selectors' => [
@@ -215,7 +215,7 @@ class Restobar_IconBox_Grid extends Widget_Base{
 		$this->add_responsive_control(
 			'box_padding',
 			[
-				'label' => __( 'Padding Box', 'restobar' ),
+				'label' => __( 'Padding Box', 'xhub' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', 'em', '%' ],
 				'selectors' => [
@@ -226,7 +226,7 @@ class Restobar_IconBox_Grid extends Widget_Base{
 		$this->add_control(
 			'heading_shadow',
 			[
-				'label' => __( 'Hover Box Shadow', 'restobar' ),
+				'label' => __( 'Hover Box Shadow', 'xhub' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -244,7 +244,7 @@ class Restobar_IconBox_Grid extends Widget_Base{
 		$this->start_controls_section(
 			'style_icon_section',
 			[
-				'label' => __( 'Icon', 'restobar' ),
+				'label' => __( 'Icon', 'xhub' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -252,7 +252,7 @@ class Restobar_IconBox_Grid extends Widget_Base{
 		$this->add_control(
 			'icon_color',
 			[
-				'label' => __( 'Color', 'restobar' ),
+				'label' => __( 'Color', 'xhub' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -264,7 +264,7 @@ class Restobar_IconBox_Grid extends Widget_Base{
 		$this->add_responsive_control(
 			'icon_size',
 			[
-				'label' => __( 'Size', 'restobar' ),
+				'label' => __( 'Size', 'xhub' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -281,7 +281,7 @@ class Restobar_IconBox_Grid extends Widget_Base{
 		$this->add_responsive_control(
 			'icon_space',
 			[
-				'label' => __( 'Spacing', 'restobar' ),
+				'label' => __( 'Spacing', 'xhub' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -300,7 +300,7 @@ class Restobar_IconBox_Grid extends Widget_Base{
 		$this->start_controls_section(
 			'style_content_section',
 			[
-				'label' => __( 'Content', 'restobar' ),
+				'label' => __( 'Content', 'xhub' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -309,7 +309,7 @@ class Restobar_IconBox_Grid extends Widget_Base{
 		$this->add_control(
 			'heading_title',
 			[
-				'label' => __( 'Title', 'restobar' ),
+				'label' => __( 'Title', 'xhub' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -317,7 +317,7 @@ class Restobar_IconBox_Grid extends Widget_Base{
 		$this->add_responsive_control(
 			'title_space',
 			[
-				'label' => __( 'Spacing', 'restobar' ),
+				'label' => __( 'Spacing', 'xhub' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -333,7 +333,7 @@ class Restobar_IconBox_Grid extends Widget_Base{
 		$this->add_control(
 			'title_color',
 			[
-				'label' => __( 'Color', 'restobar' ),
+				'label' => __( 'Color', 'xhub' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -353,7 +353,7 @@ class Restobar_IconBox_Grid extends Widget_Base{
 		$this->add_control(
 			'heading_des',
 			[
-				'label' => __( 'Description', 'restobar' ),
+				'label' => __( 'Description', 'xhub' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -361,7 +361,7 @@ class Restobar_IconBox_Grid extends Widget_Base{
 		$this->add_control(
 			'des_color',
 			[
-				'label' => __( 'Color', 'restobar' ),
+				'label' => __( 'Color', 'xhub' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -424,4 +424,4 @@ class Restobar_IconBox_Grid extends Widget_Base{
 	}
 }
 // After the Schedule class is defined, I must register the new widget class with Elementor:
-Plugin::instance()->widgets_manager->register( new Restobar_IconBox_Grid() );
+Plugin::instance()->widgets_manager->register( new Xhub_IconBox_Grid() );

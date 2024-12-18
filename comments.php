@@ -7,7 +7,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Restobar
+ * @package Xhub
  */
 
 /*
@@ -26,10 +26,10 @@ if ( post_password_required() ) {
     // You can start editing here -- including this comment!
     if ( have_comments() ) : ?>
 
-        <h4 class="comments-title"><?php comments_number( esc_html__('Comments (0)', 'restobar'), esc_html__('Comment (1)', 'restobar'), esc_html__(  'Comments (%)', 'restobar') ); ?></h4>
+        <h4 class="comments-title"><?php comments_number( esc_html__('Comments (0)', 'xhub'), esc_html__('Comment (1)', 'xhub'), esc_html__(  'Comments (%)', 'xhub') ); ?></h4>
 
         <ol class="comment-list">
-            <?php wp_list_comments('callback=restobar_comment_list'); ?>
+            <?php wp_list_comments('callback=xhub_comment_list'); ?>
         </ol><!-- .comment-list -->
 
         <?php
@@ -38,7 +38,7 @@ if ( post_password_required() ) {
         // If comments are closed and there are comments, let's leave a little note, shall we?
         if ( ! comments_open() ) :
             ?>
-            <p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'restobar' ); ?></p>
+            <p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'xhub' ); ?></p>
         <?php
         endif;
 
@@ -50,17 +50,17 @@ if ( post_password_required() ) {
     $aria_req = ( $req ? " aria-required='true'" : '' );
 
     $comments_args = array(
-        'title_reply'   => esc_html__('Leave a comment', 'restobar'),
-        'comment_field' => '<p class="comment-form-comment"><textarea id="comment" name="comment" cols="45" rows="8" aria-required="true" placeholder="'. esc_attr__( 'Comment*', 'restobar' ) .'" required></textarea></p>',
+        'title_reply'   => esc_html__('Leave a comment', 'xhub'),
+        'comment_field' => '<p class="comment-form-comment"><textarea id="comment" name="comment" cols="45" rows="8" aria-required="true" placeholder="'. esc_attr__( 'Comment*', 'xhub' ) .'" required></textarea></p>',
 
         'fields'        => apply_filters( 'comment_form_default_fields', array(
             'author' =>
                 '<div class="row"><p class="comment-form-author col-md-6"><input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) .
-                '" size="30" placeholder="'. esc_attr__( 'Name*', 'restobar' ) .'" required /></p>',
+                '" size="30" placeholder="'. esc_attr__( 'Name*', 'xhub' ) .'" required /></p>',
 
             'email' =>
                 '<p class="comment-form-email col-md-6"><input id="email" name="email" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) .
-                '" size="30" placeholder="'. esc_attr__( 'Email*', 'restobar' ) .'" required /></p></div>',
+                '" size="30" placeholder="'. esc_attr__( 'Email*', 'xhub' ) .'" required /></p></div>',
         )),
         'class_submit' => 'xptf-btn',
         'format'       => 'xhtml'

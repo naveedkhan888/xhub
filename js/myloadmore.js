@@ -30,7 +30,7 @@
 			count   = grid.data('count');
 
 		$.ajax({
-			url : restobar_loadmore_params.ajaxurl, // AJAX handler
+			url : xhub_loadmore_params.ajaxurl, // AJAX handler
 			data : {
 				'action': 'loadmore', // the parameter for admin-ajax.php
 				'ppp'	: more,

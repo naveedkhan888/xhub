@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly (security measu
 /**
  * Widget Name: Pricing Table
  */
-class Restobar_Pricing_Table extends Widget_Base{
+class Xhub_Pricing_Table extends Widget_Base{
 
  	// The get_name() method is a simple one, you just need to return a widget name that will be used in the code.
 	public function get_name() {
@@ -14,7 +14,7 @@ class Restobar_Pricing_Table extends Widget_Base{
 
 	// The get_title() method, which again, is a very simple one, you need to return the widget title that will be displayed as the widget label.
 	public function get_title() {
-		return __( 'XP Pricing Table', 'restobar' );
+		return __( 'XP Pricing Table', 'xhub' );
 	}
 
 	// The get_icon() method, is an optional but recommended method, it lets you set the widget icon. you can use any of the eicon or font-awesome icons, simply return the class name as a string.
@@ -24,7 +24,7 @@ class Restobar_Pricing_Table extends Widget_Base{
 
 	// The get_categories method, lets you set the category of the widget, return the category name as a string.
 	public function get_categories() {
-		return [ 'category_restobar' ];
+		return [ 'category_xhub' ];
 	}
 
 	protected function register_controls() {
@@ -33,17 +33,17 @@ class Restobar_Pricing_Table extends Widget_Base{
 		$this->start_controls_section(
 			'content_section',
 			[
-				'label' => __( 'Pricing Table', 'restobar' ),
+				'label' => __( 'Pricing Table', 'xhub' ),
 			]
 		);
 
 		$this->add_control(
 			'is_featured',
 			[
-				'label' => __( 'Pricing Table Featured', 'restobar' ),
+				'label' => __( 'Pricing Table Featured', 'xhub' ),
 				'type' => Controls_Manager::SWITCHER,
-				'label_on' => __( 'Yes', 'restobar' ),
-				'label_off' => __( 'No', 'restobar' ),
+				'label_on' => __( 'Yes', 'xhub' ),
+				'label_off' => __( 'No', 'xhub' ),
 				'return_value' => 'yes',
 				'default' => '',
 			]
@@ -52,9 +52,9 @@ class Restobar_Pricing_Table extends Widget_Base{
 		$this->add_control(
 			'title',
 			[
-				'label' => __( 'Title', 'restobar' ),
+				'label' => __( 'Title', 'xhub' ),
 				'type' => Controls_Manager::TEXT,
-				'default' => __( 'Standard', 'restobar' ),
+				'default' => __( 'Standard', 'xhub' ),
 				'label_block' => true,
 			]
 		);
@@ -62,9 +62,9 @@ class Restobar_Pricing_Table extends Widget_Base{
 		$this->add_control(
 			'price',
 			[
-				'label' => __( 'Price', 'restobar' ),
+				'label' => __( 'Price', 'xhub' ),
 				'type' => Controls_Manager::TEXTAREA,
-				'default' => __( '<sup>$</sup> 29', 'restobar' ),
+				'default' => __( '<sup>$</sup> 29', 'xhub' ),
 				'label_block' => true,
 			]
 		);
@@ -72,9 +72,9 @@ class Restobar_Pricing_Table extends Widget_Base{
 		$this->add_control(
 			'price_for',
 			[
-				'label' => __( 'Text Under Price', 'restobar' ),
+				'label' => __( 'Text Under Price', 'xhub' ),
 				'type' => Controls_Manager::TEXT,
-				'default' => __( 'per m2', 'restobar' ),
+				'default' => __( 'per m2', 'xhub' ),
 				'label_block' => true,
 			]
 		);
@@ -84,7 +84,7 @@ class Restobar_Pricing_Table extends Widget_Base{
 			[
 				'label' => 'Short Text',
 				'type' => Controls_Manager::TEXTAREA,
-				'default' => __( 'Discover the emerging technologies most relevant to your strategy by working.', 'restobar' ),
+				'default' => __( 'Discover the emerging technologies most relevant to your strategy by working.', 'xhub' ),
 			]
 		);
 
@@ -93,7 +93,7 @@ class Restobar_Pricing_Table extends Widget_Base{
 			[
 				'label' => 'Details',
 				'type' => Controls_Manager::TEXTAREA,
-				'default' => __( '<ul><li class="active">Structure of a project</li><li class="active">Measurement of the room</li><li>3D-Visualization of premises</li></ul>', 'restobar' ),
+				'default' => __( '<ul><li class="active">Structure of a project</li><li class="active">Measurement of the room</li><li>3D-Visualization of premises</li></ul>', 'xhub' ),
 			]
 		);
 
@@ -102,16 +102,16 @@ class Restobar_Pricing_Table extends Widget_Base{
 			[
 				'label' => 'Button',
 				'type' => Controls_Manager::TEXTAREA,
-				'default' => __( 'Choose Plane', 'restobar' ),
+				'default' => __( 'Choose Plane', 'xhub' ),
 			]
 		);
 
 		$this->add_control(
 			'link',
 			[
-				'label' => __( 'Link', 'restobar' ),
+				'label' => __( 'Link', 'xhub' ),
 				'type' => Controls_Manager::URL,
-				'placeholder' => __( 'https://your-link.com', 'restobar' ),
+				'placeholder' => __( 'https://your-link.com', 'xhub' ),
 				'condition' => [
 					'label_link!' => '',
 				],
@@ -124,14 +124,14 @@ class Restobar_Pricing_Table extends Widget_Base{
 		$this->start_controls_section(
 			'style_table_section',
 			[
-				'label' => __( 'Table', 'restobar' ),
+				'label' => __( 'Table', 'xhub' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
 		$this->add_responsive_control(
 			'box_padding',
 			[
-				'label' => __( 'Padding Box', 'restobar' ),
+				'label' => __( 'Padding Box', 'xhub' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', 'em', '%' ],
 				'selectors' => [
@@ -142,7 +142,7 @@ class Restobar_Pricing_Table extends Widget_Base{
 		$this->add_control(
 			'radius_box',
 			[
-				'label' => __( 'Border Radius', 'restobar' ),
+				'label' => __( 'Border Radius', 'xhub' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
 				'selectors' => [
@@ -153,7 +153,7 @@ class Restobar_Pricing_Table extends Widget_Base{
 		$this->add_control(
 			'bg_box',
 			[
-				'label' => __( 'Background', 'restobar' ),
+				'label' => __( 'Background', 'xhub' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -182,7 +182,7 @@ class Restobar_Pricing_Table extends Widget_Base{
 		$this->start_controls_section(
 			'style_content_section',
 			[
-				'label' => __( 'Content', 'restobar' ),
+				'label' => __( 'Content', 'xhub' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -191,7 +191,7 @@ class Restobar_Pricing_Table extends Widget_Base{
 		$this->add_control(
 			'heading_title',
 			[
-				'label' => __( 'Title', 'restobar' ),
+				'label' => __( 'Title', 'xhub' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -199,7 +199,7 @@ class Restobar_Pricing_Table extends Widget_Base{
 		$this->add_responsive_control(
 			'title_spacing',
 			[
-				'label' => __( 'Spacing', 'restobar' ),
+				'label' => __( 'Spacing', 'xhub' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -215,7 +215,7 @@ class Restobar_Pricing_Table extends Widget_Base{
 		$this->add_control(
 			'title_color',
 			[
-				'label' => __( 'Color', 'restobar' ),
+				'label' => __( 'Color', 'xhub' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -226,7 +226,7 @@ class Restobar_Pricing_Table extends Widget_Base{
 		$this->add_control(
 			'title_bgcolor',
 			[
-				'label' => __( 'Background', 'restobar' ),
+				'label' => __( 'Background', 'xhub' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -246,7 +246,7 @@ class Restobar_Pricing_Table extends Widget_Base{
 		$this->add_control(
 			'heading_price',
 			[
-				'label' => __( 'Price', 'restobar' ),
+				'label' => __( 'Price', 'xhub' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -254,7 +254,7 @@ class Restobar_Pricing_Table extends Widget_Base{
 		$this->add_responsive_control(
 			'price_space',
 			[
-				'label' => __( 'Spacing', 'restobar' ),
+				'label' => __( 'Spacing', 'xhub' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -270,7 +270,7 @@ class Restobar_Pricing_Table extends Widget_Base{
 		$this->add_control(
 			'price_color',
 			[
-				'label' => __( 'Color', 'restobar' ),
+				'label' => __( 'Color', 'xhub' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -290,7 +290,7 @@ class Restobar_Pricing_Table extends Widget_Base{
 		$this->add_control(
 			'heading_price_for',
 			[
-				'label' => __( 'Under Price', 'restobar' ),
+				'label' => __( 'Under Price', 'xhub' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -298,7 +298,7 @@ class Restobar_Pricing_Table extends Widget_Base{
 		$this->add_control(
 			'price_for_color',
 			[
-				'label' => __( 'Color', 'restobar' ),
+				'label' => __( 'Color', 'xhub' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -319,7 +319,7 @@ class Restobar_Pricing_Table extends Widget_Base{
 		$this->add_control(
 			'heading_stext',
 			[
-				'label' => __( 'Short Text', 'restobar' ),
+				'label' => __( 'Short Text', 'xhub' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -327,7 +327,7 @@ class Restobar_Pricing_Table extends Widget_Base{
 		$this->add_responsive_control(
 			'stext_spacing',
 			[
-				'label' => __( 'Spacing', 'restobar' ),
+				'label' => __( 'Spacing', 'xhub' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -343,7 +343,7 @@ class Restobar_Pricing_Table extends Widget_Base{
 		$this->add_control(
 			'stext_color',
 			[
-				'label' => __( 'Color', 'restobar' ),
+				'label' => __( 'Color', 'xhub' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -363,7 +363,7 @@ class Restobar_Pricing_Table extends Widget_Base{
 		$this->add_control(
 			'heading_des',
 			[
-				'label' => __( 'Details', 'restobar' ),
+				'label' => __( 'Details', 'xhub' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -371,7 +371,7 @@ class Restobar_Pricing_Table extends Widget_Base{
 		$this->add_responsive_control(
 			'des_padding',
 			[
-				'label' => __( 'Spacing', 'restobar' ),
+				'label' => __( 'Spacing', 'xhub' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -387,7 +387,7 @@ class Restobar_Pricing_Table extends Widget_Base{
 		$this->add_control(
 			'des_border_color',
 			[
-				'label' => __( 'Line Color', 'restobar' ),
+				'label' => __( 'Line Color', 'xhub' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -398,7 +398,7 @@ class Restobar_Pricing_Table extends Widget_Base{
 		$this->add_control(
 			'des_color',
 			[
-				'label' => __( 'Color', 'restobar' ),
+				'label' => __( 'Color', 'xhub' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -409,7 +409,7 @@ class Restobar_Pricing_Table extends Widget_Base{
 		$this->add_control(
 			'des_active_color',
 			[
-				'label' => __( 'Active Color', 'restobar' ),
+				'label' => __( 'Active Color', 'xhub' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -427,10 +427,10 @@ class Restobar_Pricing_Table extends Widget_Base{
 		$this->add_control(
 			'icon_list',
 			[
-				'label' => __( 'Icon List', 'restobar' ),
+				'label' => __( 'Icon List', 'xhub' ),
 				'type' => Controls_Manager::SWITCHER,
-				'label_on' => __( 'Yes', 'restobar' ),
-				'label_off' => __( 'No', 'restobar' ),
+				'label_on' => __( 'Yes', 'xhub' ),
+				'label_off' => __( 'No', 'xhub' ),
 				'return_value' => 'yes',
 				'default' => 'yes',
 			]
@@ -440,7 +440,7 @@ class Restobar_Pricing_Table extends Widget_Base{
 		$this->add_control(
 			'heading_btn',
 			[
-				'label' => __( 'Button', 'restobar' ),
+				'label' => __( 'Button', 'xhub' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 				'condition' => [
@@ -464,7 +464,7 @@ class Restobar_Pricing_Table extends Widget_Base{
 		$this->start_controls_tab(
 			'tab_btn_normal',
 			[
-				'label' => __( 'Normal', 'restobar' ),
+				'label' => __( 'Normal', 'xhub' ),
 				'condition' => [
 					'label_link!' => '',
 				],
@@ -474,7 +474,7 @@ class Restobar_Pricing_Table extends Widget_Base{
 		$this->add_control(
 			'btn_bg_color',
 			[
-				'label' => __( 'Background Color', 'restobar' ),
+				'label' => __( 'Background Color', 'xhub' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -488,7 +488,7 @@ class Restobar_Pricing_Table extends Widget_Base{
 		$this->add_control(
 			'btn_color',
 			[
-				'label' => __( 'Color', 'restobar' ),
+				'label' => __( 'Color', 'xhub' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -502,7 +502,7 @@ class Restobar_Pricing_Table extends Widget_Base{
 		$this->add_control(
 			'btn_bcolor',
 			[
-				'label' => __( 'Border Color', 'restobar' ),
+				'label' => __( 'Border Color', 'xhub' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -518,7 +518,7 @@ class Restobar_Pricing_Table extends Widget_Base{
 		$this->start_controls_tab(
 			'tab_btn_hover',
 			[
-				'label' => __( 'Hover', 'restobar' ),
+				'label' => __( 'Hover', 'xhub' ),
 				'condition' => [
 					'label_link!' => '',
 				],
@@ -527,7 +527,7 @@ class Restobar_Pricing_Table extends Widget_Base{
 		$this->add_control(
 			'hover_btn_bg_color',
 			[
-				'label' => __( 'Background Color', 'restobar' ),
+				'label' => __( 'Background Color', 'xhub' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -541,7 +541,7 @@ class Restobar_Pricing_Table extends Widget_Base{
 		$this->add_control(
 			'hover_btn_color',
 			[
-				'label' => __( 'Color', 'restobar' ),
+				'label' => __( 'Color', 'xhub' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -555,7 +555,7 @@ class Restobar_Pricing_Table extends Widget_Base{
 		$this->add_control(
 			'hover_btn_bcolor',
 			[
-				'label' => __( 'Border Color', 'restobar' ),
+				'label' => __( 'Border Color', 'xhub' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -611,5 +611,5 @@ class Restobar_Pricing_Table extends Widget_Base{
 	}
 
 }
-// After the Restobar_Pricing_Table class is defined, I must register the new widget class with Elementor:
-Plugin::instance()->widgets_manager->register( new Restobar_Pricing_Table() );
+// After the Xhub_Pricing_Table class is defined, I must register the new widget class with Elementor:
+Plugin::instance()->widgets_manager->register( new Xhub_Pricing_Table() );

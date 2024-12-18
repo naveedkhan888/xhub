@@ -2,7 +2,7 @@
 /**
  * Hooks for importer
  *
- * @package Restobar
+ * @package Xhub
  */
 
 
@@ -12,7 +12,7 @@
  * @since  1.0
  *
  */
-function restobar_importer() {
+function xhub_importer() {
 	return array(
 		array(
 			'name'       => 'Main Demo (all layout)',
@@ -36,4 +36,4 @@ function restobar_importer() {
 	);
 }
 
-add_filter( 'soo_demo_packages', 'restobar_importer', 30 );
+add_filter( 'soo_demo_packages', 'xhub_importer', 30 );

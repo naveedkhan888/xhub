@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly (security measu
 /**
  * Widget Name: Search
  */
-class Restobar_Search extends Widget_Base{
+class Xhub_Search extends Widget_Base{
 
  	// The get_name() method is a simple one, you just need to return a widget name that will be used in the code.
 	public function get_name() {
@@ -14,7 +14,7 @@ class Restobar_Search extends Widget_Base{
 
 	// The get_title() method, which again, is a very simple one, you need to return the widget title that will be displayed as the widget label.
 	public function get_title() {
-		return __( 'XP Search Header', 'restobar' );
+		return __( 'XP Search Header', 'xhub' );
 	}
 
 	// The get_icon() method, is an optional but recommended method, it lets you set the widget icon. you can use any of the eicon or font-awesome icons, simply return the class name as a string.
@@ -24,7 +24,7 @@ class Restobar_Search extends Widget_Base{
 
 	// The get_categories method, lets you set the category of the widget, return the category name as a string.
 	public function get_categories() {
-		return [ 'category_restobar_header' ];
+		return [ 'category_xhub_header' ];
 	}
 
 	protected function register_controls() {
@@ -33,14 +33,14 @@ class Restobar_Search extends Widget_Base{
 		$this->start_controls_section(
 			'style_icon_section',
 			[
-				'label' => __( 'Icon', 'restobar' ),
+				'label' => __( 'Icon', 'xhub' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
 		$this->add_responsive_control(
 			'icon_size',
 			[
-				'label' => __( 'Icon Size', 'restobar' ),
+				'label' => __( 'Icon Size', 'xhub' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -56,7 +56,7 @@ class Restobar_Search extends Widget_Base{
 		$this->add_control(
 			'icon_color',
 			[
-				'label' => __( 'Icon Color', 'restobar' ),
+				'label' => __( 'Icon Color', 'xhub' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -70,14 +70,14 @@ class Restobar_Search extends Widget_Base{
 		$this->start_controls_section(
 			'style_form_section',
 			[
-				'label' => __( 'Form', 'restobar' ),
+				'label' => __( 'Form', 'xhub' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
 		$this->add_responsive_control(
 			'form_width',
 			[
-				'label' => __( 'Width', 'restobar' ),
+				'label' => __( 'Width', 'xhub' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -93,7 +93,7 @@ class Restobar_Search extends Widget_Base{
 		$this->add_control(
 			'bg_form_color',
 			[
-				'label' => __( 'Background Color', 'restobar' ),
+				'label' => __( 'Background Color', 'xhub' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -104,7 +104,7 @@ class Restobar_Search extends Widget_Base{
 		$this->add_control(
 			'form_radius',
 			[
-				'label' => __( 'Border Radius', 'restobar' ),
+				'label' => __( 'Border Radius', 'xhub' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
 				'selectors' => [
@@ -122,7 +122,7 @@ class Restobar_Search extends Widget_Base{
 		$this->add_control(
 			'input_title',
 			[
-				'label' => __( 'Input', 'restobar' ),
+				'label' => __( 'Input', 'xhub' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -130,7 +130,7 @@ class Restobar_Search extends Widget_Base{
 		$this->add_control(
 			'text_form_color',
 			[
-				'label' => __( 'Color', 'restobar' ),
+				'label' => __( 'Color', 'xhub' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -141,7 +141,7 @@ class Restobar_Search extends Widget_Base{
 		$this->add_control(
 			'border_input_color',
 			[
-				'label' => __( 'Border Color', 'restobar' ),
+				'label' => __( 'Border Color', 'xhub' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -152,7 +152,7 @@ class Restobar_Search extends Widget_Base{
 		$this->add_control(
 			'btn_title',
 			[
-				'label' => __( 'Button', 'restobar' ),
+				'label' => __( 'Button', 'xhub' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -160,7 +160,7 @@ class Restobar_Search extends Widget_Base{
 		$this->add_control(
 			'btn_color',
 			[
-				'label' => __( 'Color', 'restobar' ),
+				'label' => __( 'Color', 'xhub' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -171,7 +171,7 @@ class Restobar_Search extends Widget_Base{
 		$this->add_control(
 			'bg_btn',
 			[
-				'label' => __( 'Background Color', 'restobar' ),
+				'label' => __( 'Background Color', 'xhub' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -203,5 +203,5 @@ class Restobar_Search extends Widget_Base{
 	}
 
 }
-// After the Restobar_Search class is defined, I must register the new widget class with Elementor:
-Plugin::instance()->widgets_manager->register( new Restobar_Search() );
+// After the Xhub_Search class is defined, I must register the new widget class with Elementor:
+Plugin::instance()->widgets_manager->register( new Xhub_Search() );

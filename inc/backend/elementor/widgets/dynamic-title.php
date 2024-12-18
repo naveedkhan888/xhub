@@ -3,14 +3,14 @@ namespace Elementor;
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
-class Restobar_Dynamic_Title extends Widget_Base {
+class Xhub_Dynamic_Title extends Widget_Base {
 
     public function get_name() {
-        return 'restobar_dynamic_title';
+        return 'xhub_dynamic_title';
     }
 
     public function get_title() {
-        return __( 'Dynamic Title', 'restobar' );
+        return __( 'Dynamic Title', 'xhub' );
     }
 
     public function get_icon() {
@@ -18,21 +18,21 @@ class Restobar_Dynamic_Title extends Widget_Base {
     }
 
     public function get_categories() {
-        return [ 'category_restobar' ];
+        return [ 'category_xhub' ];
     }
 
     protected function _register_controls() {
         $this->start_controls_section(
             'section_title',
             [
-                'label' => __( 'Title', 'restobar' ),
+                'label' => __( 'Title', 'xhub' ),
             ]
         );
 
         $this->add_control(
             'html_tag',
             [
-                'label' => __( 'HTML Tag', 'restobar' ),
+                'label' => __( 'HTML Tag', 'xhub' ),
                 'type' => Controls_Manager::SELECT,
                 'options' => [
                     'h1' => 'H1',
@@ -51,25 +51,25 @@ class Restobar_Dynamic_Title extends Widget_Base {
         $this->add_control(
             'alignment',
             [
-                'label' => __( 'Alignment', 'restobar' ),
+                'label' => __( 'Alignment', 'xhub' ),
                 'type' => Controls_Manager::CHOOSE,
                 'options' => [
                     'left' => [
-                        'title' => __( 'Left', 'restobar' ),
+                        'title' => __( 'Left', 'xhub' ),
                         'icon' => 'eicon-text-align-left',
                     ],
                     'center' => [
-                        'title' => __( 'Center', 'restobar' ),
+                        'title' => __( 'Center', 'xhub' ),
                         'icon' => 'eicon-text-align-center',
                     ],
                     'right' => [
-                        'title' => __( 'Right', 'restobar' ),
+                        'title' => __( 'Right', 'xhub' ),
                         'icon' => 'eicon-text-align-right',
                     ],
                 ],
                 'default' => 'center',
                 'selectors' => [
-                    '{{WRAPPER}} .restobar-dynamic-title' => 'text-align: {{VALUE}};',
+                    '{{WRAPPER}} .xhub-dynamic-title' => 'text-align: {{VALUE}};',
                 ],
             ]
         );
@@ -77,10 +77,10 @@ class Restobar_Dynamic_Title extends Widget_Base {
         $this->add_control(
             'color',
             [
-                'label' => __( 'Text Color', 'restobar' ),
+                'label' => __( 'Text Color', 'xhub' ),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
-                    '{{WRAPPER}} .restobar-dynamic-title' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .xhub-dynamic-title' => 'color: {{VALUE}};',
                 ],
             ]
         );
@@ -89,8 +89,8 @@ class Restobar_Dynamic_Title extends Widget_Base {
             Group_Control_Typography::get_type(),
             [
                 'name' => 'typography',
-                'label' => __( 'Typography', 'restobar' ),
-                'selector' => '{{WRAPPER}} .restobar-dynamic-title',
+                'label' => __( 'Typography', 'xhub' ),
+                'selector' => '{{WRAPPER}} .xhub-dynamic-title',
             ]
         );
 
@@ -102,8 +102,8 @@ class Restobar_Dynamic_Title extends Widget_Base {
         $tag = $settings['html_tag'];
         $title = get_the_title();
         
-        echo "<{$tag} class='restobar-dynamic-title'>{$title}</{$tag}>";
+        echo "<{$tag} class='xhub-dynamic-title'>{$title}</{$tag}>";
     }
 }
 
-Plugin::instance()->widgets_manager->register_widget_type( new Restobar_Dynamic_Title() );
+Plugin::instance()->widgets_manager->register_widget_type( new Xhub_Dynamic_Title() );

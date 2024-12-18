@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly (security measu
 /**
  * Widget Name: Contact Info
  */
-class Restobar_CountDown extends Widget_Base{
+class Xhub_CountDown extends Widget_Base{
 
  	// The get_name() method is a simple one, you just need to return a widget name that will be used in the code.
 	public function get_name() {
@@ -14,7 +14,7 @@ class Restobar_CountDown extends Widget_Base{
 
 	// The get_title() method, which again, is a very simple one, you need to return the widget title that will be displayed as the widget label.
 	public function get_title() {
-		return __( 'XP CountDown', 'restobar' );
+		return __( 'XP CountDown', 'xhub' );
 	}
 
 	// The get_icon() method, is an optional but recommended method, it lets you set the widget icon. you can use any of the eicon or font-awesome icons, simply return the class name as a string.
@@ -24,7 +24,7 @@ class Restobar_CountDown extends Widget_Base{
 
 	// The get_categories method, lets you set the category of the widget, return the category name as a string.
 	public function get_categories() {
-		return [ 'category_restobar' ];
+		return [ 'category_xhub' ];
 	}
 
 	protected function register_controls() {
@@ -32,30 +32,30 @@ class Restobar_CountDown extends Widget_Base{
 		$this->start_controls_section(
 			'content_section',
 			[
-				'label' => __( 'CountDown', 'restobar' ),
+				'label' => __( 'CountDown', 'xhub' ),
 			]
 		);
 
 		$this->add_responsive_control(
 			'align',
 			[
-				'label' => __( 'Alignment', 'restobar' ),
+				'label' => __( 'Alignment', 'xhub' ),
 				'type' => Controls_Manager::CHOOSE,
 				'options' => [
 					'left'    => [
-						'title' => __( 'Left', 'restobar' ),
+						'title' => __( 'Left', 'xhub' ),
 						'icon' => 'eicon-text-align-left',
 					],
 					'center' => [
-						'title' => __( 'Center', 'restobar' ),
+						'title' => __( 'Center', 'xhub' ),
 						'icon' => 'eicon-text-align-center',
 					],
 					'right' => [
-						'title' => __( 'Right', 'restobar' ),
+						'title' => __( 'Right', 'xhub' ),
 						'icon' => 'eicon-text-align-right',
 					],
 				],
-				// 'prefix_class' => 'restobar%s-align-',
+				// 'prefix_class' => 'xhub%s-align-',
 				'selectors' => [
 					'{{WRAPPER}}' => 'text-align: {{VALUE}};',
 				],
@@ -67,16 +67,16 @@ class Restobar_CountDown extends Widget_Base{
 			[
 				'label' => 'Date - Time',
 				'type' => Controls_Manager::DATE_TIME,
-				'default' => __( '2025-10-26 12:00', 'restobar' ),
+				'default' => __( '2025-10-26 12:00', 'xhub' ),
 			]
 		);
 
 		$this->add_control(
 			'zone',
 			[
-				'label' => __( 'UTC Timezone Offset', 'restobar' ),
+				'label' => __( 'UTC Timezone Offset', 'xhub' ),
 				'type' => Controls_Manager::NUMBER,
-				'default' => __( '0', 'restobar' ),
+				'default' => __( '0', 'xhub' ),
 			]
 		);
 
@@ -85,39 +85,39 @@ class Restobar_CountDown extends Widget_Base{
 		$this->start_controls_tab(
 			'tab_title_normal',
 			[
-				'label' => __( 'One', 'restobar' ),
+				'label' => __( 'One', 'xhub' ),
 			]
 		);
 		$this->add_control(
 			'day',
 			[
-				'label' => __( 'Day', 'restobar' ),
+				'label' => __( 'Day', 'xhub' ),
 				'type' => Controls_Manager::TEXT,
-				'default' => __( 'Day', 'restobar' ),
+				'default' => __( 'Day', 'xhub' ),
 			]
 		);
 		$this->add_control(
 			'hour',
 			[
-				'label' => __( 'Hour', 'restobar' ),
+				'label' => __( 'Hour', 'xhub' ),
 				'type' => Controls_Manager::TEXT,
-				'default' => __( 'Hour', 'restobar' ),
+				'default' => __( 'Hour', 'xhub' ),
 			]
 		);
 		$this->add_control(
 			'min',
 			[
-				'label' => __( 'Minute', 'restobar' ),
+				'label' => __( 'Minute', 'xhub' ),
 				'type' => Controls_Manager::TEXT,
-				'default' => __( 'Minute', 'restobar' ),
+				'default' => __( 'Minute', 'xhub' ),
 			]
 		);
 		$this->add_control(
 			'second',
 			[
-				'label' => __( 'Second', 'restobar' ),
+				'label' => __( 'Second', 'xhub' ),
 				'type' => Controls_Manager::TEXT,
-				'default' => __( 'Second', 'restobar' ),
+				'default' => __( 'Second', 'xhub' ),
 			]
 		);
 
@@ -126,39 +126,39 @@ class Restobar_CountDown extends Widget_Base{
 		$this->start_controls_tab(
 			'tab_title_active',
 			[
-				'label' => __( 'Multi', 'restobar' ),
+				'label' => __( 'Multi', 'xhub' ),
 			]
 		);
 		$this->add_control(
 			'days',
 			[
-				'label' => __( 'Days', 'restobar' ),
+				'label' => __( 'Days', 'xhub' ),
 				'type' => Controls_Manager::TEXT,
-				'default' => __( 'Days', 'restobar' ),
+				'default' => __( 'Days', 'xhub' ),
 			]
 		);
 		$this->add_control(
 			'hours',
 			[
-				'label' => __( 'Hours', 'restobar' ),
+				'label' => __( 'Hours', 'xhub' ),
 				'type' => Controls_Manager::TEXT,
-				'default' => __( 'Hours', 'restobar' ),
+				'default' => __( 'Hours', 'xhub' ),
 			]
 		);
 		$this->add_control(
 			'mins',
 			[
-				'label' => __( 'Minutes', 'restobar' ),
+				'label' => __( 'Minutes', 'xhub' ),
 				'type' => Controls_Manager::TEXT,
-				'default' => __( 'Minutes', 'restobar' ),
+				'default' => __( 'Minutes', 'xhub' ),
 			]
 		);
 		$this->add_control(
 			'seconds',
 			[
-				'label' => __( 'Seconds', 'restobar' ),
+				'label' => __( 'Seconds', 'xhub' ),
 				'type' => Controls_Manager::TEXT,
-				'default' => __( 'Seconds', 'restobar' ),
+				'default' => __( 'Seconds', 'xhub' ),
 			]
 		);
 
@@ -171,7 +171,7 @@ class Restobar_CountDown extends Widget_Base{
 		$this->start_controls_section(
 			'style_content_section',
 			[
-				'label' => __( 'Style', 'restobar' ),
+				'label' => __( 'Style', 'xhub' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -180,7 +180,7 @@ class Restobar_CountDown extends Widget_Base{
 		$this->add_control(
 			'heading_number',
 			[
-				'label' => __( 'Number', 'restobar' ),
+				'label' => __( 'Number', 'xhub' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -188,7 +188,7 @@ class Restobar_CountDown extends Widget_Base{
 		$this->add_control(
 			'number_color',
 			[
-				'label' => __( 'Color', 'restobar' ),
+				'label' => __( 'Color', 'xhub' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -206,7 +206,7 @@ class Restobar_CountDown extends Widget_Base{
 		$this->add_responsive_control(
 			'number_space',
 			[
-				'label' => __( 'Spacing', 'restobar' ),
+				'label' => __( 'Spacing', 'xhub' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -224,7 +224,7 @@ class Restobar_CountDown extends Widget_Base{
 		$this->add_control(
 			'heading_titles',
 			[
-				'label' => __( 'Texts', 'restobar' ),
+				'label' => __( 'Texts', 'xhub' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -233,7 +233,7 @@ class Restobar_CountDown extends Widget_Base{
 		$this->add_control(
 			'title_color',
 			[
-				'label' => __( 'Color', 'restobar' ),
+				'label' => __( 'Color', 'xhub' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -253,7 +253,7 @@ class Restobar_CountDown extends Widget_Base{
 		$this->add_control(
 			'heading_sepe',
 			[
-				'label' => __( 'Seperator', 'restobar' ),
+				'label' => __( 'Seperator', 'xhub' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -261,7 +261,7 @@ class Restobar_CountDown extends Widget_Base{
 		$this->add_control(
 			'sepe_color',
 			[
-				'label' => __( 'Color', 'restobar' ),
+				'label' => __( 'Color', 'xhub' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -295,5 +295,5 @@ class Restobar_CountDown extends Widget_Base{
 	}
 
 }
-// After the Restobar_CountDown class is defined, I must register the new widget class with Elementor:
-Plugin::instance()->widgets_manager->register( new Restobar_CountDown() );
+// After the Xhub_CountDown class is defined, I must register the new widget class with Elementor:
+Plugin::instance()->widgets_manager->register( new Xhub_CountDown() );

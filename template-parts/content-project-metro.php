@@ -2,7 +2,7 @@
 /**
  * Template part for displaying widget Portfolio Filter Metro
  *
- * @package Restobar
+ * @package Xhub
  */
 ?>
 <?php 
@@ -25,11 +25,11 @@
 				<?php
 					if ( has_post_thumbnail() ) {
 						if( $thumb == 'double_w' ){
-							the_post_thumbnail( 'restobar-portfolio-thumbnail-grid-wdouble' );
+							the_post_thumbnail( 'xhub-portfolio-thumbnail-grid-wdouble' );
 						}elseif( $thumb == 'double_wh' ){
-							the_post_thumbnail( 'restobar-portfolio-thumbnail-grid-whdouble' );
+							the_post_thumbnail( 'xhub-portfolio-thumbnail-grid-whdouble' );
 						}else{
-							the_post_thumbnail( 'restobar-portfolio-thumbnail-grid' );
+							the_post_thumbnail( 'xhub-portfolio-thumbnail-grid' );
 						}
 					}
 				?>

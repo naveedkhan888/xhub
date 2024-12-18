@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly (security measu
 /**
  * Widget Name: Heading 
  */
-class Restobar_Heading extends Widget_Base{
+class Xhub_Heading extends Widget_Base{
 
  	// The get_name() method is a simple one, you just need to return a widget name that will be used in the code.
 	public function get_name() {
@@ -14,7 +14,7 @@ class Restobar_Heading extends Widget_Base{
 
 	// The get_title() method, which again, is a very simple one, you need to return the widget title that will be displayed as the widget label.
 	public function get_title() {
-		return __( 'XP Heading', 'restobar' );
+		return __( 'XP Heading', 'xhub' );
 	}
 
 	// The get_icon() method, is an optional but recommended method, it lets you set the widget icon. you can use any of the eicon or font-awesome icons, simply return the class name as a string.
@@ -24,14 +24,14 @@ class Restobar_Heading extends Widget_Base{
 
 	// The get_categories method, lets you set the category of the widget, return the category name as a string.
 	public function get_categories() {
-		return [ 'category_restobar' ];
+		return [ 'category_xhub' ];
 	}
 
 	public static function get_subtitle_style() {
 		return [
-			'' 				=> __( 'Default', 'restobar' ),
-			'is_highlight' 	=> __( 'Highlight', 'restobar' ),
-			'is_line' 		=> __( 'Line', 'restobar' ),
+			'' 				=> __( 'Default', 'xhub' ),
+			'is_highlight' 	=> __( 'Highlight', 'xhub' ),
+			'is_line' 		=> __( 'Line', 'xhub' ),
 		];
 	}
 
@@ -41,20 +41,20 @@ class Restobar_Heading extends Widget_Base{
 		$this->start_controls_section(
 			'content_section',
 			[
-				'label' => __( 'Content', 'restobar' ),
+				'label' => __( 'Content', 'xhub' ),
 			]
 		);
 
 		$this->add_control(
 			'sub',
 			[
-				'label' => __( 'Subtitle', 'restobar' ),
+				'label' => __( 'Subtitle', 'xhub' ),
 				'type' => Controls_Manager::TEXT,
 				'dynamic' => [
 					'active' => true,
 				],
-				'default' => __( 'our services', 'restobar' ),
-				'placeholder' => __( 'Enter your subtitle', 'restobar' ),
+				'default' => __( 'our services', 'xhub' ),
+				'placeholder' => __( 'Enter your subtitle', 'xhub' ),
 				'label_block' => true,
 			]
 		);
@@ -62,20 +62,20 @@ class Restobar_Heading extends Widget_Base{
 		$this->add_control(
 			'title',
 			[
-				'label' => __( 'Title', 'restobar' ),
+				'label' => __( 'Title', 'xhub' ),
 				'type' => Controls_Manager::TEXT,
 				'dynamic' => [
 					'active' => true,
 				],
-				'default' => __( 'What we do', 'restobar' ),
-				'placeholder' => __( 'Enter your title', 'restobar' ),
+				'default' => __( 'What we do', 'xhub' ),
+				'placeholder' => __( 'Enter your title', 'xhub' ),
 				'label_block' => true,
 			]
 		);
 		$this->add_control(
 			'header_size',
 			[
-				'label' => __( 'Title HTML Tag', 'restobar' ),
+				'label' => __( 'Title HTML Tag', 'xhub' ),
 				'type' => Controls_Manager::SELECT,
 				'options' => [
 					'h1' => 'H1',
@@ -94,23 +94,23 @@ class Restobar_Heading extends Widget_Base{
 		$this->add_responsive_control(
 			'align',
 			[
-				'label' => __( 'Alignment', 'restobar' ),
+				'label' => __( 'Alignment', 'xhub' ),
 				'type' => Controls_Manager::CHOOSE,
 				'options' => [
 					'left'    => [
-						'title' => __( 'Left', 'restobar' ),
+						'title' => __( 'Left', 'xhub' ),
 						'icon' => 'eicon-text-align-left',
 					],
 					'center' => [
-						'title' => __( 'Center', 'restobar' ),
+						'title' => __( 'Center', 'xhub' ),
 						'icon' => 'eicon-text-align-center',
 					],
 					'right' => [
-						'title' => __( 'Right', 'restobar' ),
+						'title' => __( 'Right', 'xhub' ),
 						'icon' => 'eicon-text-align-right',
 					],
 				],
-				// 'prefix_class' => 'restobar%s-align-',
+				// 'prefix_class' => 'xhub%s-align-',
 				'selectors' => [
 					'{{WRAPPER}}' => 'text-align: {{VALUE}};',
 				],
@@ -124,7 +124,7 @@ class Restobar_Heading extends Widget_Base{
 		$this->start_controls_section(
 			'style_section',
 			[
-				'label' => __( 'Heading', 'restobar' ),
+				'label' => __( 'Heading', 'xhub' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -133,7 +133,7 @@ class Restobar_Heading extends Widget_Base{
 		$this->add_control(
 			'heading_stitle',
 			[
-				'label' => __( 'Subtitle', 'restobar' ),
+				'label' => __( 'Subtitle', 'xhub' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -142,7 +142,7 @@ class Restobar_Heading extends Widget_Base{
 		$this->add_control(
 			'subtitle_style',
 			[
-				'label' => __( 'Subtitle Style', 'restobar' ),
+				'label' => __( 'Subtitle Style', 'xhub' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => '',
 				'options' => self::get_subtitle_style(),
@@ -151,7 +151,7 @@ class Restobar_Heading extends Widget_Base{
 		$this->add_responsive_control(
 			'line_width',
 			[
-				'label' => __( 'Width', 'restobar' ),
+				'label' => __( 'Width', 'xhub' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -176,7 +176,7 @@ class Restobar_Heading extends Widget_Base{
 		$this->add_control(
 			'stitle_color',
 			[
-				'label' => __( 'Color', 'restobar' ),
+				'label' => __( 'Color', 'xhub' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -188,7 +188,7 @@ class Restobar_Heading extends Widget_Base{
 		$this->add_control(
 			'stitle_bg',
 			[
-				'label' => __( 'Background color', 'restobar' ),
+				'label' => __( 'Background color', 'xhub' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -202,7 +202,7 @@ class Restobar_Heading extends Widget_Base{
 		$this->add_control(
 			'stitle_border',
 			[
-				'label' => __( 'Border Color', 'restobar' ),
+				'label' => __( 'Border Color', 'xhub' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -223,7 +223,7 @@ class Restobar_Heading extends Widget_Base{
 		$this->add_responsive_control(
 			'stitle_bottom_space',
 			[
-				'label' => __( 'Spacing', 'restobar' ),
+				'label' => __( 'Spacing', 'xhub' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -241,7 +241,7 @@ class Restobar_Heading extends Widget_Base{
 		$this->add_control(
 			'heading_title',
 			[
-				'label' => __( 'Title', 'restobar' ),
+				'label' => __( 'Title', 'xhub' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -249,7 +249,7 @@ class Restobar_Heading extends Widget_Base{
 		$this->add_control(
 			'title_color',
 			[
-				'label' => __( 'Color', 'restobar' ),
+				'label' => __( 'Color', 'xhub' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -288,4 +288,4 @@ class Restobar_Heading extends Widget_Base{
 	}
 }
 // After the Schedule class is defined, I must register the new widget class with Elementor:
-Plugin::instance()->widgets_manager->register( new Restobar_Heading() );
+Plugin::instance()->widgets_manager->register( new Xhub_Heading() );

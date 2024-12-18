@@ -10,7 +10,7 @@ class Food_Price_Menu_Widget extends Widget_Base {
     }
 
     public function get_title() {
-        return __( 'Food Price Menu', 'restobar' );
+        return __( 'Food Price Menu', 'xhub' );
     }
 
     public function get_icon() {
@@ -26,7 +26,7 @@ class Food_Price_Menu_Widget extends Widget_Base {
         $this->start_controls_section(
             'content_section',
             [
-                'label' => __( 'Content', 'restobar' ),
+                'label' => __( 'Content', 'xhub' ),
                 'tab' => Controls_Manager::TAB_CONTENT,
             ]
         );
@@ -36,9 +36,9 @@ class Food_Price_Menu_Widget extends Widget_Base {
         $repeater->add_control(
             'title',
             [
-                'label' => __( 'Title', 'restobar' ),
+                'label' => __( 'Title', 'xhub' ),
                 'type' => Controls_Manager::TEXT,
-                'default' => __( 'Menu Item' , 'restobar' ),
+                'default' => __( 'Menu Item' , 'xhub' ),
                 'label_block' => true,
             ]
         );
@@ -46,19 +46,19 @@ class Food_Price_Menu_Widget extends Widget_Base {
         $repeater->add_control(
             'title_tag',
             [
-                'label' => __( 'Title HTML Tag', 'restobar' ),
+                'label' => __( 'Title HTML Tag', 'xhub' ),
                 'type' => Controls_Manager::SELECT,
                 'default' => 'h3',
                 'options' => [
-                    'h1' => __( 'H1', 'restobar' ),
-                    'h2' => __( 'H2', 'restobar' ),
-                    'h3' => __( 'H3', 'restobar' ),
-                    'h4' => __( 'H4', 'restobar' ),
-                    'h5' => __( 'H5', 'restobar' ),
-                    'h6' => __( 'H6', 'restobar' ),
-                    'p' => __( 'p', 'restobar' ),
-                    'span' => __( 'span', 'restobar' ),
-                    'div' => __( 'div', 'restobar' ),
+                    'h1' => __( 'H1', 'xhub' ),
+                    'h2' => __( 'H2', 'xhub' ),
+                    'h3' => __( 'H3', 'xhub' ),
+                    'h4' => __( 'H4', 'xhub' ),
+                    'h5' => __( 'H5', 'xhub' ),
+                    'h6' => __( 'H6', 'xhub' ),
+                    'p' => __( 'p', 'xhub' ),
+                    'span' => __( 'span', 'xhub' ),
+                    'div' => __( 'div', 'xhub' ),
                 ],
             ]
         );
@@ -66,9 +66,9 @@ class Food_Price_Menu_Widget extends Widget_Base {
         $repeater->add_control(
             'description',
             [
-                'label' => __( 'Description', 'restobar' ),
+                'label' => __( 'Description', 'xhub' ),
                 'type' => Controls_Manager::TEXTAREA,
-                'default' => __( 'Menu Item Description' , 'restobar' ),
+                'default' => __( 'Menu Item Description' , 'xhub' ),
                 'show_label' => true,
             ]
         );
@@ -76,19 +76,19 @@ class Food_Price_Menu_Widget extends Widget_Base {
         $repeater->add_control(
             'description_tag',
             [
-                'label' => __( 'Description HTML Tag', 'restobar' ),
+                'label' => __( 'Description HTML Tag', 'xhub' ),
                 'type' => Controls_Manager::SELECT,
                 'default' => 'p',
                 'options' => [
-                    'h1' => __( 'H1', 'restobar' ),
-                    'h2' => __( 'H2', 'restobar' ),
-                    'h3' => __( 'H3', 'restobar' ),
-                    'h4' => __( 'H4', 'restobar' ),
-                    'h5' => __( 'H5', 'restobar' ),
-                    'h6' => __( 'H6', 'restobar' ),
-                    'p' => __( 'p', 'restobar' ),
-                    'span' => __( 'span', 'restobar' ),
-                    'div' => __( 'div', 'restobar' ),
+                    'h1' => __( 'H1', 'xhub' ),
+                    'h2' => __( 'H2', 'xhub' ),
+                    'h3' => __( 'H3', 'xhub' ),
+                    'h4' => __( 'H4', 'xhub' ),
+                    'h5' => __( 'H5', 'xhub' ),
+                    'h6' => __( 'H6', 'xhub' ),
+                    'p' => __( 'p', 'xhub' ),
+                    'span' => __( 'span', 'xhub' ),
+                    'div' => __( 'div', 'xhub' ),
                 ],
             ]
         );
@@ -96,9 +96,9 @@ class Food_Price_Menu_Widget extends Widget_Base {
         $repeater->add_control(
             'price',
             [
-                'label' => __( 'Price', 'restobar' ),
+                'label' => __( 'Price', 'xhub' ),
                 'type' => Controls_Manager::TEXT,
-                'default' => __( '$10' , 'restobar' ),
+                'default' => __( '$10' , 'xhub' ),
                 'label_block' => true,
             ]
         );
@@ -106,9 +106,9 @@ class Food_Price_Menu_Widget extends Widget_Base {
         $repeater->add_control(
             'menu_label',
             [
-                'label' => __( 'Menu Label', 'restobar' ),
+                'label' => __( 'Menu Label', 'xhub' ),
                 'type' => Controls_Manager::TEXT,
-                'default' => __( 'Special', 'restobar' ),
+                'default' => __( 'Special', 'xhub' ),
                 'label_block' => true,
             ]
         );
@@ -116,7 +116,7 @@ class Food_Price_Menu_Widget extends Widget_Base {
         $repeater->add_control(
             'image',
             [
-                'label' => __( 'Image', 'restobar' ),
+                'label' => __( 'Image', 'xhub' ),
                 'type' => Controls_Manager::MEDIA,
                 'default' => [
                     'url' => Utils::get_placeholder_image_src(),
@@ -127,9 +127,9 @@ class Food_Price_Menu_Widget extends Widget_Base {
         $repeater->add_control(
             'link',
             [
-                'label' => __( 'Link', 'restobar' ),
+                'label' => __( 'Link', 'xhub' ),
                 'type' => Controls_Manager::URL,
-                'placeholder' => __( 'https://your-link.com', 'restobar' ),
+                'placeholder' => __( 'https://your-link.com', 'xhub' ),
                 'show_external' => true,
                 'default' => [
                     'url' => '',
@@ -142,14 +142,14 @@ class Food_Price_Menu_Widget extends Widget_Base {
         $this->add_control(
             'list',
             [
-                'label' => __( 'List Items', 'restobar' ),
+                'label' => __( 'List Items', 'xhub' ),
                 'type' => Controls_Manager::REPEATER,
                 'fields' => $repeater->get_controls(),
                 'default' => [
                     [
-                        'title' => __( 'Menu Item #1', 'restobar' ),
-                        'description' => __( 'Description for menu item #1', 'restobar' ),
-                        'price' => __( '$10', 'restobar' ),
+                        'title' => __( 'Menu Item #1', 'xhub' ),
+                        'description' => __( 'Description for menu item #1', 'xhub' ),
+                        'price' => __( '$10', 'xhub' ),
                     ],
                 ],
                 'title_field' => '{{{ title }}}',
@@ -162,7 +162,7 @@ class Food_Price_Menu_Widget extends Widget_Base {
         $this->start_controls_section(
             'style_section',
             [
-                'label' => __( 'Style', 'restobar' ),
+                'label' => __( 'Style', 'xhub' ),
                 'tab' => Controls_Manager::TAB_STYLE,
             ]
         );
@@ -171,7 +171,7 @@ class Food_Price_Menu_Widget extends Widget_Base {
         $this->add_control(
             'title_color',
             [
-                'label' => __( 'Title Color', 'restobar' ),
+                'label' => __( 'Title Color', 'xhub' ),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .title' => 'color: {{VALUE}}',
@@ -183,7 +183,7 @@ class Food_Price_Menu_Widget extends Widget_Base {
             Group_Control_Typography::get_type(),
             [
                 'name' => 'title_typography',
-                'label' => __( 'Title Typography', 'restobar' ),
+                'label' => __( 'Title Typography', 'xhub' ),
                 'selector' => '{{WRAPPER}} .title',
             ]
         );
@@ -192,7 +192,7 @@ class Food_Price_Menu_Widget extends Widget_Base {
         $this->add_control(
             'description_color',
             [
-                'label' => __( 'Description Color', 'restobar' ),
+                'label' => __( 'Description Color', 'xhub' ),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .description' => 'color: {{VALUE}}',
@@ -204,7 +204,7 @@ class Food_Price_Menu_Widget extends Widget_Base {
             Group_Control_Typography::get_type(),
             [
                 'name' => 'description_typography',
-                'label' => __( 'Description Typography', 'restobar' ),
+                'label' => __( 'Description Typography', 'xhub' ),
                 'selector' => '{{WRAPPER}} .description',
             ]
         );
@@ -213,7 +213,7 @@ class Food_Price_Menu_Widget extends Widget_Base {
         $this->add_control(
             'price_color',
             [
-                'label' => __( 'Price Color', 'restobar' ),
+                'label' => __( 'Price Color', 'xhub' ),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .price' => 'color: {{VALUE}}',
@@ -225,7 +225,7 @@ class Food_Price_Menu_Widget extends Widget_Base {
         $this->add_control(
             'menu_label_bg_color',
             [
-                'label' => __( 'Menu Label Background Color', 'restobar' ),
+                'label' => __( 'Menu Label Background Color', 'xhub' ),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .menu-label' => 'background-color: {{VALUE}}',
@@ -237,7 +237,7 @@ class Food_Price_Menu_Widget extends Widget_Base {
             Group_Control_Typography::get_type(),
             [
                 'name' => 'price_typography',
-                'label' => __( 'Price Typography', 'restobar' ),
+                'label' => __( 'Price Typography', 'xhub' ),
                 'selector' => '{{WRAPPER}} .price',
             ]
         );
@@ -246,14 +246,14 @@ class Food_Price_Menu_Widget extends Widget_Base {
         $this->add_control(
             'separator_style',
             [
-                'label' => __( 'Separator Style', 'restobar' ),
+                'label' => __( 'Separator Style', 'xhub' ),
                 'type' => Controls_Manager::SELECT,
                 'options' => [
-                    'solid' => __( 'Solid', 'restobar' ),
-                    'dotted' => __( 'Dotted', 'restobar' ),
-                    'dashed' => __( 'Dashed', 'restobar' ),
-                    'double' => __( 'Double', 'restobar' ),
-                    'none' => __( 'None', 'restobar' ),
+                    'solid' => __( 'Solid', 'xhub' ),
+                    'dotted' => __( 'Dotted', 'xhub' ),
+                    'dashed' => __( 'Dashed', 'xhub' ),
+                    'double' => __( 'Double', 'xhub' ),
+                    'none' => __( 'None', 'xhub' ),
                 ],
                 'default' => 'solid',
                 'selectors' => [
@@ -265,7 +265,7 @@ class Food_Price_Menu_Widget extends Widget_Base {
         $this->add_control(
             'separator_weight',
             [
-                'label' => __( 'Separator Weight', 'restobar' ),
+                'label' => __( 'Separator Weight', 'xhub' ),
                 'type' => Controls_Manager::SLIDER,
                 'range' => [
                     'px' => [
@@ -282,7 +282,7 @@ class Food_Price_Menu_Widget extends Widget_Base {
         $this->add_control(
             'separator_color',
             [
-                'label' => __( 'Separator Color', 'restobar' ),
+                'label' => __( 'Separator Color', 'xhub' ),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .separator' => 'border-bottom-color: {{VALUE}}',
@@ -294,14 +294,14 @@ class Food_Price_Menu_Widget extends Widget_Base {
         $this->add_control(
             'item_separator_style',
             [
-                'label' => __( 'Item Separator Style', 'restobar' ),
+                'label' => __( 'Item Separator Style', 'xhub' ),
                 'type' => Controls_Manager::SELECT,
                 'options' => [
-                    'solid' => __( 'Solid', 'restobar' ),
-                    'dotted' => __( 'Dotted', 'restobar' ),
-                    'dashed' => __( 'Dashed', 'restobar' ),
-                    'double' => __( 'Double', 'restobar' ),
-                    'none' => __( 'None', 'restobar' ),
+                    'solid' => __( 'Solid', 'xhub' ),
+                    'dotted' => __( 'Dotted', 'xhub' ),
+                    'dashed' => __( 'Dashed', 'xhub' ),
+                    'double' => __( 'Double', 'xhub' ),
+                    'none' => __( 'None', 'xhub' ),
                 ],
                 'default' => 'solid',
                 'selectors' => [
@@ -313,7 +313,7 @@ class Food_Price_Menu_Widget extends Widget_Base {
         $this->add_control(
             'item_separator_weight',
             [
-                'label' => __( 'Item Separator Weight', 'restobar' ),
+                'label' => __( 'Item Separator Weight', 'xhub' ),
                 'type' => Controls_Manager::SLIDER,
                 'range' => [
                     'px' => [
@@ -330,7 +330,7 @@ class Food_Price_Menu_Widget extends Widget_Base {
         $this->add_control(
             'item_separator_color',
             [
-                'label' => __( 'Item Separator Color', 'restobar' ),
+                'label' => __( 'Item Separator Color', 'xhub' ),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .item-separator' => 'border-top-color: {{VALUE}}',
@@ -342,7 +342,7 @@ class Food_Price_Menu_Widget extends Widget_Base {
         $this->add_responsive_control(
             'item_spacing',
             [
-                'label' => __( 'Item Spacing', 'restobar' ),
+                'label' => __( 'Item Spacing', 'xhub' ),
                 'type' => Controls_Manager::SLIDER,
                 'range' => [
                     'px' => [

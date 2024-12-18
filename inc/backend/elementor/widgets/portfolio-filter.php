@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly (security measu
 /**
  * Widget Name: Portfolio Filter
  */
-class Restobar_PortfolioGrid extends Widget_Base{
+class Xhub_PortfolioGrid extends Widget_Base{
 
  	// The get_name() method is a simple one, you just need to return a widget name that will be used in the code.
 	public function get_name() {
@@ -14,7 +14,7 @@ class Restobar_PortfolioGrid extends Widget_Base{
 
 	// The get_title() method, which again, is a very simple one, you need to return the widget title that will be displayed as the widget label.
 	public function get_title() {
-		return __( 'XP Portfolio Filter', 'restobar' );
+		return __( 'XP Portfolio Filter', 'xhub' );
 	}
 
 	// The get_icon() method, is an optional but recommended method, it lets you set the widget icon. you can use any of the eicon or font-awesome icons, simply return the class name as a string.
@@ -24,7 +24,7 @@ class Restobar_PortfolioGrid extends Widget_Base{
 
 	// The get_categories method, lets you set the category of the widget, return the category name as a string.
 	public function get_categories() {
-		return [ 'category_restobar' ];
+		return [ 'category_xhub' ];
 	}
 
 	protected function register_controls() {
@@ -33,41 +33,41 @@ class Restobar_PortfolioGrid extends Widget_Base{
 		$this->start_controls_section(
 			'content_section',
 			[
-				'label' => __( 'General', 'restobar' ),
+				'label' => __( 'General', 'xhub' ),
 			]
 		);
 		$this->add_control(
 			'style',
 			[
-				'label' => __( 'Style Layout', 'restobar' ),
+				'label' => __( 'Style Layout', 'xhub' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'p-grid',
 				'options' => [
-					'p-grid'  	 => __( 'Grid', 'restobar' ),
-					'p-masonry'  => __( 'Masonry', 'restobar' ),
-					'p-metro'  => __( 'Metro', 'restobar' ),
+					'p-grid'  	 => __( 'Grid', 'xhub' ),
+					'p-masonry'  => __( 'Masonry', 'xhub' ),
+					'p-metro'  => __( 'Metro', 'xhub' ),
 				],
 			]
 		);
 		$this->add_control(
 			'project_cat',
 			[
-				'label' => __( 'Select Categories', 'restobar' ),
+				'label' => __( 'Select Categories', 'xhub' ),
 				'type' => Controls_Manager::SELECT2,
 				'options' => $this->select_param_cate_project(),
 				'multiple' => true,
 				'label_block' => true,
-				'placeholder' => __( 'All Categories', 'restobar' ),
+				'placeholder' => __( 'All Categories', 'xhub' ),
 				'separator' => 'before',
 			]
 		);
 		$this->add_control(
 			'filter',
 			[
-				'label' => __( 'Show Filter', 'restobar' ),
+				'label' => __( 'Show Filter', 'xhub' ),
 				'type' => Controls_Manager::SWITCHER,
-				'label_on' => __( 'Show', 'restobar' ),
-				'label_off' => __( 'Hide', 'restobar' ),
+				'label_on' => __( 'Show', 'xhub' ),
+				'label_off' => __( 'Hide', 'xhub' ),
 				'return_value' => 'yes',
 				'default' => 'yes',
 				'separator' => 'before',
@@ -76,7 +76,7 @@ class Restobar_PortfolioGrid extends Widget_Base{
 		$this->add_control(
 			'all_text',
 			[
-				'label' => __( 'All Text', 'restobar' ),
+				'label' => __( 'All Text', 'xhub' ),
 				'type' => Controls_Manager::TEXT,
 				'default' => 'All',
 				'condition' => [
@@ -87,10 +87,10 @@ class Restobar_PortfolioGrid extends Widget_Base{
 		$this->add_control(
 			'count',
 			[
-				'label' => __( 'Show Count', 'restobar' ),
+				'label' => __( 'Show Count', 'xhub' ),
 				'type' => Controls_Manager::SWITCHER,
-				'label_on' => __( 'Show', 'restobar' ),
-				'label_off' => __( 'Hide', 'restobar' ),
+				'label_on' => __( 'Show', 'xhub' ),
+				'label_off' => __( 'Hide', 'xhub' ),
 				'return_value' => 'yes',
 				'default' => 'yes',
 				'condition' => [
@@ -101,10 +101,10 @@ class Restobar_PortfolioGrid extends Widget_Base{
 		$this->add_control(
 			'arrow',
 			[
-				'label' => __( 'Show Arrow', 'restobar' ),
+				'label' => __( 'Show Arrow', 'xhub' ),
 				'type' => Controls_Manager::SWITCHER,
-				'label_on' => __( 'Show', 'restobar' ),
-				'label_off' => __( 'Hide', 'restobar' ),
+				'label_on' => __( 'Show', 'xhub' ),
+				'label_off' => __( 'Hide', 'xhub' ),
 				'return_value' => 'yes',
 				'default' => 'yes',
 				'condition' => [
@@ -115,14 +115,14 @@ class Restobar_PortfolioGrid extends Widget_Base{
 		$this->add_control(
 			'column',
 			[
-				'label' => __( 'Columns', 'restobar' ),
+				'label' => __( 'Columns', 'xhub' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'pf_3_cols',
 				'options' => [
-					'pf_2_cols' => __( '2 Column', 'restobar' ),
-					'pf_3_cols'	=> __( '3 Column', 'restobar' ),
-					'pf_4_cols' => __( '4 Column', 'restobar' ),
-					'pf_5_cols' => __( '5 Column', 'restobar' ),
+					'pf_2_cols' => __( '2 Column', 'xhub' ),
+					'pf_3_cols'	=> __( '3 Column', 'xhub' ),
+					'pf_4_cols' => __( '4 Column', 'xhub' ),
+					'pf_5_cols' => __( '5 Column', 'xhub' ),
 				],
 				'separator' => 'before',
 			]
@@ -130,7 +130,7 @@ class Restobar_PortfolioGrid extends Widget_Base{
 		$this->add_responsive_control(
 			'w_gaps',
 			[
-				'label' => __( 'Gap Width', 'restobar' ),
+				'label' => __( 'Gap Width', 'xhub' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -149,7 +149,7 @@ class Restobar_PortfolioGrid extends Widget_Base{
 		$this->add_control(
 			'project_num',
 			[
-				'label' => __( 'Show Number Projects', 'restobar' ),
+				'label' => __( 'Show Number Projects', 'xhub' ),
 				'type' => Controls_Manager::NUMBER,
 				'default' => '6',
 				'separator' => 'before',
@@ -158,7 +158,7 @@ class Restobar_PortfolioGrid extends Widget_Base{
 		$this->add_control(
 			'load_more',
 			[
-				'label' => __( 'Load More Button', 'restobar' ),
+				'label' => __( 'Load More Button', 'xhub' ),
 				'type' => Controls_Manager::TEXT,
 				'default' => 'Load More',
 				'separator' => 'before',
@@ -167,7 +167,7 @@ class Restobar_PortfolioGrid extends Widget_Base{
 		$this->add_control(
 			'loading_more',
 			[
-				'label' => __( 'Loading Text', 'restobar' ),
+				'label' => __( 'Loading Text', 'xhub' ),
 				'type' => Controls_Manager::TEXT,
 				'default' => 'Loading...',
 				'condition' => [
@@ -178,7 +178,7 @@ class Restobar_PortfolioGrid extends Widget_Base{
 		$this->add_control(
 			'p_more',
 			[
-				'label' => __( 'Load Number Projects', 'restobar' ),
+				'label' => __( 'Load Number Projects', 'xhub' ),
 				'type' => Controls_Manager::NUMBER,
 				'default' => '3',
 				'condition' => [
@@ -189,13 +189,13 @@ class Restobar_PortfolioGrid extends Widget_Base{
 		$this->add_control(
 			'layout',
 			[
-				'label' => __( 'Info Box Style', 'restobar' ),
+				'label' => __( 'Info Box Style', 'xhub' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'style-1',
 				'options' => [
-					'style-1'  	=> __( 'Background Overlay', 'restobar' ),
-					'style-2' 	=> __( 'Background Solid', 'restobar' ),
-					'style-3' 	=> __( 'Hidden', 'restobar' ),
+					'style-1'  	=> __( 'Background Overlay', 'xhub' ),
+					'style-2' 	=> __( 'Background Solid', 'xhub' ),
+					'style-3' 	=> __( 'Hidden', 'xhub' ),
 				],
 				'separator' => 'before',
 			]
@@ -203,10 +203,10 @@ class Restobar_PortfolioGrid extends Widget_Base{
 		$this->add_control(
 			'popup_thumb',
 			[
-				'label' => __( 'Popup Gallery', 'restobar' ),
+				'label' => __( 'Popup Gallery', 'xhub' ),
 				'type' => Controls_Manager::SWITCHER,
-				'label_on' => __( 'Yes', 'restobar' ),
-				'label_off' => __( 'No', 'restobar' ),
+				'label_on' => __( 'Yes', 'xhub' ),
+				'label_off' => __( 'No', 'xhub' ),
 				'return_value' => 'yes',
 				'default' => 'yes',
 				'condition' => [
@@ -220,7 +220,7 @@ class Restobar_PortfolioGrid extends Widget_Base{
 		$this->start_controls_section(
 			'filter_style_section',
 			[
-				'label' => __( 'Filter', 'restobar' ),
+				'label' => __( 'Filter', 'xhub' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 				'condition' => [
 					'filter' => 'yes',
@@ -230,19 +230,19 @@ class Restobar_PortfolioGrid extends Widget_Base{
 		$this->add_responsive_control(
 			'filter_align',
 			[
-				'label' => __( 'Alignment', 'restobar' ),
+				'label' => __( 'Alignment', 'xhub' ),
 				'type' => Controls_Manager::CHOOSE,
 				'options' => [
 					'left'    => [
-						'title' => __( 'Left', 'restobar' ),
+						'title' => __( 'Left', 'xhub' ),
 						'icon' => 'eicon-text-align-left',
 					],
 					'center' => [
-						'title' => __( 'Center', 'restobar' ),
+						'title' => __( 'Center', 'xhub' ),
 						'icon' => 'eicon-text-align-center',
 					],
 					'right' => [
-						'title' => __( 'Right', 'restobar' ),
+						'title' => __( 'Right', 'xhub' ),
 						'icon' => 'eicon-text-align-right',
 					]
 				],
@@ -255,7 +255,7 @@ class Restobar_PortfolioGrid extends Widget_Base{
 		$this->add_responsive_control(
 			'filter_spacing',
 			[
-				'label' => __( 'Spacing', 'restobar' ),
+				'label' => __( 'Spacing', 'xhub' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -271,7 +271,7 @@ class Restobar_PortfolioGrid extends Widget_Base{
 		$this->add_control(
 			'filter_color',
 			[
-				'label' => __( 'Button Color', 'restobar' ),
+				'label' => __( 'Button Color', 'xhub' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -282,7 +282,7 @@ class Restobar_PortfolioGrid extends Widget_Base{
 		$this->add_control(
 			'filter_hcolor',
 			[
-				'label' => __( 'Active Color', 'restobar' ),
+				'label' => __( 'Active Color', 'xhub' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -300,7 +300,7 @@ class Restobar_PortfolioGrid extends Widget_Base{
 		$this->add_control(
 			'count_color',
 			[
-				'label' => __( 'Count Color', 'restobar' ),
+				'label' => __( 'Count Color', 'xhub' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -328,14 +328,14 @@ class Restobar_PortfolioGrid extends Widget_Base{
 		$this->start_controls_section(
 			'overlay_style_section',
 			[
-				'label' => __( 'Project Items', 'restobar' ),
+				'label' => __( 'Project Items', 'xhub' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
 		$this->add_control(
 			'heading_general',
 			[
-				'label' => __( 'General', 'restobar' ),
+				'label' => __( 'General', 'xhub' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -343,19 +343,19 @@ class Restobar_PortfolioGrid extends Widget_Base{
 		$this->add_responsive_control(
 			'overlay_align',
 			[
-				'label' => __( 'Alignment Info', 'restobar' ),
+				'label' => __( 'Alignment Info', 'xhub' ),
 				'type' => Controls_Manager::CHOOSE,
 				'options' => [
 					'left'    => [
-						'title' => __( 'Left', 'restobar' ),
+						'title' => __( 'Left', 'xhub' ),
 						'icon' => 'eicon-text-align-left',
 					],
 					'center' => [
-						'title' => __( 'Center', 'restobar' ),
+						'title' => __( 'Center', 'xhub' ),
 						'icon' => 'eicon-text-align-center',
 					],
 					'right' => [
-						'title' => __( 'Right', 'restobar' ),
+						'title' => __( 'Right', 'xhub' ),
 						'icon' => 'eicon-text-align-right',
 					],
 				],				
@@ -370,20 +370,20 @@ class Restobar_PortfolioGrid extends Widget_Base{
 		$this->add_control(
 			'position',
 			[
-				'label' => __( 'Position Info', 'restobar' ),
+				'label' => __( 'Position Info', 'xhub' ),
 				'type' => Controls_Manager::CHOOSE,
 				'default' => 'top',
 				'options' => [
 					'flex-start' => [
-						'title' => __( 'Top', 'restobar' ),
+						'title' => __( 'Top', 'xhub' ),
 						'icon' => 'eicon-v-align-top',
 					],
 					'center' => [
-						'title' => __( 'Middle', 'restobar' ),
+						'title' => __( 'Middle', 'xhub' ),
 						'icon' => 'eicon-v-align-middle',
 					],
 					'flex-end' => [
-						'title' => __( 'Bottom', 'restobar' ),
+						'title' => __( 'Bottom', 'xhub' ),
 						'icon' => 'eicon-v-align-bottom',
 					],
 				],
@@ -398,7 +398,7 @@ class Restobar_PortfolioGrid extends Widget_Base{
 		$this->add_control(
 			'overlay_background',
 			[
-				'label' => __( 'Background Overlay', 'restobar' ),
+				'label' => __( 'Background Overlay', 'xhub' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -412,7 +412,7 @@ class Restobar_PortfolioGrid extends Widget_Base{
 		$this->add_control(
 			'info_background',
 			[
-				'label' => __( 'Background Info', 'restobar' ),
+				'label' => __( 'Background Info', 'xhub' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -440,10 +440,10 @@ class Restobar_PortfolioGrid extends Widget_Base{
 		$this->add_control(
 			'scale_thumb',
 			[
-				'label' => __( 'Animation Image Hover', 'restobar' ),
+				'label' => __( 'Animation Image Hover', 'xhub' ),
 				'type' => Controls_Manager::SWITCHER,
-				'label_on' => __( 'Yes', 'restobar' ),
-				'label_off' => __( 'No', 'restobar' ),
+				'label_on' => __( 'Yes', 'xhub' ),
+				'label_off' => __( 'No', 'xhub' ),
 				'return_value' => 'yes',
 				'default' => 'yes',
 			]
@@ -451,7 +451,7 @@ class Restobar_PortfolioGrid extends Widget_Base{
 		$this->add_control(
 			'radius_thumb',
 			[
-				'label' => __( 'Border Radius Image', 'restobar' ),
+				'label' => __( 'Border Radius Image', 'xhub' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -469,7 +469,7 @@ class Restobar_PortfolioGrid extends Widget_Base{
 		$this->add_control(
 			'heading_icon',
 			[
-				'label' => __( 'Icon Button', 'restobar' ),
+				'label' => __( 'Icon Button', 'xhub' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 				'condition' => [
@@ -480,10 +480,10 @@ class Restobar_PortfolioGrid extends Widget_Base{
 		$this->add_control(
 			'show_icon',
 			[
-				'label' => __( 'Show Button', 'restobar' ),
+				'label' => __( 'Show Button', 'xhub' ),
 				'type' => Controls_Manager::SWITCHER,
-				'label_on' => __( 'Show', 'restobar' ),
-				'label_off' => __( 'Hide', 'restobar' ),
+				'label_on' => __( 'Show', 'xhub' ),
+				'label_off' => __( 'Hide', 'xhub' ),
 				'return_value' => 'yes',
 				'default' => 'yes',
 				'condition' => [
@@ -494,7 +494,7 @@ class Restobar_PortfolioGrid extends Widget_Base{
 		$this->add_control(
 			'icon_color',
 			[
-				'label' => __( 'Color', 'restobar' ),
+				'label' => __( 'Color', 'xhub' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -509,7 +509,7 @@ class Restobar_PortfolioGrid extends Widget_Base{
 		$this->add_control(
 			'icon_bg',
 			[
-				'label' => __( 'Background', 'restobar' ),
+				'label' => __( 'Background', 'xhub' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -526,7 +526,7 @@ class Restobar_PortfolioGrid extends Widget_Base{
 		$this->add_control(
 			'heading_title',
 			[
-				'label' => __( 'Title', 'restobar' ),
+				'label' => __( 'Title', 'xhub' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 				'condition' => [
@@ -537,7 +537,7 @@ class Restobar_PortfolioGrid extends Widget_Base{
 		$this->add_responsive_control(
 			'title_spacing',
 			[
-				'label' => __( 'Spacing', 'restobar' ),
+				'label' => __( 'Spacing', 'xhub' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -556,7 +556,7 @@ class Restobar_PortfolioGrid extends Widget_Base{
 		$this->add_control(
 			'title_color',
 			[
-				'label' => __( 'Color', 'restobar' ),
+				'label' => __( 'Color', 'xhub' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -570,7 +570,7 @@ class Restobar_PortfolioGrid extends Widget_Base{
 		$this->add_control(
 			'title_hcolor',
 			[
-				'label' => __( 'Hover Color', 'restobar' ),
+				'label' => __( 'Hover Color', 'xhub' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -596,7 +596,7 @@ class Restobar_PortfolioGrid extends Widget_Base{
 		$this->add_control(
 			'heading_cat',
 			[
-				'label' => __( 'Category', 'restobar' ),
+				'label' => __( 'Category', 'xhub' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 				'condition' => [
@@ -607,10 +607,10 @@ class Restobar_PortfolioGrid extends Widget_Base{
 		$this->add_control(
 			'show_cat',
 			[
-				'label' => __( 'Show Category', 'restobar' ),
+				'label' => __( 'Show Category', 'xhub' ),
 				'type' => Controls_Manager::SWITCHER,
-				'label_on' => __( 'Show', 'restobar' ),
-				'label_off' => __( 'Hide', 'restobar' ),
+				'label_on' => __( 'Show', 'xhub' ),
+				'label_off' => __( 'Hide', 'xhub' ),
 				'return_value' => 'yes',
 				'default' => 'yes',
 				'condition' => [
@@ -621,7 +621,7 @@ class Restobar_PortfolioGrid extends Widget_Base{
 		$this->add_control(
 			'cat_color',
 			[
-				'label' => __( 'Color', 'restobar' ),
+				'label' => __( 'Color', 'xhub' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -637,7 +637,7 @@ class Restobar_PortfolioGrid extends Widget_Base{
 		$this->add_control(
 			'cat_hcolor',
 			[
-				'label' => __( 'Hover', 'restobar' ),
+				'label' => __( 'Hover', 'xhub' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -666,7 +666,7 @@ class Restobar_PortfolioGrid extends Widget_Base{
 		$this->start_controls_section(
 			'style_section',
 			[
-				'label' => __( 'Load More Button', 'restobar' ),
+				'label' => __( 'Load More Button', 'xhub' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 				'condition' => [
 					'load_more[value]!' => '',
@@ -677,19 +677,19 @@ class Restobar_PortfolioGrid extends Widget_Base{
 		$this->add_responsive_control(
 			'btn_align',
 			[
-				'label' => __( 'Alignment', 'restobar' ),
+				'label' => __( 'Alignment', 'xhub' ),
 				'type' => Controls_Manager::CHOOSE,
 				'options' => [
 					'left'    => [
-						'title' => __( 'Left', 'restobar' ),
+						'title' => __( 'Left', 'xhub' ),
 						'icon' => 'eicon-text-align-left',
 					],
 					'center' => [
-						'title' => __( 'Center', 'restobar' ),
+						'title' => __( 'Center', 'xhub' ),
 						'icon' => 'eicon-text-align-center',
 					],
 					'right' => [
-						'title' => __( 'Right', 'restobar' ),
+						'title' => __( 'Right', 'xhub' ),
 						'icon' => 'eicon-text-align-right',
 					]
 				],
@@ -702,7 +702,7 @@ class Restobar_PortfolioGrid extends Widget_Base{
 		$this->add_responsive_control(
 			'btn_spacing',
 			[
-				'label' => __( 'Spacing', 'restobar' ),
+				'label' => __( 'Spacing', 'xhub' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -721,14 +721,14 @@ class Restobar_PortfolioGrid extends Widget_Base{
 		$this->start_controls_tab(
 			'tab_button_normal',
 			[
-				'label' => __( 'Normal', 'restobar' ),
+				'label' => __( 'Normal', 'xhub' ),
 			]
 		);
 
 		$this->add_control(
 			'button_text_color',
 			[
-				'label' => __( 'Text Color', 'restobar' ),
+				'label' => __( 'Text Color', 'xhub' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -740,7 +740,7 @@ class Restobar_PortfolioGrid extends Widget_Base{
 		$this->add_control(
 			'background_color',
 			[
-				'label' => __( 'Background Color', 'restobar' ),
+				'label' => __( 'Background Color', 'xhub' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .xptf-btn' => 'background-color: {{VALUE}};',
@@ -753,14 +753,14 @@ class Restobar_PortfolioGrid extends Widget_Base{
 		$this->start_controls_tab(
 			'tab_button_hover',
 			[
-				'label' => __( 'Hover', 'restobar' ),
+				'label' => __( 'Hover', 'xhub' ),
 			]
 		);
 
 		$this->add_control(
 			'hover_color',
 			[
-				'label' => __( 'Text Color', 'restobar' ),
+				'label' => __( 'Text Color', 'xhub' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .xptf-btn:hover, {{WRAPPER}} .xptf-btn:focus' => 'color: {{VALUE}};',
@@ -771,7 +771,7 @@ class Restobar_PortfolioGrid extends Widget_Base{
 		$this->add_control(
 			'button_background_hover_color',
 			[
-				'label' => __( 'Background Color', 'restobar' ),
+				'label' => __( 'Background Color', 'xhub' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .xptf-btn:hover, {{WRAPPER}} .xptf-btn:focus' => 'background-color: {{VALUE}};',
@@ -914,4 +914,4 @@ class Restobar_PortfolioGrid extends Widget_Base{
 	}
 }
 // After the Schedule class is defined, I must register the new widget class with Elementor:
-Plugin::instance()->widgets_manager->register( new Restobar_PortfolioGrid() );
+Plugin::instance()->widgets_manager->register( new Xhub_PortfolioGrid() );

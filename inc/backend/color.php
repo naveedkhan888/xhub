@@ -1,12 +1,12 @@
 <?php 
 
 //Custom Style Frontend
-if(!function_exists('restobar_color_scheme')){
-    function restobar_color_scheme(){
+if(!function_exists('xhub_color_scheme')){
+    function xhub_color_scheme(){
 	  	$color_scheme = '';
 
 	  	//Heading Color
-	  	if( restobar_get_option('heading_color') != '#191717' ){
+	  	if( xhub_get_option('heading_color') != '#191717' ){
 			$color_scheme = 
 			'
 			/****Heading Color****/
@@ -15,7 +15,7 @@ if(!function_exists('restobar_color_scheme')){
 			h3,
 			h4,
 			h5,
-			h6{ color: '.restobar_get_option('heading_color').';}
+			h6{ color: '.xhub_get_option('heading_color').';}
 				';
 		}
 
@@ -24,7 +24,7 @@ if(!function_exists('restobar_color_scheme')){
 		}
 
 		//Button Hover and Dark Color
-	  	if( restobar_get_option('btn_hover_dark') != '#191717' ){
+	  	if( xhub_get_option('btn_hover_dark') != '#191717' ){
 			$color_scheme = 
 			'
 			/****Secondary Color****/
@@ -44,7 +44,7 @@ if(!function_exists('restobar_color_scheme')){
 			.xptf-btn:hover,
 			.woocommerce ul.products li.product .add_to_cart_button:hover,
 			.woocommerce-page ul.products li.product .add_to_cart_button:hover,
-			.xptf-btn:focus{ background: '.restobar_get_option('btn_hover_dark').';}
+			.xptf-btn:focus{ background: '.xhub_get_option('btn_hover_dark').';}
 				';
 		}
 
@@ -55,7 +55,7 @@ if(!function_exists('restobar_color_scheme')){
 
 
 	  	//Main Color
-	  	if( restobar_get_option('main_color') != '#C19977' ){
+	  	if( xhub_get_option('main_color') != '#C19977' ){
 			$color_scheme = 
 			'
 		  	/****Main Color****/
@@ -108,20 +108,20 @@ if(!function_exists('restobar_color_scheme')){
 			.error-404 .page-content form button:hover,
 			.woocommerce ul.products li.product .added_to_cart, .woocommerce ul.products li.product .product_type_grouped, .woocommerce-page ul.products li.product .added_to_cart, .woocommerce-page ul.products li.product .product_type_grouped,
 			.woocommerce #respond input#submit.alt, .woocommerce a.button.alt,.woocommerce button.button.alt, .woocommerce input.button.alt,.woocommerce #respond input#submit, .woocommerce a.button,.woocommerce input.button, .woocommerce button.button.alt.disabled,
-			.woocommerce button.button{ background: '.restobar_get_option('main_color').'; }
+			.woocommerce button.button{ background: '.xhub_get_option('main_color').'; }
 			.slide-rev-subtitle {
-				background: '.restobar_get_option('main_color').' !important;
+				background: '.xhub_get_option('main_color').' !important;
 			}
 			.post-box .entry-meta .btn-details:hover, 
 			.blog-post .tagcloud a:hover, 
 			.widget .tagcloud a:hover,
-			.icon-box-1 .icon-main{background: '.hex2rgba(restobar_get_option('main_color'), 0.1).';}
-			.team-3 .team-thumb a:before{background: '.hex2rgba(restobar_get_option('main_color'), 0.8).';}
+			.icon-box-1 .icon-main{background: '.hex2rgba(xhub_get_option('main_color'), 0.1).';}
+			.team-3 .team-thumb a:before{background: '.hex2rgba(xhub_get_option('main_color'), 0.8).';}
 			.projects-grid .projects-box .portfolio-info,
-			.projects-grid.style-3 .projects-thumbnail .overlay{background: '.hex2rgba(restobar_get_option('main_color'), 0.9).';}
+			.projects-grid.style-3 .projects-thumbnail .overlay{background: '.hex2rgba(xhub_get_option('main_color'), 0.9).';}
 
 			/*Background Image*/
-			.author-widget_wrapper:before{ background-image: linear-gradient(230deg, '.restobar_get_option('main_color').' -150%, #fff 80%); }
+			.author-widget_wrapper:before{ background-image: linear-gradient(230deg, '.xhub_get_option('main_color').' -150%, #fff 80%); }
 
 			/*Border Color*/
 			.xptf-btn.xptf-btn-border,
@@ -137,11 +137,11 @@ if(!function_exists('restobar_color_scheme')){
 			.xp-tabs .tab-link.current, .xp-tabs .tab-link:hover,
 			.xp-video-button a:hover span,
 			.woocommerce div.product .woocommerce-tabs ul.tabs li a:hover,
-			.woocommerce div.product .woocommerce-tabs ul.tabs li.active a{ border-color: '.restobar_get_option('main_color').'; }
+			.woocommerce div.product .woocommerce-tabs ul.tabs li.active a{ border-color: '.xhub_get_option('main_color').'; }
 
 			/*Border Top Color*/
 			.woocommerce-message,
-			.woocommerce-info{ border-top-color: '.restobar_get_option('main_color').'; }
+			.woocommerce-info{ border-top-color: '.xhub_get_option('main_color').'; }
 
 			/*Color*/
 			blockquote:before,
@@ -206,7 +206,7 @@ if(!function_exists('restobar_color_scheme')){
 			.tab-titles .title-item a.tab-active,
 			.tab-titles .title-item a:hover,
 			.xp-counter-2.icounter .c-number.font-second span.num + span, 
-			.woocommerce div.product p.price,.woocommerce div.product span.price{ color: '.restobar_get_option('main_color').'; }
+			.woocommerce div.product p.price,.woocommerce div.product span.price{ color: '.xhub_get_option('main_color').'; }
 
 			.main-navigation > ul > li:hover > a,
 			.main-navigation ul li li a:hover,.main-navigation ul ul.sub-menu li.current-menu-item > a,.main-navigation ul ul.sub-menu li.current-menu-ancestor > a,
@@ -214,28 +214,28 @@ if(!function_exists('restobar_color_scheme')){
 			.main-navigation ul > li.menu-item-has-children:hover > a:after,
 			.main-navigation ul > li.current_page_item > a::after, 
 			.main-navigation ul > li.menu-item-has-children > a:hover:after{
-				color:'.restobar_get_option('main_color').' !important;
+				color:'.xhub_get_option('main_color').' !important;
 			}
 
 			.elementor-widget-icon.elementor-view-framed .elementor-icon, 
 			.elementor-widget-icon.elementor-view-default .elementor-icon{
-				color:'.restobar_get_option('main_color').';
+				color:'.xhub_get_option('main_color').';
 			}
 
 			/*Other*/
 			.border_clr.elementor-widget-divider.elementor-view-framed .elementor-icon, 
 			.border_clr.elementor-widget-divider.elementor-view-default .elementor-icon svg {
-			  fill: '.restobar_get_option('main_color').';
+			  fill: '.xhub_get_option('main_color').';
 			}
 			.border_clr.elementor-widget-divider.elementor-view-framed .elementor-icon, 
 			.border_clr.elementor-widget-divider.elementor-view-default .elementor-icon {
-			  color: '.restobar_get_option('main_color').';
+			  color: '.xhub_get_option('main_color').';
 			}
 			.border_clr.elementor-widget-divider {
-			  --divider-color: '.restobar_get_option('main_color').'; }
+			  --divider-color: '.xhub_get_option('main_color').'; }
 			.icon-box .icon-main svg,
 			.icon-box-grid .icon-box .icon-main svg,
-			.xp-counter-2 svg{ fill: '.restobar_get_option('main_color').'; }
+			.xp-counter-2 svg{ fill: '.xhub_get_option('main_color').'; }
 				';
 		}
 
@@ -246,12 +246,12 @@ if(!function_exists('restobar_color_scheme')){
 
     }
 }
-add_action('wp_head', 'restobar_color_scheme');
+add_action('wp_head', 'xhub_color_scheme');
 
 //Custom Second Font
-if(!function_exists('restobar_second_font')){
-	function restobar_second_font(){
-		$second_font = restobar_get_option( 'second_font', [] );
+if(!function_exists('xhub_second_font')){
+	function xhub_second_font(){
+		$second_font = xhub_get_option( 'second_font', [] );
 		$data_font = '';
 
 		if ( is_array($second_font) && !empty($second_font['font-family']) && $second_font['font-family'] != 'DM Sans' ) {
@@ -324,4 +324,4 @@ if(!function_exists('restobar_second_font')){
 		}
 	}
 }
-add_action('wp_head', 'restobar_second_font');
+add_action('wp_head', 'xhub_second_font');

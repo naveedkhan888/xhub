@@ -1,9 +1,9 @@
 <wpml-config>
   <custom-fields>
-    <custom-field action="copy">restobar_options</custom-field>
+    <custom-field action="copy">xhub_options</custom-field>
   </custom-fields>
   <admin-texts>
-    <key name="restobar_options">
+    <key name="xhub_options">
       <key name="sidebar_widgets"/>
       <key name="widgets_above_page"/>
       <key name="widgets_above_content"/>

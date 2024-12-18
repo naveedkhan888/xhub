@@ -3,14 +3,14 @@ namespace Elementor;
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly (security measure)
 
-class Restobar_WooCommerce_Products extends Widget_Base {
+class Xhub_WooCommerce_Products extends Widget_Base {
 
     public function get_name() {
         return 'woocommerce_products';
     }
 
     public function get_title() {
-        return __( 'WooCommerce Products', 'restobar' );
+        return __( 'WooCommerce Products', 'xhub' );
     }
 
     public function get_icon() {
@@ -18,7 +18,7 @@ class Restobar_WooCommerce_Products extends Widget_Base {
     }
 
     public function get_categories() {
-        return [ 'category_restobar' ];
+        return [ 'category_xhub' ];
     }
 
     protected function register_controls() {
@@ -26,14 +26,14 @@ class Restobar_WooCommerce_Products extends Widget_Base {
         $this->start_controls_section(
             'content_section',
             [
-                'label' => __( 'Content', 'restobar' ),
+                'label' => __( 'Content', 'xhub' ),
             ]
         );
 
         $this->add_control(
             'products',
             [
-                'label' => __( 'Products', 'restobar' ),
+                'label' => __( 'Products', 'xhub' ),
                 'type' => Controls_Manager::SELECT2,
                 'multiple' => true,
                 'options' => $this->get_woocommerce_products(),
@@ -48,7 +48,7 @@ class Restobar_WooCommerce_Products extends Widget_Base {
         $this->start_controls_section(
             'style_content_section',
             [
-                'label' => __( 'Style', 'restobar' ),
+                'label' => __( 'Style', 'xhub' ),
                 'tab'   => Controls_Manager::TAB_STYLE,
             ]
         );
@@ -56,7 +56,7 @@ class Restobar_WooCommerce_Products extends Widget_Base {
         $this->add_control(
             'product_title_color',
             [
-                'label' => __( 'Product Title Color', 'restobar' ),
+                'label' => __( 'Product Title Color', 'xhub' ),
                 'type' => Controls_Manager::COLOR,
                 'default' => '',
                 'selectors' => [
@@ -68,7 +68,7 @@ class Restobar_WooCommerce_Products extends Widget_Base {
         $this->add_control(
             'product_price_color',
             [
-                'label' => __( 'Product Price Color', 'restobar' ),
+                'label' => __( 'Product Price Color', 'xhub' ),
                 'type' => Controls_Manager::COLOR,
                 'default' => '',
                 'selectors' => [
@@ -80,7 +80,7 @@ class Restobar_WooCommerce_Products extends Widget_Base {
         $this->add_control(
             'button_color',
             [
-                'label' => __( 'Button Color', 'restobar' ),
+                'label' => __( 'Button Color', 'xhub' ),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#000000',
                 'selectors' => [
@@ -92,7 +92,7 @@ class Restobar_WooCommerce_Products extends Widget_Base {
         $this->add_responsive_control(
             'product_grid_columns',
             [
-                'label' => __( 'Columns', 'restobar' ),
+                'label' => __( 'Columns', 'xhub' ),
                 'type' => Controls_Manager::NUMBER,
                 'default' => 3,
                 'min' => 1,
@@ -133,7 +133,7 @@ class Restobar_WooCommerce_Products extends Widget_Base {
                         <p class="product-price"><?php echo wp_kses_post( $product_obj->get_price_html() ); ?></p>
                         <?php if ( function_exists( 'wc_get_cart_url' ) ) : ?>
                             <a href="?add-to-cart=<?php echo esc_attr( $product_id ); ?>" class="add-to-cart-button">
-                                <?php _e( 'Add to Cart', 'restobar' ); ?>
+                                <?php _e( 'Add to Cart', 'xhub' ); ?>
                             </a>
                         <?php endif; ?>
                     </div>
@@ -163,4 +163,4 @@ class Restobar_WooCommerce_Products extends Widget_Base {
     }
 }
 
-Plugin::instance()->widgets_manager->register( new Restobar_WooCommerce_Products() );
+Plugin::instance()->widgets_manager->register( new Xhub_WooCommerce_Products() );

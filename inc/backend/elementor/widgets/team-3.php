@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly (security measu
 /**
  * Widget Name: Team 3
  */
-class Restobar_Team3 extends Widget_Base{
+class Xhub_Team3 extends Widget_Base{
 
  	// The get_name() method is a simple one, you just need to return a widget name that will be used in the code.
 	public function get_name() {
@@ -14,7 +14,7 @@ class Restobar_Team3 extends Widget_Base{
 
 	// The get_title() method, which again, is a very simple one, you need to return the widget title that will be displayed as the widget label.
 	public function get_title() {
-		return __( 'XP Team 3', 'restobar' );
+		return __( 'XP Team 3', 'xhub' );
 	}
 
 	// The get_icon() method, is an optional but recommended method, it lets you set the widget icon. you can use any of the eicon or font-awesome icons, simply return the class name as a string.
@@ -24,7 +24,7 @@ class Restobar_Team3 extends Widget_Base{
 
 	// The get_categories method, lets you set the category of the widget, return the category name as a string.
 	public function get_categories() {
-		return [ 'category_restobar' ];
+		return [ 'category_xhub' ];
 	}
 
 	protected function register_controls() {
@@ -33,14 +33,14 @@ class Restobar_Team3 extends Widget_Base{
 		$this->start_controls_section(
 			'content_section',
 			[
-				'label' => esc_html__( 'Member Team', 'restobar' ),
+				'label' => esc_html__( 'Member Team', 'xhub' ),
 			]
 		);
 
 		$this->add_control(
 	       'member_image',
 	        [
-	            'label' => esc_html__( 'Photo', 'restobar' ),
+	            'label' => esc_html__( 'Photo', 'xhub' ),
 	            'type'  => Controls_Manager::MEDIA,
 				'default' => [
 					'url' => get_template_directory_uri().'/images/c-member-2.jpg',
@@ -60,18 +60,18 @@ class Restobar_Team3 extends Widget_Base{
 	    $this->add_control(
 		    'member_name',
 	      	[
-	          	'label' => esc_html__( 'Name', 'restobar' ),
+	          	'label' => esc_html__( 'Name', 'xhub' ),
 	          	'type'  => Controls_Manager::TEXTAREA,
-				'default' => esc_html__( 'Peter Perish', 'restobar' ),
+				'default' => esc_html__( 'Peter Perish', 'xhub' ),
 	    	]
 	    );
 
 	    $this->add_control(
 		    'member_extra',
 	      	[
-	          	'label' => esc_html__( 'Extra/Job', 'restobar' ),
+	          	'label' => esc_html__( 'Extra/Job', 'xhub' ),
 	          	'type'  => Controls_Manager::TEXTAREA,
-	          	'default' => esc_html__( 'co-founder of company', 'restobar' ),
+	          	'default' => esc_html__( 'co-founder of company', 'xhub' ),
 	    	]
 	    );
 
@@ -79,16 +79,16 @@ class Restobar_Team3 extends Widget_Base{
 		$repeater->add_control(
 	      	'title',
 		    [
-		        'label'   => esc_html__( 'Name', 'restobar' ),
+		        'label'   => esc_html__( 'Name', 'xhub' ),
 		        'type'    => Controls_Manager::TEXT,
-		        'default' => esc_html__( 'Social', 'restobar' ),
+		        'default' => esc_html__( 'Social', 'xhub' ),
 		    ]
 	    );
 
         $repeater->add_control(
             'social_icon',
             [
-                'label' => esc_html__( 'Icon', 'restobar' ),
+                'label' => esc_html__( 'Icon', 'xhub' ),
                 'type'  => Controls_Manager::ICONS,
                 'fa4compatibility' => 'icon',
 				'default' => [
@@ -101,12 +101,12 @@ class Restobar_Team3 extends Widget_Base{
         $repeater->add_control(
             'social_link',
             [
-                'label' => esc_html__( 'Link', 'restobar' ),
+                'label' => esc_html__( 'Link', 'xhub' ),
                 'type'  => Controls_Manager::URL,
                 'dynamic' => [
 					'active' => true,
 				],
-				'placeholder' => __( 'https://', 'restobar' ),
+				'placeholder' => __( 'https://', 'xhub' ),
 				'default' => [
 					'url' => 'https://', 
 				],
@@ -116,13 +116,13 @@ class Restobar_Team3 extends Widget_Base{
 		$this->add_control(
 		    'social_share',
 		    [
-		        'label'       => esc_html__( 'Socials', 'restobar' ),
+		        'label'       => esc_html__( 'Socials', 'xhub' ),
 		        'type'        => Controls_Manager::REPEATER,
 		        'show_label'  => true,
 		        'default'     => [
 		            [
-		             	'title'       => esc_html__( 'Twitter', 'restobar' ),
-		                'social_link' => esc_html__( 'https://www.twitter.com/', 'restobar' ),
+		             	'title'       => esc_html__( 'Twitter', 'xhub' ),
+		                'social_link' => esc_html__( 'https://www.twitter.com/', 'xhub' ),
 		                'social_icon' => [
 							'value' => 'fab fa-twitter',
 							'library' => 'fa-brand',
@@ -130,8 +130,8 @@ class Restobar_Team3 extends Widget_Base{
 		 
 		            ],
 		            [
-		             	'title'       => esc_html__( 'Facebook', 'restobar' ),
-		                'social_link' => esc_html__( 'https://www.facebook.com/', 'restobar' ),
+		             	'title'       => esc_html__( 'Facebook', 'xhub' ),
+		                'social_link' => esc_html__( 'https://www.facebook.com/', 'xhub' ),
 		                'social_icon' => [
 							'value' => 'fab fa-facebook-f',
 							'library' => 'fa-brand',
@@ -139,8 +139,8 @@ class Restobar_Team3 extends Widget_Base{
 		 
 		            ],
 		            [
-		             	'title'       => esc_html__( 'Pinterest', 'restobar' ),
-		                'social_link' => esc_html__( 'https://www.pinterest.com/', 'restobar' ),
+		             	'title'       => esc_html__( 'Pinterest', 'xhub' ),
+		                'social_link' => esc_html__( 'https://www.pinterest.com/', 'xhub' ),
 		                'social_icon' => [
 							'value' => 'fab fa-pinterest-p',
 							'library' => 'fa-brand',
@@ -155,9 +155,9 @@ class Restobar_Team3 extends Widget_Base{
 		$this->add_control(
 			'link',
 			[
-				'label' => __( 'Link To Details', 'restobar' ),
+				'label' => __( 'Link To Details', 'xhub' ),
 				'type' => Controls_Manager::URL,
-				'placeholder' => __( 'https://', 'restobar' ),
+				'placeholder' => __( 'https://', 'xhub' ),
 			]
 		);
 
@@ -167,7 +167,7 @@ class Restobar_Team3 extends Widget_Base{
 		$this->start_controls_section(
 			'content_style',
 			[
-				'label' => esc_html__( 'General', 'restobar' ),
+				'label' => esc_html__( 'General', 'xhub' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -175,14 +175,14 @@ class Restobar_Team3 extends Widget_Base{
 		$this->add_control(
 			'heading_normal',
 			[
-				'label' => __( 'Normal', 'restobar' ),
+				'label' => __( 'Normal', 'xhub' ),
 				'type' => Controls_Manager::HEADING,
 			]
 		);
 		$this->add_responsive_control(
 			'padding_box',
 			[
-				'label' => __( 'Padding Box', 'restobar' ),
+				'label' => __( 'Padding Box', 'xhub' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
 				'selectors' => [
@@ -193,7 +193,7 @@ class Restobar_Team3 extends Widget_Base{
 		$this->add_control(
 			'radius_box',
 			[
-				'label' => __( 'Border Radius', 'restobar' ),
+				'label' => __( 'Border Radius', 'xhub' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
 				'selectors' => [
@@ -204,7 +204,7 @@ class Restobar_Team3 extends Widget_Base{
 		$this->add_control(
 			'bg_box',
 			[
-				'label' => __( 'Background', 'restobar' ),
+				'label' => __( 'Background', 'xhub' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -224,7 +224,7 @@ class Restobar_Team3 extends Widget_Base{
 		$this->add_control(
 			'box_animation',
 			[
-				'label' => __( 'Hover Animation', 'restobar' ),
+				'label' => __( 'Hover Animation', 'xhub' ),
 				'type' => Controls_Manager::HOVER_ANIMATION,
 				'default' => 'float',
 			]
@@ -235,7 +235,7 @@ class Restobar_Team3 extends Widget_Base{
 		$this->start_controls_section(
 			'photo_style',
 			[
-				'label' => esc_html__( 'Photo', 'restobar' ),
+				'label' => esc_html__( 'Photo', 'xhub' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -243,7 +243,7 @@ class Restobar_Team3 extends Widget_Base{
 		$this->add_responsive_control(
 			'photo_space',
 			[
-				'label' => esc_html__( 'Spacing', 'restobar' ),
+				'label' => esc_html__( 'Spacing', 'xhub' ),
 				'type'  => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -259,7 +259,7 @@ class Restobar_Team3 extends Widget_Base{
 		$this->add_control(
 			'radius_photo',
 			[
-				'label' => __( 'Border Radius', 'restobar' ),
+				'label' => __( 'Border Radius', 'xhub' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
 				'selectors' => [
@@ -271,7 +271,7 @@ class Restobar_Team3 extends Widget_Base{
 		$this->add_control(
 			'heading_hover',
 			[
-				'label' => __( 'Hover', 'restobar' ),
+				'label' => __( 'Hover', 'xhub' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -279,7 +279,7 @@ class Restobar_Team3 extends Widget_Base{
 		$this->add_control(
 			'bg_overlay',
 			[
-				'label' => __( 'Background Overlay', 'restobar' ),
+				'label' => __( 'Background Overlay', 'xhub' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -293,7 +293,7 @@ class Restobar_Team3 extends Widget_Base{
 		$this->add_control(
 			'color_icon_overlay',
 			[
-				'label' => __( 'Color Icon', 'restobar' ),
+				'label' => __( 'Color Icon', 'xhub' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -310,7 +310,7 @@ class Restobar_Team3 extends Widget_Base{
 		$this->start_controls_section(
 			'info_style',
 			[
-				'label' => esc_html__( 'Info Box', 'restobar' ),
+				'label' => esc_html__( 'Info Box', 'xhub' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -318,19 +318,19 @@ class Restobar_Team3 extends Widget_Base{
 		$this->add_responsive_control(
 			'align',
 			[
-				'label' => __( 'Alignment', 'restobar' ),
+				'label' => __( 'Alignment', 'xhub' ),
 				'type' => Controls_Manager::CHOOSE,
 				'options' => [
 					'left'    => [
-						'title' => __( 'Left', 'restobar' ),
+						'title' => __( 'Left', 'xhub' ),
 						'icon' => 'eicon-text-align-left',
 					],
 					'center' => [
-						'title' => __( 'Center', 'restobar' ),
+						'title' => __( 'Center', 'xhub' ),
 						'icon' => 'eicon-text-align-center',
 					],
 					'right' => [
-						'title' => __( 'Right', 'restobar' ),
+						'title' => __( 'Right', 'xhub' ),
 						'icon' => 'eicon-text-align-right',
 					]
 				],
@@ -343,7 +343,7 @@ class Restobar_Team3 extends Widget_Base{
 		$this->add_control(
 			'heading_title',
 			[
-				'label' => __( 'Title', 'restobar' ),
+				'label' => __( 'Title', 'xhub' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -352,7 +352,7 @@ class Restobar_Team3 extends Widget_Base{
 		$this->add_responsive_control(
 			'title_space',
 			[
-				'label' => esc_html__( 'Spacing', 'restobar' ),
+				'label' => esc_html__( 'Spacing', 'xhub' ),
 				'type'  => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -369,7 +369,7 @@ class Restobar_Team3 extends Widget_Base{
 		$this->add_control(
 			'title_color',
 			[
-				'label'     => esc_html__( 'Color', 'restobar' ),
+				'label'     => esc_html__( 'Color', 'xhub' ),
 				'type'      => Controls_Manager::COLOR,
 				'default'   => '',
 				'selectors' => [
@@ -380,7 +380,7 @@ class Restobar_Team3 extends Widget_Base{
 		$this->add_control(
 			'title_hcolor',
 			[
-				'label'     => esc_html__( 'Color Hover', 'restobar' ),
+				'label'     => esc_html__( 'Color Hover', 'xhub' ),
 				'type'      => Controls_Manager::COLOR,
 				'default'   => '',
 				'selectors' => [
@@ -395,7 +395,7 @@ class Restobar_Team3 extends Widget_Base{
 			Group_Control_Typography::get_type(),
 			[
 				'name'     => 'title_typography',
-				'label'    => esc_html__( 'Typography', 'restobar' ),
+				'label'    => esc_html__( 'Typography', 'xhub' ),
 				'selector' => '{{WRAPPER}} .xp-team h6',
 			]
 		);
@@ -404,7 +404,7 @@ class Restobar_Team3 extends Widget_Base{
 		$this->add_control(
 			'heading_job',
 			[
-				'label' => __( 'Extra/Job', 'restobar' ),
+				'label' => __( 'Extra/Job', 'xhub' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -413,7 +413,7 @@ class Restobar_Team3 extends Widget_Base{
 		$this->add_responsive_control(
 			'job_space',
 			[
-				'label' => esc_html__( 'Spacing', 'restobar' ),
+				'label' => esc_html__( 'Spacing', 'xhub' ),
 				'type'  => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -429,7 +429,7 @@ class Restobar_Team3 extends Widget_Base{
 		$this->add_control(
 			'job_color',
 			[
-				'label'     => esc_html__( 'Color', 'restobar' ),
+				'label'     => esc_html__( 'Color', 'xhub' ),
 				'type'      => Controls_Manager::COLOR,
 				'default'   => '',
 				'selectors' => [
@@ -441,7 +441,7 @@ class Restobar_Team3 extends Widget_Base{
 			Group_Control_Typography::get_type(),
 				[
 					'name'     => 'job_typography',
-					'label'    => esc_html__( 'Typography', 'restobar' ),
+					'label'    => esc_html__( 'Typography', 'xhub' ),
 					'selector' => '{{WRAPPER}} .team-info span',
 				]
 		);
@@ -452,7 +452,7 @@ class Restobar_Team3 extends Widget_Base{
 		$this->start_controls_section(
 			'icon_style',
 			[
-				'label' => esc_html__( 'Socials', 'restobar' ),
+				'label' => esc_html__( 'Socials', 'xhub' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -460,7 +460,7 @@ class Restobar_Team3 extends Widget_Base{
 		$this->add_responsive_control(
 			'icon_social_space',
 			[
-				'label' => esc_html__( 'Spacing', 'restobar' ),
+				'label' => esc_html__( 'Spacing', 'xhub' ),
 				'type'  => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -476,7 +476,7 @@ class Restobar_Team3 extends Widget_Base{
 		$this->add_control(
 			'radius_socials',
 			[
-				'label' => __( 'Border Radius', 'restobar' ),
+				'label' => __( 'Border Radius', 'xhub' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
 				'selectors' => [
@@ -488,7 +488,7 @@ class Restobar_Team3 extends Widget_Base{
 		$this->add_control(
 			'icon_social_color',
 			[
-				'label'     => esc_html__( 'Color', 'restobar' ),
+				'label'     => esc_html__( 'Color', 'xhub' ),
 				'type'      => Controls_Manager::COLOR,
 				'default'   => '',
 				'selectors' => [
@@ -500,7 +500,7 @@ class Restobar_Team3 extends Widget_Base{
 		$this->add_control(
 			'icon_social_bg',
 			[
-				'label'     => esc_html__( 'Background', 'restobar' ),
+				'label'     => esc_html__( 'Background', 'xhub' ),
 				'type'      => Controls_Manager::COLOR,
 				'default'   => '',
 				'selectors' => [
@@ -511,7 +511,7 @@ class Restobar_Team3 extends Widget_Base{
 		$this->add_control(
 			'icon_hover_color',
 			[
-				'label'     => esc_html__( 'Color Hover', 'restobar' ),
+				'label'     => esc_html__( 'Color Hover', 'xhub' ),
 				'type'      => Controls_Manager::COLOR,
 				'default'   => '',
 				'selectors' => [
@@ -523,7 +523,7 @@ class Restobar_Team3 extends Widget_Base{
 		$this->add_control(
 			'social_hover_bg',
 			[
-				'label'     => esc_html__( 'Background Hover', 'restobar' ),
+				'label'     => esc_html__( 'Background Hover', 'xhub' ),
 				'type'      => Controls_Manager::COLOR,
 				'default'   => '',
 				'selectors' => [
@@ -596,5 +596,5 @@ class Restobar_Team3 extends Widget_Base{
 	}
 
 }
-// After the Restobar_Team3 class is defined, I must register the new widget class with Elementor:
-Plugin::instance()->widgets_manager->register( new Restobar_Team3() );
+// After the Xhub_Team3 class is defined, I must register the new widget class with Elementor:
+Plugin::instance()->widgets_manager->register( new Xhub_Team3() );

@@ -12,7 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly (security measu
 
  */
 
-class Restobar_Vertical_Menu extends Widget_Base{
+class Xhub_Vertical_Menu extends Widget_Base{
 
 
 
@@ -26,7 +26,7 @@ class Restobar_Vertical_Menu extends Widget_Base{
 
 	public function get_title() {
 
-		return __( 'XP Vertical Services Menu', 'restobar' );
+		return __( 'XP Vertical Services Menu', 'xhub' );
 
 	}
 
@@ -42,7 +42,7 @@ class Restobar_Vertical_Menu extends Widget_Base{
 
 	public function get_categories() {
 
-		return [ 'category_restobar_sidebar' ];
+		return [ 'category_xhub_sidebar' ];
 
 	}
 
@@ -58,7 +58,7 @@ class Restobar_Vertical_Menu extends Widget_Base{
 
 			[
 
-				'label' => __( 'Menu', 'restobar' ),
+				'label' => __( 'Menu', 'xhub' ),
 
 			]
 
@@ -74,7 +74,7 @@ class Restobar_Vertical_Menu extends Widget_Base{
 
 			[
 
-				'label' => esc_html__( 'Select Services Menu', 'restobar' ),
+				'label' => esc_html__( 'Select Services Menu', 'xhub' ),
 
 				'type' => Controls_Manager::SELECT,
 
@@ -104,7 +104,7 @@ class Restobar_Vertical_Menu extends Widget_Base{
 
 			[
 
-				'label' => __( 'Vertical Menu Style', 'restobar' ),
+				'label' => __( 'Vertical Menu Style', 'xhub' ),
 
 				'tab'   => Controls_Manager::TAB_STYLE,
 
@@ -122,7 +122,7 @@ class Restobar_Vertical_Menu extends Widget_Base{
 
 			[
 
-				'label' => __( 'Background Color', 'restobar' ),
+				'label' => __( 'Background Color', 'xhub' ),
 
 				'type' => Controls_Manager::COLOR,
 
@@ -146,7 +146,7 @@ class Restobar_Vertical_Menu extends Widget_Base{
 
 			[
 
-				'label' => __( 'Text Color', 'restobar' ),
+				'label' => __( 'Text Color', 'xhub' ),
 
 				'type' => Controls_Manager::COLOR,
 
@@ -170,7 +170,7 @@ class Restobar_Vertical_Menu extends Widget_Base{
 
 			[
 
-				'label' => __( 'Hover Text Color', 'restobar' ),
+				'label' => __( 'Hover Text Color', 'xhub' ),
 
 				'type' => Controls_Manager::COLOR,
 
@@ -194,7 +194,7 @@ class Restobar_Vertical_Menu extends Widget_Base{
 
 			[
 
-				'label' => __( 'Active Menu Item Color', 'restobar' ),
+				'label' => __( 'Active Menu Item Color', 'xhub' ),
 
 				'type' => Controls_Manager::COLOR,
 
@@ -236,7 +236,7 @@ class Restobar_Vertical_Menu extends Widget_Base{
 
 			[
 
-				'label' => __( 'Item Padding', 'restobar' ),
+				'label' => __( 'Item Padding', 'xhub' ),
 
 				'type' => Controls_Manager::DIMENSIONS,
 
@@ -322,4 +322,4 @@ class Restobar_Vertical_Menu extends Widget_Base{
 
 // Register the new vertical menu widget with Elementor
 
-Plugin::instance()->widgets_manager->register( new Restobar_Vertical_Menu() );
+Plugin::instance()->widgets_manager->register( new Xhub_Vertical_Menu() );

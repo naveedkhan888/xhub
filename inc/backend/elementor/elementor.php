@@ -1,8 +1,8 @@
 <?php
 
 // Load the theme's custom Widgets so that they appear in the Elementor element panel.
-add_action( 'elementor/widgets/register', 'restobar_register_elementor_widgets' );
-function restobar_register_elementor_widgets() {
+add_action( 'elementor/widgets/register', 'xhub_register_elementor_widgets' );
+function xhub_register_elementor_widgets() {
     // Include PHP files for Elementor widgets
     // These files contain registration logic for custom Elementor widgets
     locate_template('/inc/backend/elementor/widgets/widgets.php', true, true);
@@ -10,20 +10,20 @@ function restobar_register_elementor_widgets() {
 
 }
 
-// Add a custom 'category_restobar' category for to the Elementor element panel so that our theme's widgets have their own category.
+// Add a custom 'category_xhub' category for to the Elementor element panel so that our theme's widgets have their own category.
 add_action( 'elementor/init', function() {
     \Elementor\Plugin::$instance->elements_manager->add_category( 
-        'category_restobar',
+        'category_xhub',
         [
-            'title' => __( 'Restobar', 'restobar' ),
+            'title' => __( 'Xhub', 'xhub' ),
             'icon' => 'fa fa-plug', //default icon
         ],
         1 // position
     );
     \Elementor\Plugin::$instance->elements_manager->add_category( 
-        'category_restobar_header',
+        'category_xhub_header',
         [
-            'title' => __( 'XP Header', 'restobar' ),
+            'title' => __( 'XP Header', 'xhub' ),
             'icon' => 'fa fa-plug', //default icon
         ],
         2 // position
@@ -31,7 +31,7 @@ add_action( 'elementor/init', function() {
 });
 
 // Post types with Elementor
-function restobar_add_cpt_support() {
+function xhub_add_cpt_support() {
     
     //if exists, assign to $cpt_support var
     $cpt_support = get_option( 'elementor_cpt_support' );
@@ -61,10 +61,10 @@ function restobar_add_cpt_support() {
     
     //otherwise do nothing, portfolio already exists in elementor_cpt_support option
 }
-add_action( 'elementor/init', 'restobar_add_cpt_support' );
+add_action( 'elementor/init', 'xhub_add_cpt_support' );
 
 // Upload SVG for Elementor
-function restobar_unfiltered_files_upload() {
+function xhub_unfiltered_files_upload() {
     
     //if exists, assign to $cpt_support var
     $cpt_support = get_option( 'elementor_unfiltered_files_upload' );
@@ -75,17 +75,17 @@ function restobar_unfiltered_files_upload() {
         update_option( 'elementor_unfiltered_files_upload', $cpt_support ); //write it to the database
     }
 }
-add_action( 'elementor/init', 'restobar_unfiltered_files_upload' );
+add_action( 'elementor/init', 'xhub_unfiltered_files_upload' );
 
 
 
 /*Fix Elementor Pro*/
-function restobar_register_elementor_locations( $elementor_theme_manager ) {
+function xhub_register_elementor_locations( $elementor_theme_manager ) {
 
     $elementor_theme_manager->register_all_core_location();
 
 }
-add_action( 'elementor/theme/register_locations', 'restobar_register_elementor_locations' );
+add_action( 'elementor/theme/register_locations', 'xhub_register_elementor_locations' );
 
 /*** add options to sections ***/
 add_action('elementor/element/container/section_layout/after_section_end', function( $container, $args ) {
@@ -94,14 +94,14 @@ add_action('elementor/element/container/section_layout/after_section_end', funct
     $container->start_controls_section(
         'header_custom_class',
         [
-            'label' => __( 'For Header', 'restobar' ),
+            'label' => __( 'For Header', 'xhub' ),
             'tab' => \Elementor\Controls_Manager::TAB_LAYOUT,
         ]
     );
     $container->add_control(
         'sticky_class',
         [
-            'label'        => __( 'Sticky On/Off', 'restobar' ),
+            'label'        => __( 'Sticky On/Off', 'xhub' ),
             'type'         => Elementor\Controls_Manager::SWITCHER,
             'return_value' => 'is-fixed',
             'prefix_class' => '',
@@ -110,7 +110,7 @@ add_action('elementor/element/container/section_layout/after_section_end', funct
     $container->add_control(
         'sticky_background',
         [
-            'label'     => __( 'Background Scroll', 'restobar' ),
+            'label'     => __( 'Background Scroll', 'xhub' ),
             'type'      => Elementor\Controls_Manager::COLOR,
             'selectors' => [
                 '{{WRAPPER}}.is-fixed.is-stuck' => 'background: {{VALUE}};',
@@ -123,7 +123,7 @@ add_action('elementor/element/container/section_layout/after_section_end', funct
     $container->add_responsive_control(
         'offset_space',
         [
-            'label' => __( 'Offset', 'restobar' ),
+            'label' => __( 'Offset', 'xhub' ),
             'type' => Elementor\Controls_Manager::SLIDER,
             'range' => [
                 'px' => [

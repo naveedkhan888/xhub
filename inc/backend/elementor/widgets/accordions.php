@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly (security measu
 /**
  * Widget Name: Accordions
  */
-class Restobar_Accordions extends Widget_Base{
+class Xhub_Accordions extends Widget_Base{
 
  	// The get_name() method is a simple one, you just need to return a widget name that will be used in the code.
 	public function get_name() {
@@ -14,7 +14,7 @@ class Restobar_Accordions extends Widget_Base{
 
 	// The get_title() method, which again, is a very simple one, you need to return the widget title that will be displayed as the widget label.
 	public function get_title() {
-		return __( 'XP Accordions', 'restobar' );
+		return __( 'XP Accordions', 'xhub' );
 	}
 
 	// The get_icon() method, is an optional but recommended method, it lets you set the widget icon. you can use any of the eicon or font-awesome icons, simply return the class name as a string.
@@ -24,7 +24,7 @@ class Restobar_Accordions extends Widget_Base{
 
 	// The get_categories method, lets you set the category of the widget, return the category name as a string.
 	public function get_categories() {
-		return [ 'category_restobar' ];
+		return [ 'category_xhub' ];
 	}
 
 	protected function register_controls() {
@@ -33,7 +33,7 @@ class Restobar_Accordions extends Widget_Base{
 		$this->start_controls_section(
 			'content_section',
 			[
-				'label' => __( 'Accordions', 'restobar' ),
+				'label' => __( 'Accordions', 'xhub' ),
 			]
 		);
 
@@ -42,10 +42,10 @@ class Restobar_Accordions extends Widget_Base{
 		$repeater->add_control(
 			'acc_title',
 			[
-				'label' => __( 'Title & Content', 'restobar' ),
+				'label' => __( 'Title & Content', 'xhub' ),
 				'type' => Controls_Manager::TEXT,
-				'default' => __( 'Accordion Title', 'restobar' ),
-				'placeholder' => __( 'Accordion Title', 'restobar' ),
+				'default' => __( 'Accordion Title', 'xhub' ),
+				'placeholder' => __( 'Accordion Title', 'xhub' ),
 				'label_block' => true,
 			]
 		);
@@ -53,9 +53,9 @@ class Restobar_Accordions extends Widget_Base{
 		$repeater->add_control(
 			'acc_content',
 			[
-				'label' => __( 'Content', 'restobar' ),
-				'default' => __( 'Accordion Content', 'restobar' ),
-				'placeholder' => __( 'Accordion Content', 'restobar' ),
+				'label' => __( 'Content', 'xhub' ),
+				'default' => __( 'Accordion Content', 'xhub' ),
+				'placeholder' => __( 'Accordion Content', 'xhub' ),
 				'type' => Controls_Manager::WYSIWYG,
 				'show_label' => false,
 			]
@@ -64,17 +64,17 @@ class Restobar_Accordions extends Widget_Base{
 		$this->add_control(
 			'xp_accs',
 			[
-				'label' => __( 'Accordion Items', 'restobar' ),
+				'label' => __( 'Accordion Items', 'xhub' ),
 				'type' => Controls_Manager::REPEATER,
 				'fields' => $repeater->get_controls(),
 				'default' => [
 					[
-						'acc_title' => __( 'Accordion #1', 'restobar' ),
-						'acc_content' => __( 'The basic philosophy of our studio is to create individual, aesthetically stunning solutions for our customers by lightning-fast development of projects employing unique styles.', 'restobar' ),
+						'acc_title' => __( 'Accordion #1', 'xhub' ),
+						'acc_content' => __( 'The basic philosophy of our studio is to create individual, aesthetically stunning solutions for our customers by lightning-fast development of projects employing unique styles.', 'xhub' ),
 					],
 					[
-						'acc_title' => __( 'Accordion #2', 'restobar' ),
-						'acc_content' => __( 'The basic philosophy of our studio is to create individual, aesthetically stunning solutions for our customers by lightning-fast development of projects employing unique styles.', 'restobar' ),
+						'acc_title' => __( 'Accordion #2', 'xhub' ),
+						'acc_content' => __( 'The basic philosophy of our studio is to create individual, aesthetically stunning solutions for our customers by lightning-fast development of projects employing unique styles.', 'xhub' ),
 					],
 				],
 				'title_field' => '{{{ acc_title }}}',
@@ -83,7 +83,7 @@ class Restobar_Accordions extends Widget_Base{
 		$this->add_control(
 			'default_active',
 			[
-				'label'   => esc_html__( 'Default Active', 'restobar' ),
+				'label'   => esc_html__( 'Default Active', 'xhub' ),
 				'type'    => Controls_Manager::SWITCHER,
 				'default' => 'yes'
 			]
@@ -91,7 +91,7 @@ class Restobar_Accordions extends Widget_Base{
 		$this->add_control(
 			'item_active',
 			[
-				'label' => esc_html__( 'Item Active', 'restobar' ),
+				'label' => esc_html__( 'Item Active', 'xhub' ),
 				'type' => Controls_Manager::NUMBER,
 				'min' => 1,
 				'step' => 1,
@@ -109,14 +109,14 @@ class Restobar_Accordions extends Widget_Base{
 		$this->start_controls_section(
 			'style_title',
 			[
-				'label' => __( 'Title', 'restobar' ),
+				'label' => __( 'Title', 'xhub' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
 		$this->add_control(
 			'bg_title',
 			[
-				'label' => __( 'Background', 'restobar' ),
+				'label' => __( 'Background', 'xhub' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -127,7 +127,7 @@ class Restobar_Accordions extends Widget_Base{
 		$this->add_control(
 			'bg_title_active',
 			[
-				'label' => __( 'Background Active', 'restobar' ),
+				'label' => __( 'Background Active', 'xhub' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -138,7 +138,7 @@ class Restobar_Accordions extends Widget_Base{
 		$this->add_control(
 			'title_border',
 			[
-				'label' => __( 'Border Color', 'restobar' ),
+				'label' => __( 'Border Color', 'xhub' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -149,7 +149,7 @@ class Restobar_Accordions extends Widget_Base{
 		$this->add_control(
 			'title_color',
 			[
-				'label' => __( 'Color', 'restobar' ),
+				'label' => __( 'Color', 'xhub' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -160,7 +160,7 @@ class Restobar_Accordions extends Widget_Base{
 		$this->add_control(
 			'title_color_active',
 			[
-				'label' => __( 'Color Active', 'restobar' ),
+				'label' => __( 'Color Active', 'xhub' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -178,7 +178,7 @@ class Restobar_Accordions extends Widget_Base{
 		$this->add_responsive_control(
 			'title_padding',
 			[
-				'label' => __( 'Padding', 'restobar' ),
+				'label' => __( 'Padding', 'xhub' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', 'em', '%' ],
 				'selectors' => [
@@ -192,14 +192,14 @@ class Restobar_Accordions extends Widget_Base{
 		$this->start_controls_section(
 			'style_content',
 			[
-				'label' => __( 'Content', 'restobar' ),
+				'label' => __( 'Content', 'xhub' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
 		$this->add_control(
 			'bg_content',
 			[
-				'label' => __( 'Background', 'restobar' ),
+				'label' => __( 'Background', 'xhub' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -210,7 +210,7 @@ class Restobar_Accordions extends Widget_Base{
 		$this->add_control(
 			'content_color',
 			[
-				'label' => __( 'Color', 'restobar' ),
+				'label' => __( 'Color', 'xhub' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -228,7 +228,7 @@ class Restobar_Accordions extends Widget_Base{
 		$this->add_responsive_control(
 			'content_padding',
 			[
-				'label' => __( 'Padding', 'restobar' ),
+				'label' => __( 'Padding', 'xhub' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', 'em', '%' ],
 				'selectors' => [
@@ -275,5 +275,5 @@ class Restobar_Accordions extends Widget_Base{
 	}
 
 }
-// After the Restobar_Accordions class is defined, I must register the new widget class with Elementor:
-Plugin::instance()->widgets_manager->register( new Restobar_Accordions() );
+// After the Xhub_Accordions class is defined, I must register the new widget class with Elementor:
+Plugin::instance()->widgets_manager->register( new Xhub_Accordions() );

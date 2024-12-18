@@ -183,7 +183,7 @@
 			cat 	= $(this).data('category'),
 			count   = grid.data('count');
 		$.ajax({
-			url : restobar_loadmore_params.ajaxurl, // AJAX handler
+			url : xhub_loadmore_params.ajaxurl, // AJAX handler
 			data : {
 				'action': 'loadmore', // the parameter for admin-ajax.php
 				'ppp'	: more,
@@ -249,19 +249,19 @@
 	* switcher
 	* --------------------------------------------------*/
 	var swt = $('.xp-switcher').find('.switch input');
-	$('.restobar_block_hidden').hide();
+	$('.xhub_block_hidden').hide();
 	swt.on( 'change', function() {
 		var parent = $(this).parents('.e-parent');
 		if(this.checked) {
 			parent.find('.r-switch').addClass('active');
 			parent.find('.l-switch').removeClass('active');
-			parent.find('.restobar_block_show').hide();
-			parent.find('.restobar_block_hidden').show();
+			parent.find('.xhub_block_show').hide();
+			parent.find('.xhub_block_hidden').show();
 		}else{
 			parent.find('.l-switch').addClass('active');
 			parent.find('.r-switch').removeClass('active');
-			parent.find('.restobar_block_hidden').hide();
-			parent.find('.restobar_block_show').show();
+			parent.find('.xhub_block_hidden').hide();
+			parent.find('.xhub_block_show').show();
 		}
 	});
 

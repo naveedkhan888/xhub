@@ -13,7 +13,7 @@
 <?php
 
 if ( ! function_exists( 'elementor_theme_do_location' ) || ! elementor_theme_do_location( 'single' ) ) {
-	restobar_404_builder();
+	xhub_404_builder();
 } 
 
 ?>

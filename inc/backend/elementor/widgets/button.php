@@ -5,14 +5,14 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 /**
  * Widget Name: Button with Icon
  */
-class Restobar_Button extends Widget_Base {
+class Xhub_Button extends Widget_Base {
 
     public function get_name() {
         return 'ibutton';
     }
 
     public function get_title() {
-        return __( 'XP Button', 'restobar' );
+        return __( 'XP Button', 'xhub' );
     }
 
     public function get_icon() {
@@ -20,15 +20,15 @@ class Restobar_Button extends Widget_Base {
     }
 
     public function get_categories() {
-        return [ 'category_restobar' ];
+        return [ 'category_xhub' ];
     }
 
     public static function get_button_color() {
         return [
-            'main'   => __( 'Main Color', 'restobar' ),
-            'dark'   => __( 'Dark Color', 'restobar' ),
-            'light'  => __( 'Light Color', 'restobar' ),
-            'border' => __( 'Border Color', 'restobar' ),
+            'main'   => __( 'Main Color', 'xhub' ),
+            'dark'   => __( 'Dark Color', 'xhub' ),
+            'light'  => __( 'Light Color', 'xhub' ),
+            'border' => __( 'Border Color', 'xhub' ),
         ];
     }
 
@@ -37,30 +37,30 @@ class Restobar_Button extends Widget_Base {
         $this->start_controls_section(
             'button_section',
             [
-                'label' => __( 'Button', 'restobar' ),
+                'label' => __( 'Button', 'xhub' ),
             ]
         );
 
         $this->add_responsive_control(
             'align',
             [
-                'label' => __( 'Alignment', 'restobar' ),
+                'label' => __( 'Alignment', 'xhub' ),
                 'type' => Controls_Manager::CHOOSE,
                 'options' => [
                     'left'    => [
-                        'title' => __( 'Left', 'restobar' ),
+                        'title' => __( 'Left', 'xhub' ),
                         'icon' => 'eicon-text-align-left',
                     ],
                     'center' => [
-                        'title' => __( 'Center', 'restobar' ),
+                        'title' => __( 'Center', 'xhub' ),
                         'icon' => 'eicon-text-align-center',
                     ],
                     'right' => [
-                        'title' => __( 'Right', 'restobar' ),
+                        'title' => __( 'Right', 'xhub' ),
                         'icon' => 'eicon-text-align-right',
                     ],
                     'justify' => [
-                        'title' => __( 'Justify', 'restobar' ),
+                        'title' => __( 'Justify', 'xhub' ),
                         'icon' => 'eicon-text-align-justify',
                     ],
                 ],
@@ -72,7 +72,7 @@ class Restobar_Button extends Widget_Base {
         $this->add_control(
             'btn_style',
             [
-                'label' => __( 'Style Color', 'restobar' ),
+                'label' => __( 'Style Color', 'xhub' ),
                 'type' => Controls_Manager::SELECT,
                 'default' => 'main',
                 'options' => self::get_button_color(),
@@ -83,9 +83,9 @@ class Restobar_Button extends Widget_Base {
         $this->add_control(
             'text',
             [
-                'label' => __( 'Label', 'restobar' ),
+                'label' => __( 'Label', 'xhub' ),
                 'type' => Controls_Manager::TEXT,
-                'default' => __( 'Click here', 'restobar' ),
+                'default' => __( 'Click here', 'xhub' ),
                 'dynamic' => [
                     'active' => true,
                 ],
@@ -96,7 +96,7 @@ class Restobar_Button extends Widget_Base {
         $this->add_control(
             'selected_icon',
             [
-                'label' => __( 'Icon', 'restobar' ),
+                'label' => __( 'Icon', 'xhub' ),
                 'type' => Controls_Manager::ICONS,
                 'fa4compatibility' => 'icon',
                 'skin' => 'inline',
@@ -107,12 +107,12 @@ class Restobar_Button extends Widget_Base {
         $this->add_control(
             'icon_position',
             [
-                'label' => __( 'Icon Position', 'restobar' ),
+                'label' => __( 'Icon Position', 'xhub' ),
                 'type' => Controls_Manager::SELECT,
                 'default' => 'left',
                 'options' => [
-                    'left' => __( 'Before', 'restobar' ),
-                    'right' => __( 'After', 'restobar' ),
+                    'left' => __( 'Before', 'xhub' ),
+                    'right' => __( 'After', 'xhub' ),
                 ],
                 'condition' => [
                     'selected_icon[value]!' => '',
@@ -123,7 +123,7 @@ class Restobar_Button extends Widget_Base {
         $this->add_control(
             'icon_spacing',
             [
-                'label' => __( 'Icon Spacing', 'restobar' ),
+                'label' => __( 'Icon Spacing', 'xhub' ),
                 'type' => Controls_Manager::SLIDER,
                 'range' => [
                     'px' => [
@@ -143,9 +143,9 @@ class Restobar_Button extends Widget_Base {
         $this->add_control(
             'link',
             [
-                'label' => __( 'Link', 'restobar' ),
+                'label' => __( 'Link', 'xhub' ),
                 'type' => Controls_Manager::URL,
-                'placeholder' => __( 'https://your-link.com', 'restobar' ),
+                'placeholder' => __( 'https://your-link.com', 'xhub' ),
                 'default' => [
                     'url' => '#',
                 ],
@@ -161,7 +161,7 @@ class Restobar_Button extends Widget_Base {
         $this->start_controls_section(
             'style_section',
             [
-                'label' => __( 'General', 'restobar' ),
+                'label' => __( 'General', 'xhub' ),
                 'tab'   => Controls_Manager::TAB_STYLE,
             ]
         );
@@ -181,7 +181,7 @@ class Restobar_Button extends Widget_Base {
         $this->add_control(
             'button_radius',
             [
-                'label' => __( 'Border Radius', 'restobar' ),
+                'label' => __( 'Border Radius', 'xhub' ),
                 'type' => Controls_Manager::DIMENSIONS,
                 'size_units' => [ 'px', '%' ],
                 'selectors' => [
@@ -202,7 +202,7 @@ class Restobar_Button extends Widget_Base {
         $this->add_control(
             'icon_size',
             [
-                'label' => __( 'Icon Size', 'restobar' ),
+                'label' => __( 'Icon Size', 'xhub' ),
                 'type' => Controls_Manager::SLIDER,
                 'range' => [
                     'px' => [
@@ -226,14 +226,14 @@ class Restobar_Button extends Widget_Base {
         $this->start_controls_tab(
             'tab_button_normal',
             [
-                'label' => __( 'Normal', 'restobar' ),
+                'label' => __( 'Normal', 'xhub' ),
             ]
         );
 
         $this->add_control(
             'button_text_color',
             [
-                'label' => __( 'Text Color', 'restobar' ),
+                'label' => __( 'Text Color', 'xhub' ),
                 'type' => Controls_Manager::COLOR,
                 'default' => '',
                 'selectors' => [
@@ -246,7 +246,7 @@ class Restobar_Button extends Widget_Base {
         $this->add_control(
             'btn_bg',
             [
-                'label' => __( 'Background Color', 'restobar' ),
+                'label' => __( 'Background Color', 'xhub' ),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .xptf-btn' => 'background-color: {{VALUE}};',
@@ -267,14 +267,14 @@ class Restobar_Button extends Widget_Base {
         $this->start_controls_tab(
             'tab_button_hover',
             [
-                'label' => __( 'Hover', 'restobar' ),
+                'label' => __( 'Hover', 'xhub' ),
             ]
         );
 
         $this->add_control(
             'hover_color',
             [
-                'label' => __( 'Text Color', 'restobar' ),
+                'label' => __( 'Text Color', 'xhub' ),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .xptf-btn:hover, {{WRAPPER}} .xptf-btn:focus' => 'color: {{VALUE}};',
@@ -286,7 +286,7 @@ class Restobar_Button extends Widget_Base {
         $this->add_control(
             'button_background_hover_color',
             [
-                'label' => __( 'Background Color', 'restobar' ),
+                'label' => __( 'Background Color', 'xhub' ),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .xptf-btn:hover, {{WRAPPER}} .xptf-btn:focus' => 'background-color: {{VALUE}};',
@@ -297,7 +297,7 @@ class Restobar_Button extends Widget_Base {
         $this->add_control(
             'border_hover_color',
             [
-                'label' => __( 'Border Color', 'restobar' ),
+                'label' => __( 'Border Color', 'xhub' ),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .xptf-btn:hover, {{WRAPPER}} .xptf-btn:focus' => 'border-color: {{VALUE}};',
@@ -308,7 +308,7 @@ class Restobar_Button extends Widget_Base {
         $this->add_control(
             'hover_animation',
             [
-                'label' => __( 'Hover Animation', 'restobar' ),
+                'label' => __( 'Hover Animation', 'xhub' ),
                 'type' => Controls_Manager::HOVER_ANIMATION,
             ]
         );
@@ -364,4 +364,4 @@ class Restobar_Button extends Widget_Base {
     }
 }
 
-Plugin::instance()->widgets_manager->register( new Restobar_Button() );
+Plugin::instance()->widgets_manager->register( new Xhub_Button() );

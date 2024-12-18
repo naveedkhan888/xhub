@@ -6,7 +6,7 @@ function preloader_customize_settings() {
 	 */
 
 	$settings = array(
-		'theme' => 'restobar',
+		'theme' => 'xhub',
 	);
 
 	$panels = array(
@@ -15,7 +15,7 @@ function preloader_customize_settings() {
 
 	$sections = array(
 		'preload_section'     => array(
-			'title'       => esc_attr__( 'Preloader', 'restobar' ),
+			'title'       => esc_attr__( 'Preloader', 'xhub' ),
 			'description' => '',
 			'priority'    => 22,
 			'capability'  => 'edit_theme_options',
@@ -26,14 +26,14 @@ function preloader_customize_settings() {
         /* preloader */
         'preload'     => array(
             'type'        => 'toggle',
-            'label'       => esc_attr__( 'Preloader', 'restobar' ),
+            'label'       => esc_attr__( 'Preloader', 'xhub' ),
             'section'     => 'preload_section',
             'default'     => 0,
             'priority'    => 10,
         ),
         'preload_logo'    => array(
             'type'     => 'image',
-            'label'    => esc_html__( 'Logo Preload', 'restobar' ),
+            'label'    => esc_html__( 'Logo Preload', 'xhub' ),
             'section'  => 'preload_section',
             'default'  => trailingslashit( get_template_directory_uri() ) . 'images/logo.svg',
             'priority' => 11,
@@ -47,7 +47,7 @@ function preloader_customize_settings() {
         ),
         'preload_logo_width'     => array(
             'type'     => 'slider',
-            'label'    => esc_html__( 'Logo Width', 'restobar' ),
+            'label'    => esc_html__( 'Logo Width', 'xhub' ),
             'section'  => 'preload_section',
             'default'  => 124,
             'priority' => 12,
@@ -66,7 +66,7 @@ function preloader_customize_settings() {
         ),
         'preload_logo_height'    => array(
             'type'     => 'slider',
-            'label'    => esc_html__( 'Logo Height', 'restobar' ),
+            'label'    => esc_html__( 'Logo Height', 'xhub' ),
             'section'  => 'preload_section',
             'default'  => 50,
             'priority' => 13,
@@ -85,7 +85,7 @@ function preloader_customize_settings() {
         ),
         'preload_text_color'    => array(
             'type'     => 'color',
-            'label'    => esc_html__( 'Percent Text Color', 'restobar' ),
+            'label'    => esc_html__( 'Percent Text Color', 'xhub' ),
             'section'  => 'preload_section',
             'default'  => '#0a0f2b',
             'priority' => 14,
@@ -99,7 +99,7 @@ function preloader_customize_settings() {
         ),
         'preload_bgcolor'    => array(
             'type'     => 'color',
-            'label'    => esc_html__( 'Background Color', 'restobar' ),
+            'label'    => esc_html__( 'Background Color', 'xhub' ),
             'section'  => 'preload_section',
             'default'  => '#fff',
             'priority' => 15,
@@ -113,7 +113,7 @@ function preloader_customize_settings() {
         ),
         'preload_typo' => array(
             'type'        => 'typography',
-            'label'       => esc_attr__( 'Percent Preload Font', 'restobar' ),
+            'label'       => esc_attr__( 'Percent Preload Font', 'xhub' ),
             'section'     => 'preload_section',
             'default'     => array(
                 'font-family'    => 'Roboto',
@@ -141,34 +141,34 @@ function preloader_customize_settings() {
         ),
 	);
 
-	$settings['panels']   = apply_filters( 'restobar_customize_panels', $panels );
-	$settings['sections'] = apply_filters( 'restobar_customize_sections', $sections );
-	$settings['fields']   = apply_filters( 'restobar_customize_fields', $fields );
+	$settings['panels']   = apply_filters( 'xhub_customize_panels', $panels );
+	$settings['sections'] = apply_filters( 'xhub_customize_sections', $sections );
+	$settings['fields']   = apply_filters( 'xhub_customize_fields', $fields );
 
 	return $settings;
 }
 
-$restobar_customize = new Restobar_Customize( preloader_customize_settings() );
+$xhub_customize = new Xhub_Customize( preloader_customize_settings() );
 
-if( restobar_get_option('preload') != false ){
+if( xhub_get_option('preload') != false ){
 
-    function restobar_body_classes( $classes ) {
+    function xhub_body_classes( $classes ) {
 
     	$classes[] = 'royal_preloader';
 
     	return $classes;
     }
-    add_filter( 'body_class', 'restobar_body_classes' );
+    add_filter( 'body_class', 'xhub_body_classes' );
 
-    function restobar_preload_body_open_script() {
-        echo '<div id="royal_preloader" data-width="'.restobar_get_option('preload_logo_width').'" data-height="'.restobar_get_option('preload_logo_height').'" data-url="'.restobar_get_option('preload_logo').'" data-color="'.restobar_get_option('preload_text_color').'" data-bgcolor="'.restobar_get_option('preload_bgcolor').'"></div>';
+    function xhub_preload_body_open_script() {
+        echo '<div id="royal_preloader" data-width="'.xhub_get_option('preload_logo_width').'" data-height="'.xhub_get_option('preload_logo_height').'" data-url="'.xhub_get_option('preload_logo').'" data-color="'.xhub_get_option('preload_text_color').'" data-bgcolor="'.xhub_get_option('preload_bgcolor').'"></div>';
         
     }
-    add_action( 'wp_body_open', 'restobar_preload_body_open_script' );
+    add_action( 'wp_body_open', 'xhub_preload_body_open_script' );
 
-    function restobar_preload_scripts() {
-    	wp_enqueue_style('restobar-preload', get_template_directory_uri().'/css/royal-preload.css');
+    function xhub_preload_scripts() {
+    	wp_enqueue_style('xhub-preload', get_template_directory_uri().'/css/royal-preload.css');
     }
-    add_action( 'wp_enqueue_scripts', 'restobar_preload_scripts' );
+    add_action( 'wp_enqueue_scripts', 'xhub_preload_scripts' );
 
 }

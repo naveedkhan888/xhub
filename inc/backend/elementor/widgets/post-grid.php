@@ -5,14 +5,14 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 /**
  * Widget Name: Post Grid
  */
-class Restobar_Post_Grid extends Widget_Base {
+class Xhub_Post_Grid extends Widget_Base {
 
  	public function get_name() {
 		return 'ipostgrid';
 	}
 
 	public function get_title() {
-		return __( 'XP Post Grid', 'restobar' );
+		return __( 'XP Post Grid', 'xhub' );
 	}
 
 	public function get_icon() {
@@ -20,7 +20,7 @@ class Restobar_Post_Grid extends Widget_Base {
 	}
 
 	public function get_categories() {
-		return [ 'category_restobar' ];
+		return [ 'category_xhub' ];
 	}
 
 	protected function register_controls() {
@@ -28,24 +28,24 @@ class Restobar_Post_Grid extends Widget_Base {
 		$this->start_controls_section(
 			'content_section',
 			[
-				'label' => __( 'Posts', 'restobar' ),
+				'label' => __( 'Posts', 'xhub' ),
 			]
 		);
 		$this->add_control(
 			'post_cat',
 			[
-				'label' => __( 'Select Categories', 'restobar' ),
+				'label' => __( 'Select Categories', 'xhub' ),
 				'type' => Controls_Manager::SELECT2,
 				'options' => $this->select_param_cate_post(),
 				'multiple' => true,
 				'label_block' => true,
-				'placeholder' => __( 'All Categories', 'restobar' ),
+				'placeholder' => __( 'All Categories', 'xhub' ),
 			]
 		);
 		$this->add_control(
 			'post_num',
 			[
-				'label' => __( 'Show Number Posts', 'restobar' ),
+				'label' => __( 'Show Number Posts', 'xhub' ),
 				'type' => Controls_Manager::NUMBER,
 				'default' => '6',
 			]
@@ -53,7 +53,7 @@ class Restobar_Post_Grid extends Widget_Base {
 		$this->add_control(
 			'exc',
 			[
-				'label' => esc_html__( 'Excerpt Length', 'restobar' ),
+				'label' => esc_html__( 'Excerpt Length', 'xhub' ),
 				'type' => Controls_Manager::NUMBER,
 				'default' => '0',
 			]
@@ -61,12 +61,12 @@ class Restobar_Post_Grid extends Widget_Base {
 		$this->add_control(
 			'post_thumbnail',
 			[
-				'label' => __( 'Thumbnail Image Size', 'restobar' ),
+				'label' => __( 'Thumbnail Image Size', 'xhub' ),
 				'type' => Controls_Manager::SELECT,
-				'default' => 'restobar-post-thumbnail-grid',
+				'default' => 'xhub-post-thumbnail-grid',
 				'options' => [
-					'restobar-post-thumbnail-grid' => __( 'Default', 'restobar' ),
-					'full' => __( 'Full', 'restobar' ),
+					'xhub-post-thumbnail-grid' => __( 'Default', 'xhub' ),
+					'full' => __( 'Full', 'xhub' ),
 				],
 			]
 		);
@@ -75,7 +75,7 @@ class Restobar_Post_Grid extends Widget_Base {
 		$this->add_control(
 			'heading_grid',
 			[
-				'label' => __( 'Grid', 'restobar' ),
+				'label' => __( 'Grid', 'xhub' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -84,7 +84,7 @@ class Restobar_Post_Grid extends Widget_Base {
 		$this->add_responsive_control(
 			'columns',
 			[
-				'label' => __( 'Columns', 'restobar' ),
+				'label' => __( 'Columns', 'xhub' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => '3',
 				'tablet_default' => '2',
@@ -103,7 +103,7 @@ class Restobar_Post_Grid extends Widget_Base {
 		$this->add_control(
 			'grid_gap',
 			[
-				'label' => __( 'Grid Gap', 'restobar' ),
+				'label' => __( 'Grid Gap', 'xhub' ),
 				'type' => Controls_Manager::SLIDER,
 				'default' => [
 					'size' => 30,
@@ -126,7 +126,7 @@ class Restobar_Post_Grid extends Widget_Base {
 		$this->start_controls_section(
 			'posts_style',
 			[
-				'label' => __( 'Post Items', 'restobar' ),
+				'label' => __( 'Post Items', 'xhub' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -134,7 +134,7 @@ class Restobar_Post_Grid extends Widget_Base {
 		$this->add_control(
 			'heading_general',
 			[
-				'label' => __( 'General', 'restobar' ),
+				'label' => __( 'General', 'xhub' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -143,7 +143,7 @@ class Restobar_Post_Grid extends Widget_Base {
 		$this->add_control(
 			'radius_box',
 			[
-				'label' => __( 'Border Radius', 'restobar' ),
+				'label' => __( 'Border Radius', 'xhub' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
 				'selectors' => [
@@ -155,7 +155,7 @@ class Restobar_Post_Grid extends Widget_Base {
 		$this->add_control(
 			'item_bg',
 			[
-				'label' => __( 'Background', 'restobar' ),
+				'label' => __( 'Background', 'xhub' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -176,7 +176,7 @@ class Restobar_Post_Grid extends Widget_Base {
 		$this->add_control(
 			'heading_title',
 			[
-				'label' => __( 'Title', 'restobar' ),
+				'label' => __( 'Title', 'xhub' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -185,7 +185,7 @@ class Restobar_Post_Grid extends Widget_Base {
 		$this->add_control(
 			'title_color',
 			[
-				'label' => __( 'Color', 'restobar' ),
+				'label' => __( 'Color', 'xhub' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -197,7 +197,7 @@ class Restobar_Post_Grid extends Widget_Base {
 		$this->add_control(
 			'title_hcolor',
 			[
-				'label' => __( 'Hover Color', 'restobar' ),
+				'label' => __( 'Hover Color', 'xhub' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -218,7 +218,7 @@ class Restobar_Post_Grid extends Widget_Base {
 		$this->add_control(
 			'heading_excerpt',
 			[
-				'label' => __( 'Excerpt', 'restobar' ),
+				'label' => __( 'Excerpt', 'xhub' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -227,7 +227,7 @@ class Restobar_Post_Grid extends Widget_Base {
 		$this->add_control(
 			'excerpt_color',
 			[
-				'label' => __( 'Color', 'restobar' ),
+				'label' => __( 'Color', 'xhub' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -248,7 +248,7 @@ class Restobar_Post_Grid extends Widget_Base {
 		$this->add_control(
 			'heading_cat',
 			[
-				'label' => __( 'Category', 'restobar' ),
+				'label' => __( 'Category', 'xhub' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -257,10 +257,10 @@ class Restobar_Post_Grid extends Widget_Base {
 		$this->add_control(
 			'show_cat',
 			[
-				'label' => __( 'Show Category', 'restobar' ),
+				'label' => __( 'Show Category', 'xhub' ),
 				'type' => Controls_Manager::SWITCHER,
-				'label_on' => __( 'Show', 'restobar' ),
-				'label_off' => __( 'Hide', 'restobar' ),
+				'label_on' => __( 'Show', 'xhub' ),
+				'label_off' => __( 'Hide', 'xhub' ),
 				'return_value' => 'yes',
 				'default' => 'yes',
 			]
@@ -269,7 +269,7 @@ class Restobar_Post_Grid extends Widget_Base {
 		$this->add_control(
 			'cat_color',
 			[
-				'label' => __( 'Color', 'restobar' ),
+				'label' => __( 'Color', 'xhub' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -284,7 +284,7 @@ class Restobar_Post_Grid extends Widget_Base {
 		$this->add_control(
 			'cat_bg',
 			[
-				'label' => __( 'Background', 'restobar' ),
+				'label' => __( 'Background', 'xhub' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -300,7 +300,7 @@ class Restobar_Post_Grid extends Widget_Base {
 		$this->add_control(
 			'heading_meta',
 			[
-				'label' => __( 'Meta', 'restobar' ),
+				'label' => __( 'Meta', 'xhub' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -309,7 +309,7 @@ class Restobar_Post_Grid extends Widget_Base {
 		$this->add_control(
 			'meta_color',
 			[
-				'label' => __( 'Color', 'restobar' ),
+				'label' => __( 'Color', 'xhub' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -321,7 +321,7 @@ class Restobar_Post_Grid extends Widget_Base {
 		$this->add_control(
 			'meta_hover_color',
 			[
-				'label' => __( 'Hover Color', 'restobar' ),
+				'label' => __( 'Hover Color', 'xhub' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -369,7 +369,7 @@ class Restobar_Post_Grid extends Widget_Base {
 					<div class="post-inner">
 						<?php if ( has_post_thumbnail() ) { ?>
 							<div class="entry-media">
-								<?php if( $settings['show_cat'] ) { restobar_posted_in(); } ?>
+								<?php if( $settings['show_cat'] ) { xhub_posted_in(); } ?>
 								<a href="<?php the_permalink(); ?>">
 									<?php the_post_thumbnail($settings['post_thumbnail']); ?>
 								</a>
@@ -377,15 +377,15 @@ class Restobar_Post_Grid extends Widget_Base {
 						<?php } ?>
 
 						<div class="inner-post">
-							<?php if( !has_post_thumbnail() && $settings['show_cat'] ) restobar_posted_in(); ?>
+							<?php if( !has_post_thumbnail() && $settings['show_cat'] ) xhub_posted_in(); ?>
 							<div class="entry-header">
 								<?php the_title( '<h5 class="entry-title"><a class="title-link" href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h5>' ); ?>
 							</div>
 
-							<?php if( $settings['exc'] ) { echo '<div class="entry-summary the-excerpt">' .restobar_excerpt($settings['exc']). '...</div>'; } ?>
+							<?php if( $settings['exc'] ) { echo '<div class="entry-summary the-excerpt">' .xhub_excerpt($settings['exc']). '...</div>'; } ?>
 						</div>
 						<div class="entry-meta">
-							<?php if( restobar_get_option( 'post_entry_meta' ) ) { restobar_post_meta(); } ?>
+							<?php if( xhub_get_option( 'post_entry_meta' ) ) { xhub_post_meta(); } ?>
 							<a href="<?php the_permalink(); ?>" class="btn-details"><i class="xp-webicon-trajectory"></i></a>
 						</div>
 					</div>
@@ -409,4 +409,4 @@ class Restobar_Post_Grid extends Widget_Base {
 	}
 }
 // Register the widget
-Plugin::instance()->widgets_manager->register( new Restobar_Post_Grid() );
+Plugin::instance()->widgets_manager->register( new Xhub_Post_Grid() );
