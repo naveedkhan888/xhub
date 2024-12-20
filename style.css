@@ -6694,7 +6694,7 @@ object {
 }
 
 .form_icon .main_wraper textarea,
-.form_icon .main_wraper input.wpcf7-form-control{
+.form_icon .main_wraper .wpcf7-form-control{
   padding: 15px 10px 15px 36px;
   border-width: 0 0 1px 0;
   border-color: transparent;
