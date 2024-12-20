@@ -6578,7 +6578,6 @@ object {
     border: 1px solid rgba(0, 0, 0, 0.15); 
     border-radius: 0; 
     font-size: 14px; 
-    color: #ffffff; 
     box-sizing: border-box; 
     outline: none !important;
 }
@@ -6596,21 +6595,6 @@ object {
     
 }
 
-/* Styling for the popup options */
-.wpcf7 select option {
-    background-color: #080b0f; /* Dark background for options */
-    color: #ffffff; /* Light text color */
-}
-
-/* For Chrome/Safari: */
-.wpcf7 select optgroup {
-    background-color: #080b0f;
-}
-
-/* Hover effect on options */
-.wpcf7 select option:hover {
-    background-color: #444; /* Slightly lighter background on hover */
-}
 
 
 
