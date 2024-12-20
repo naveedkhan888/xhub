@@ -212,7 +212,8 @@ if(!function_exists('xhub_color_scheme')){
 			.main-navigation ul li li a:hover,.main-navigation ul ul.sub-menu li.current-menu-item > a,.main-navigation ul ul.sub-menu li.current-menu-ancestor > a,
 			.main-navigation ul > li.menu-item-has-children:hover > a,
 			.main-navigation ul > li.menu-item-has-children:hover > a:after,
-			.main-navigation ul > li.current_page_item > a::after, 
+			.main-navigation ul > li.current_page_item > a::after,
+			.custom-checkbox .formcheckbox_link:hover,  
 			.main-navigation ul > li.menu-item-has-children > a:hover:after{
 				color:'.xhub_get_option('main_color').' !important;
 			}
