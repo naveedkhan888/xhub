@@ -3610,8 +3610,8 @@ object {
 /*--------------------------------------------------------------
 # Elementor icons and other
 --------------------------------------------------------------*/
-.elementor-widget-icon.elementor-view-framed .elementor-icon-wrapper .elementor-icon, 
-.elementor-widget-icon.elementor-view-default .elementor-icon-wrapper .elementor-icon, 
+.elementor-widget-icon.elementor-view-framed .elementor-icon, 
+.elementor-widget-icon.elementor-view-default .elementor-icon, 
 .xp-counter-2.icounter .c-number.font-second span.num + span {
   fill: #C19977;
   color: #C19977;
