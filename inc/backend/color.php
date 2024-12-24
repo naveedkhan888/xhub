@@ -204,7 +204,8 @@ if(!function_exists('xhub_color_scheme')){
 			.woocommerce .woocommerce-widget-layered-nav-list li a:hover,
 			.woocommerce .widget_price_filter .price_slider_amount button.button,
 			.tab-titles .title-item a.tab-active,
-			.tab-titles .title-item a:hover,
+			.tab-titles .title-item a:hover, 
+			.xptf-btn.xptf-btn-light, 
 			.xp-counter-2.icounter .c-number.font-second span.num + span, 
 			.woocommerce div.product p.price,.woocommerce div.product span.price{ color: '.xhub_get_option('main_color').'; }
 
@@ -214,7 +215,6 @@ if(!function_exists('xhub_color_scheme')){
 			.main-navigation ul > li.menu-item-has-children:hover > a:after,
 			.main-navigation ul > li.current_page_item > a::after,
 			.custom-checkbox .formcheckbox_link:hover,  
-			.xptf-btn.xptf-btn-light, 
 			.main-navigation ul > li.menu-item-has-children > a:hover:after{
 				color:'.xhub_get_option('main_color').' !important;
 			}
