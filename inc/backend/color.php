@@ -220,7 +220,9 @@ if(!function_exists('xhub_color_scheme')){
 			}
 
 			.elementor-widget-icon.elementor-view-framed .elementor-icon, 
-			.elementor-widget-icon.elementor-view-default .elementor-icon{
+			.elementor-widget-icon.elementor-view-default .elementor-icon, 
+			.icon_newmain.elementor-widget-icon.elementor-view-framed .elementor-icon, 
+			.icon_newmain.elementor-widget-icon.elementor-view-default .elementor-icon{
 				color:'.xhub_get_option('main_color').';
 			}
 
