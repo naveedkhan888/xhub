@@ -997,6 +997,7 @@ td {
 }
 .xptf-btn i {
   margin-right: 12px;
+  vertical-align: middle;
 }
 .xptf-btn:hover, .xptf-btn:visited {
   background: #1e73be;
