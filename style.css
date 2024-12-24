@@ -6744,7 +6744,7 @@ object {
   .form_icon .formButton{
     flex-direction: column-reverse;
     align-items: start;
-    gap: 7px;
+    gap: 37px;
   }
   .form_icon .formButton .col-md-8{
     margin-bottom: 12px;
