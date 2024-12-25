@@ -3371,9 +3371,6 @@ Vertical Menu
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
-  box-shadow: 8px 8px 30px 0 rgba(0, 0, 0, 0.12);
-  -webkit-box-shadow: 8px 8px 30px 0 rgba(0, 0, 0, 0.12);
-  -moz-box-shadow: 8px 8px 30px 0 rgba(0, 0, 0, 0.12);
   border: 1px solid rgba(0, 0, 0, 0.15);
 }
 .author-widget_wrapper .author-widget_image-wrapper {
@@ -3394,6 +3391,7 @@ Vertical Menu
 }
 .author-widget_wrapper:before {
   content: "";
+  display: none;
   position: absolute;
   top: 90px;
   left: -240px;
