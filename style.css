@@ -6503,6 +6503,9 @@ object {
   display: block;
   margin-bottom: 45px;
 }
+.inquiry_form p {
+  margin-bottom: 15px;
+}
 .wpcf7 p:last-child {
   margin-bottom: 0;
 }
