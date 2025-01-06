@@ -10,6 +10,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+// Add hook to load Kirki textdomain at the correct time
+add_action('after_setup_theme', function() {
+    if (class_exists('Kirki')) {
+        load_textdomain('kirki', get_template_directory() . '/languages/kirki.mo');
+    }
+}, 20);
+
 class Xhub_Customize {
 	/**
 	 * Customize settings
@@ -24,14 +31,22 @@ class Xhub_Customize {
 	 * @param array $config
 	 */
 	public function __construct( $config ) {
-		$this->config = $config;
+        $this->config = $config;
 
-		if ( ! class_exists( 'Kirki' ) ) {
-			return;
-		}
+        // Move Kirki initialization to init hook
+        add_action('init', array($this, 'init_kirki'));
+    }
 
-		$this->register();
-	}
+    /**
+     * Initialize Kirki
+     */
+    public function init_kirki() {
+        if ( ! class_exists( 'Kirki' ) ) {
+            return;
+        }
+
+        $this->register();
+    }
 
 	/**
 	 * Register settings
