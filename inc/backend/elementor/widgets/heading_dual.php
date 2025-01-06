@@ -298,9 +298,9 @@ class Xhub_Heading_dual extends Widget_Base{
 
 		// First Parent Title Styling
         $this->add_control(
-            'heading_parent_title_1',
+            'heading_parent_title_1_colors',
             [
-                'label' => __( 'First Parent Title', 'xhub' ),
+                'label' => __( 'First Parent Title Colors', 'xhub' ),
                 'type' => Controls_Manager::HEADING,
                 'separator' => 'before',
             ]
@@ -366,23 +366,12 @@ class Xhub_Heading_dual extends Widget_Base{
             ]
         );
 
-        $this->add_control(
-            'parent_title_1_color',
-            [
-                'label' => __( 'Color', 'xhub' ),
-                'type' => Controls_Manager::COLOR,
-                'default' => '',
-                'selectors' => [
-                    '{{WRAPPER}} .xp-heading .parent-head-1' => 'color: {{VALUE}};',
-                ]
-            ]
-        );
 
 		// Second Parent Title Styling
 		$this->add_control(
-			'heading_parent_title_2',
+			'heading_parent_title_2_colors',
 			[
-				'label' => __( 'Second Parent Title', 'xhub' ),
+				'label' => __( 'Second Parent Title Colors', 'xhub' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
