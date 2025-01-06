@@ -467,18 +467,6 @@ class Xhub_Heading_dual extends Widget_Base{
             ]
         );
 
-        $this->add_control(
-            'parent_title_2_color',
-            [
-                'label' => __( 'Color', 'xhub' ),
-                'type' => Controls_Manager::COLOR,
-                'default' => '',
-                'selectors' => [
-                    '{{WRAPPER}} .xp-heading .parent-head-2' => 'color: {{VALUE}};',
-                ]
-            ]
-        );
-
 		//Title
 		$this->add_control(
 			'heading_title',
