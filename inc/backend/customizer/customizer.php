@@ -1102,7 +1102,7 @@ function xhub_customize_settings() {
             'type'     => 'color',
             'label'    => esc_html__( 'Primary Color', 'xhub' ),
             'section'  => 'color_scheme',
-            'default'  => '#C19977',
+            'default'  => '#00ae6c',
             'priority' => 10,
         ),
         'heading_color'   => array(

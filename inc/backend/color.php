@@ -56,7 +56,7 @@ if(!function_exists('xhub_color_scheme')){
 
 
 	  	//Main Color
-	  	if( xhub_get_option('main_color') != '#C19977' ){
+	  	if( xhub_get_option('main_color') != '#00ae6c' ){
 			$color_scheme = 
 			'
 		  	/****Main Color****/

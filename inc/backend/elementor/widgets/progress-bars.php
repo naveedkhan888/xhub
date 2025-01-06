@@ -132,7 +132,7 @@ class Xhub_Progress_Bars extends Widget_Base{
 			[
 				'label' => __( 'Color', 'xhub' ),
 				'type' => Controls_Manager::COLOR,
-				'default' => '#C19977',
+				'default' => '#00ae6c',
 				'condition' => [
 					'bar_style' => 'circle',
 				]
@@ -181,7 +181,7 @@ class Xhub_Progress_Bars extends Widget_Base{
 			[
 				'label' => __( 'Color', 'xhub' ),
 				'type' => Controls_Manager::COLOR,
-				'default' => '#C19977',
+				'default' => '#00ae6c',
 				'selectors' => [
 					'{{WRAPPER}} .progress-bar' => 'background: {{VALUE}};',
 				],
